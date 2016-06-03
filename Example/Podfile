@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CKImagePicker_Example' do
+  pod 'CKImagePicker', :path => '../'
+
+  target 'CKImagePicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
