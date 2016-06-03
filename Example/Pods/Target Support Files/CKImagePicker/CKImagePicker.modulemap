@@ -1,0 +1,6 @@
+framework module CKImagePicker {
+  umbrella header "CKImagePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

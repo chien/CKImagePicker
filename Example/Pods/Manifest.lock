@@ -1,0 +1,16 @@
+PODS:
+  - CKImagePicker (0.1.0)
+
+DEPENDENCIES:
+  - CKImagePicker (from `../`)
+
+EXTERNAL SOURCES:
+  CKImagePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CKImagePicker: 0e1287f12bb3f8fb9a5ed0f9c37e522755daaaf1
+
+PODFILE CHECKSUM: 240996fa929ce3cd61a4b26157e7ca0e686c2e8f
+
+COCOAPODS: 1.0.1
