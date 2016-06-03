@@ -1,5 +1,9 @@
 PODS:
-  - CKImagePicker (0.1.0)
+  - Cartography (0.6.0)
+  - CKImagePicker (0.1.0):
+    - Cartography (~> 0.5)
+    - FontAwesome.swift
+  - FontAwesome.swift (0.7.3)
 
 DEPENDENCIES:
   - CKImagePicker (from `../`)
@@ -9,7 +13,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CKImagePicker: 0e1287f12bb3f8fb9a5ed0f9c37e522755daaaf1
+  Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  CKImagePicker: e7053b25212291378d1f95e31e73f4083973b1d9
+  FontAwesome.swift: f694fe0f667d6d3390b5919cdb0556a27b75d427
 
 PODFILE CHECKSUM: 240996fa929ce3cd61a4b26157e7ca0e686c2e8f
 

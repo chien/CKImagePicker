@@ -7,77 +7,183 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		037E0A963FF38536D3A4C217F75A13F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		2D4032F4DC6A603DF9A444A272C43441 /* CKImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 339CC665ABC707C7A9121F1CAD9044CB /* CKImagePicker-dummy.m */; };
-		3DEE668A91D92D42E52E1D735A7281D3 /* Pods-CKImagePicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030855295DAD83227BA348C8BA0DE92F /* Pods-CKImagePicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BA54FB43138F524259BA1053700F3D4 /* CKImagePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C14A418C427B40D2E2FA201F7E50A97A /* CKImagePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04BC278ED8790BA7610C8D826D3507E7 /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908FB65CD7562DABBB3728606868B140 /* FontAwesome_swift.framework */; };
+		0517A3D1AE2235822B12880D2317472A /* FontAwesome.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F15F88D93D5C57D747201A997ECFB73 /* FontAwesome.swift-dummy.m */; };
+		0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62541BC7C4A93AA6C92D4B14AFBE67E6 /* Dimension.swift */; };
+		0FD7387EDA5009285A3BE3D08D444D70 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587088FB6A896D7E50728300EFCB25E0 /* Cartography.framework */; };
+		102C78F71D024224006B5163 /* CKImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */; };
+		2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F228D8596C5F06F6692032A729A6B1 /* Edge.swift */; };
+		28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D609ADA3CBBE2EB59D4E0EEDA9C38E4 /* Compound.swift */; };
+		337A8DFD50F43263096173E061EEA9A5 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EFC96D3A79D103387BBE83B2977783 /* Enum.swift */; };
+		369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDFC488F6C44FB2308C4DDB5BF54D5 /* Distribute.swift */; };
+		452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B519A6C8A3C0ABF52151D3C3E80484 /* Context.swift */; };
+		48ADE3FB3F30FCA5893083351449DA98 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F964DB26B0F492D4D158574C4046F /* ViewUtils.swift */; };
+		5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63834B86CE7819F19880B1116E314D21 /* Edges.swift */; };
+		584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BF92C747917382CD69B081E05ED61 /* Align.swift */; };
+		69FA424183BC078853BCF9A653C4E503 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7040C4521CFEC3E43116B1C1C5094687 /* CoreText.framework */; };
+		6D984EFBC6C8A5C3D72EBD58D0FE6452 /* Pods-CKImagePicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C02DDF8E205F0FD9E89D65F4379F5 /* Pods-CKImagePicker_Example-dummy.m */; };
+		7C3FBF5E1E0F80256604CB657F319CA1 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895F3FBB4DCC9F9A94819B1EE8F9086 /* FontAwesome.swift */; };
+		7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3FEFEEA125EDD2FC79971A72F07EC /* Expression.swift */; };
+		8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F91BD93887B5697C881EC522B3F5 /* LayoutProxy.swift */; };
 		8547482751BA97D2641836491D494EB4 /* Pods-CKImagePicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B316A27472CDADAE1ADF46CA65CAA8E /* Pods-CKImagePicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94FD7BB95BC27C8C6B08FE68A45E88DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		9DF4DA4954BAA0DA56CC124A000AE4B9 /* Pods-CKImagePicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C02DDF8E205F0FD9E89D65F4379F5 /* Pods-CKImagePicker_Example-dummy.m */; };
+		893C94DDB856C18251D42D60C88AE2E8 /* CKImagePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C14A418C427B40D2E2FA201F7E50A97A /* CKImagePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		959E94859EB9C6E5053730A5CA807BDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
+		A33E78335A9459EC83327D52001569C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
+		AEA028409EAB5D66D04F375D62E90CA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
 		B11F5A38FEFEA1E9C42C8BBD24B9CCAE /* Pods-CKImagePicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB3F14F2770A749A5BCA676FE74D7B /* Pods-CKImagePicker_Tests-dummy.m */; };
-		EE964A7C6CE7CE8D74056501B2D8FD0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		F6DACA113E939744048D120B0DBE7003 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222992A35FB37EAA67BF45335A584123 /* ReplaceMe.swift */; };
+		B23E3B878363F72D1E874E46EB62FA7F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA943956740DFF5FD1327D6F9714D7 /* Size.swift */; };
+		B90891688A088BC37455234028C2E993 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D6E28AC3C6F8C10D54A191C52C747EC /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1990AA51B9B2CF26994D479E3F4EBED /* Extensions.swift */; };
+		C2BF1C991136F55CCED13B8F3BDA5FB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB252D8D28FC805929A8F0175B0CF902 /* UIKit.framework */; };
+		C3649839064E53A4BF767D2EF29651EF /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE1EB9D0B50D7EF9173744C93BA658 /* Priority.swift */; };
+		C3CD9494F03FA3BD829EC2574FEBA574 /* CKImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 339CC665ABC707C7A9121F1CAD9044CB /* CKImagePicker-dummy.m */; };
+		D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD33908679C2D583A279BBD56D7729 /* Constrain.swift */; };
+		D3C01862D88692FA2E85A2D84345982B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529215ABCE0F34C011ABB7381DAA38B2 /* Point.swift */; };
+		D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CA82255853E2B4165667D953B09F53 /* Cartography-dummy.m */; };
+		D975AC225FD9B2CD04B7874BC3FE10AA /* FontAwesome.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1CAAFCE21FB744447212C2A70B691CE /* FontAwesome.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD26D6B360B69331A9163CD61ABE81 /* ConstraintGroup.swift */; };
+		E6B4D17838D9F72928A00FA0EB7F857B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
+		EB9E85B0CE6A53DCBDE040A716B5DBF8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4DD5FA9D392852FF21F33986D9F4D3 /* Property.swift */; };
+		ED4AEC119704E8A39B71A233D6201B29 /* CKImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804F2610EEF857462AE13AD417CC312 /* CKImagePickerView.swift */; };
+		EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23E3F9ACF9CEC09645F436CC5D3035 /* Coefficients.swift */; };
+		EE964A7C6CE7CE8D74056501B2D8FD0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
+		F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989E9286978C6881458F33AAC288F041 /* Constraint.swift */; };
+		F95ADCA0B85C6C0640372D3EFBBF1AD6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01155ECB608F59BE64C4E589B34EA2F /* View.swift */; };
+		FDF48CFB4EC10AC253D136CCD431E086 /* Pods-CKImagePicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030855295DAD83227BA348C8BA0DE92F /* Pods-CKImagePicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8A879F804270F0A51EF6B5712B4700BD /* PBXContainerItemProxy */ = {
+		0A38B8A830E5357504ED0F028B40F439 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3F15E1FAF2CFD5351692FFD7FE93FC65;
+			remoteGlobalIDString = DAB223D9A33832F8971BAE0497926C76;
+			remoteInfo = FontAwesome.swift;
+		};
+		512AABAFAB70D6D7E0FF5A9A3C7B3D1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3A04698AAE4D6124C20602D622956E5;
+			remoteInfo = Cartography;
+		};
+		B239FB09C3B79F9C2891751A1FDD2D37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAB223D9A33832F8971BAE0497926C76;
+			remoteInfo = FontAwesome.swift;
+		};
+		BD9C4EB073B45887CE37C98D6C5DF4A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3A04698AAE4D6124C20602D622956E5;
+			remoteInfo = Cartography;
+		};
+		E8A9E476897274F5509554BF833CD5A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BCCE0E29F8F6496C50F158AD85DF61F;
 			remoteInfo = CKImagePicker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		030855295DAD83227BA348C8BA0DE92F /* Pods-CKImagePicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CKImagePicker_Example-umbrella.h"; sourceTree = "<group>"; };
-		05EE8FB496C1F2CE3378B283F75B4043 /* Pods_CKImagePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKImagePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		092417E0E15A8592D7A5FDC1F01C51AE /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
+		0D6E28AC3C6F8C10D54A191C52C747EC /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
+		0F15F88D93D5C57D747201A997ECFB73 /* FontAwesome.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesome.swift-dummy.m"; sourceTree = "<group>"; };
+		10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKImagePickerViewController.swift; sourceTree = "<group>"; };
 		10D92AE5D82047E9A9E308B6073DC690 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1804F2610EEF857462AE13AD417CC312 /* CKImagePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKImagePickerView.swift; sourceTree = "<group>"; };
+		1A544112391090DBFFEC39D98EB7CDD9 /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
+		1B2B6CA4BECB3ABC2560ADDD4E68041B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BBFE4FB47CB95CFA119ECF19C190E53 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesome/FontAwesome.otf; sourceTree = "<group>"; };
 		1E394E7746C9D1B71AD7DB7853B9FE19 /* Pods-CKImagePicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CKImagePicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		222992A35FB37EAA67BF45335A584123 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		20B519A6C8A3C0ABF52151D3C3E80484 /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
+		2635398B762378A33F5020695B5E931A /* FontAwesome.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-prefix.pch"; sourceTree = "<group>"; };
 		28D8099CB9A495D6890D3BBD32DC129B /* Pods-CKImagePicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		29949495165F9A00CA36C1D6062114A1 /* Pods_CKImagePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKImagePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D609ADA3CBBE2EB59D4E0EEDA9C38E4 /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
 		2DCEDDF89AFC120B672D095471C4F924 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FB99F5D3D9B1BCB9026437E40B22981 /* Pods-CKImagePicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKImagePicker_Example-resources.sh"; sourceTree = "<group>"; };
+		30DA943956740DFF5FD1327D6F9714D7 /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
+		32EFC96D3A79D103387BBE83B2977783 /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = FontAwesome/Enum.swift; sourceTree = "<group>"; };
 		339CC665ABC707C7A9121F1CAD9044CB /* CKImagePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CKImagePicker-dummy.m"; sourceTree = "<group>"; };
 		369C02DDF8E205F0FD9E89D65F4379F5 /* Pods-CKImagePicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CKImagePicker_Example-dummy.m"; sourceTree = "<group>"; };
+		3866F91BD93887B5697C881EC522B3F5 /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
+		3895F3FBB4DCC9F9A94819B1EE8F9086 /* FontAwesome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = FontAwesome/FontAwesome.swift; sourceTree = "<group>"; };
 		4A9FBC396EE0E094A30AF3DF9051CAAF /* Pods-CKImagePicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CKImagePicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		602027DC12E0C1DAA4804BFB2731D71E /* Pods_CKImagePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKImagePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE3FEFEEA125EDD2FC79971A72F07EC /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
+		4EBE1EB9D0B50D7EF9173744C93BA658 /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
+		512068B24C07B9F7696EE8AAB1227413 /* Pods_CKImagePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKImagePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		529215ABCE0F34C011ABB7381DAA38B2 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
+		587088FB6A896D7E50728300EFCB25E0 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C3C7504B51BE8628D523B57D89B05C /* CKImagePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CKImagePicker.xcconfig; sourceTree = "<group>"; };
+		62541BC7C4A93AA6C92D4B14AFBE67E6 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
+		63834B86CE7819F19880B1116E314D21 /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
 		64D6C1489BCD47A406BCE0D4678B1C36 /* Pods-CKImagePicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKImagePicker_Tests-resources.sh"; sourceTree = "<group>"; };
+		6F4DD5FA9D392852FF21F33986D9F4D3 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
+		7040C4521CFEC3E43116B1C1C5094687 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		731EBA943FDE7B334334EA6BCACA78C0 /* Pods-CKImagePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CKImagePicker_Tests.modulemap"; sourceTree = "<group>"; };
 		7B316A27472CDADAE1ADF46CA65CAA8E /* Pods-CKImagePicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CKImagePicker_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7F23E3F9ACF9CEC09645F436CC5D3035 /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
 		8A9DF7D2CB3743C01DAFD7B53B3E698D /* Pods-CKImagePicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKImagePicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8ACBCBA4AEE7E7DDCDD87F05583CAF5F /* CKImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CKImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		908FB65CD7562DABBB3728606868B140 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9665797115B26A8CEACB19819B53D421 /* FontAwesome.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesome.swift.xcconfig; sourceTree = "<group>"; };
+		96813BB33D4E4FE01E47FCB5FF65EE00 /* FontAwesome.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FontAwesome.swift.modulemap; sourceTree = "<group>"; };
+		989E9286978C6881458F33AAC288F041 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
 		A049E714E9DAF710C014BCD3B52FF42A /* Pods-CKImagePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A2F228D8596C5F06F6692032A729A6B1 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
 		A7AB3F14F2770A749A5BCA676FE74D7B /* Pods-CKImagePicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CKImagePicker_Tests-dummy.m"; sourceTree = "<group>"; };
+		A9AD33908679C2D583A279BBD56D7729 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
+		AD86BDF312F877543F2F302853A96F0E /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4761EB692EDE2918E3F89722EC980E /* CKImagePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKImagePicker-prefix.pch"; sourceTree = "<group>"; };
+		AFF7F1F887F603617A4D025AAE7379AB /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cartography.modulemap; sourceTree = "<group>"; };
+		B01155ECB608F59BE64C4E589B34EA2F /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
 		B19BD9B784A432B2195BAFFFA0A514C1 /* Pods-CKImagePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKImagePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B9B7AD74037AB5C5AFC7B4D76A6487FB /* Pods-CKImagePicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKImagePicker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BBC2C249BB93E16C53B9E6859EF2DEBE /* Pods-CKImagePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C14A418C427B40D2E2FA201F7E50A97A /* CKImagePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKImagePicker-umbrella.h"; sourceTree = "<group>"; };
-		C42996682C41680AB3A8753912F1E090 /* CKImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CKImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C78F964DB26B0F492D4D158574C4046F /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
+		CFF154F894F261086983C164743A9235 /* ResourceBundle-FontAwesome.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FontAwesome.swift-Info.plist"; sourceTree = "<group>"; };
 		D0E974606CABE4778F9D8A240DC3D7EA /* CKImagePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CKImagePicker.modulemap; sourceTree = "<group>"; };
+		D1CAAFCE21FB744447212C2A70B691CE /* FontAwesome.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-umbrella.h"; sourceTree = "<group>"; };
+		D1FDFC488F6C44FB2308C4DDB5BF54D5 /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
 		D5EA43D2726506325D3863CE1A197B6E /* Pods-CKImagePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CKImagePicker_Example.modulemap"; sourceTree = "<group>"; };
+		D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DC71C5A0C7E6BA04F6F1AC7384E3F493 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3CA82255853E2B4165667D953B09F53 /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
+		E5FD26D6B360B69331A9163CD61ABE81 /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
+		E99BF92C747917382CD69B081E05ED61 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
+		F1990AA51B9B2CF26994D479E3F4EBED /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
 		F31F43A0701AA6DF19E04F3C04B90A83 /* Pods-CKImagePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F3FB5E699E738A833F7D0F5A3C8007A7 /* Pods-CKImagePicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKImagePicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FB1E654ED15A6F539BEAAAD6C4FFAA2B /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB252D8D28FC805929A8F0175B0CF902 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FC67CBD050FD5204C7A3A2A197E8CC49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F94BDBA8855F7375F9D96D8A6592CE4 /* Frameworks */ = {
+		0A2E797CF7CC77E14C32DA55E9FA5AE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				037E0A963FF38536D3A4C217F75A13F3 /* Foundation.framework in Frameworks */,
+				0FD7387EDA5009285A3BE3D08D444D70 /* Cartography.framework in Frameworks */,
+				04BC278ED8790BA7610C8D826D3507E7 /* FontAwesome_swift.framework in Frameworks */,
+				959E94859EB9C6E5053730A5CA807BDD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30AAA70580E7D834C93751BC8C900555 /* Frameworks */ = {
+		429A34DF3BBD7321C9C7D6FBF5F1E3FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94FD7BB95BC27C8C6B08FE68A45E88DA /* Foundation.framework in Frameworks */,
+				A33E78335A9459EC83327D52001569C9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +192,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE964A7C6CE7CE8D74056501B2D8FD0E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F97FD1FDF8026733FF67D6053520723 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6B4D17838D9F72928A00FA0EB7F857B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABDA05BD117E5203A06ECA16CA024D61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69FA424183BC078853BCF9A653C4E503 /* CoreText.framework in Frameworks */,
+				AEA028409EAB5D66D04F375D62E90CA7 /* Foundation.framework in Frameworks */,
+				C2BF1C991136F55CCED13B8F3BDA5FB2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +243,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		2961161AE9F445E0A3CD985064896FBA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+				96813BB33D4E4FE01E47FCB5FF65EE00 /* FontAwesome.swift.modulemap */,
+				9665797115B26A8CEACB19819B53D421 /* FontAwesome.swift.xcconfig */,
+				0F15F88D93D5C57D747201A997ECFB73 /* FontAwesome.swift-dummy.m */,
+				2635398B762378A33F5020695B5E931A /* FontAwesome.swift-prefix.pch */,
+				D1CAAFCE21FB744447212C2A70B691CE /* FontAwesome.swift-umbrella.h */,
+				DC71C5A0C7E6BA04F6F1AC7384E3F493 /* Info.plist */,
+				CFF154F894F261086983C164743A9235 /* ResourceBundle-FontAwesome.swift-Info.plist */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/FontAwesome.swift";
 			sourceTree = "<group>";
 		};
 		3FCE16374516E9C2D0E891B5692738C9 /* Development Pods */ = {
@@ -133,6 +264,14 @@
 				99A6323C5AC39C030818E2E90164380F /* CKImagePicker */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		456C7A4103EC32B1C570C71995D3D342 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BBFE4FB47CB95CFA119ECF19C190E53 /* FontAwesome.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		53DD72C8851E2F4B22A4645E0A5D3179 /* Pods-CKImagePicker_Example */ = {
@@ -153,6 +292,20 @@
 			path = "Target Support Files/Pods-CKImagePicker_Example";
 			sourceTree = "<group>";
 		};
+		54FAA4C9CA7A857AEBBD701C1C35E574 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFF7F1F887F603617A4D025AAE7379AB /* Cartography.modulemap */,
+				092417E0E15A8592D7A5FDC1F01C51AE /* Cartography.xcconfig */,
+				E3CA82255853E2B4165667D953B09F53 /* Cartography-dummy.m */,
+				1A544112391090DBFFEC39D98EB7CDD9 /* Cartography-prefix.pch */,
+				0D6E28AC3C6F8C10D54A191C52C747EC /* Cartography-umbrella.h */,
+				1B2B6CA4BECB3ABC2560ADDD4E68041B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cartography";
+			sourceTree = "<group>";
+		};
 		5A091148867774A23EA0D02FF04FCD08 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,77 +320,157 @@
 			path = "Example/Pods/Target Support Files/CKImagePicker";
 			sourceTree = "<group>";
 		};
+		7484D59C830410C0EB6528E601B48A44 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7040C4521CFEC3E43116B1C1C5094687 /* CoreText.framework */,
+				D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */,
+				FB252D8D28FC805929A8F0175B0CF902 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7B009CD1819DCE0D53E3B50CBF5F5AF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0CAC1145D5EA87AA51EF9917F8A0DEB /* Cartography */,
+				8257B743184BDA27CD55DEA0CE764B5E /* FontAwesome.swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7BADDB9910B55CD25A37955945DF2151 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1804F2610EEF857462AE13AD417CC312 /* CKImagePickerView.swift */,
+				10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				3FCE16374516E9C2D0E891B5692738C9 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				EA1E2C6E0BE8DCC66A6ED2280DE5744E /* Products */,
+				F33B6DCFC94ADEE72CEEB3744069CBAE /* Frameworks */,
+				7B009CD1819DCE0D53E3B50CBF5F5AF6 /* Pods */,
+				A82E604DEA5AE7779439E64D6BC0FD21 /* Products */,
 				293768885D20C8F4E18028A73DD3B0CA /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8257B743184BDA27CD55DEA0CE764B5E /* FontAwesome.swift */ = {
+			isa = PBXGroup;
+			children = (
+				32EFC96D3A79D103387BBE83B2977783 /* Enum.swift */,
+				3895F3FBB4DCC9F9A94819B1EE8F9086 /* FontAwesome.swift */,
+				456C7A4103EC32B1C570C71995D3D342 /* Resources */,
+				2961161AE9F445E0A3CD985064896FBA /* Support Files */,
+			);
+			path = FontAwesome.swift;
 			sourceTree = "<group>";
 		};
 		99A6323C5AC39C030818E2E90164380F /* CKImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				9C3F8D09CFCB45ECC7457F6B40613778 /* CKImagePicker */,
+				ACB9152CE165AFC37C947F4D25CC6893 /* CKImagePicker */,
 				5A091148867774A23EA0D02FF04FCD08 /* Support Files */,
 			);
 			name = CKImagePicker;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		9C3F8D09CFCB45ECC7457F6B40613778 /* CKImagePicker */ = {
+		A82E604DEA5AE7779439E64D6BC0FD21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D95FE894A4B5A834BC28233857EF25DD /* Classes */,
+				AD86BDF312F877543F2F302853A96F0E /* Cartography.framework */,
+				8ACBCBA4AEE7E7DDCDD87F05583CAF5F /* CKImagePicker.framework */,
+				FB1E654ED15A6F539BEAAAD6C4FFAA2B /* FontAwesome_swift.framework */,
+				512068B24C07B9F7696EE8AAB1227413 /* Pods_CKImagePicker_Example.framework */,
+				29949495165F9A00CA36C1D6062114A1 /* Pods_CKImagePicker_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACB9152CE165AFC37C947F4D25CC6893 /* CKImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				7BADDB9910B55CD25A37955945DF2151 /* Classes */,
 			);
 			path = CKImagePicker;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		D0CAC1145D5EA87AA51EF9917F8A0DEB /* Cartography */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				E99BF92C747917382CD69B081E05ED61 /* Align.swift */,
+				7F23E3F9ACF9CEC09645F436CC5D3035 /* Coefficients.swift */,
+				2D609ADA3CBBE2EB59D4E0EEDA9C38E4 /* Compound.swift */,
+				A9AD33908679C2D583A279BBD56D7729 /* Constrain.swift */,
+				989E9286978C6881458F33AAC288F041 /* Constraint.swift */,
+				E5FD26D6B360B69331A9163CD61ABE81 /* ConstraintGroup.swift */,
+				20B519A6C8A3C0ABF52151D3C3E80484 /* Context.swift */,
+				62541BC7C4A93AA6C92D4B14AFBE67E6 /* Dimension.swift */,
+				D1FDFC488F6C44FB2308C4DDB5BF54D5 /* Distribute.swift */,
+				A2F228D8596C5F06F6692032A729A6B1 /* Edge.swift */,
+				63834B86CE7819F19880B1116E314D21 /* Edges.swift */,
+				4DE3FEFEEA125EDD2FC79971A72F07EC /* Expression.swift */,
+				F1990AA51B9B2CF26994D479E3F4EBED /* Extensions.swift */,
+				3866F91BD93887B5697C881EC522B3F5 /* LayoutProxy.swift */,
+				529215ABCE0F34C011ABB7381DAA38B2 /* Point.swift */,
+				4EBE1EB9D0B50D7EF9173744C93BA658 /* Priority.swift */,
+				6F4DD5FA9D392852FF21F33986D9F4D3 /* Property.swift */,
+				30DA943956740DFF5FD1327D6F9714D7 /* Size.swift */,
+				B01155ECB608F59BE64C4E589B34EA2F /* View.swift */,
+				C78F964DB26B0F492D4D158574C4046F /* ViewUtils.swift */,
+				54FAA4C9CA7A857AEBBD701C1C35E574 /* Support Files */,
+			);
+			path = Cartography;
+			sourceTree = "<group>";
+		};
+		F33B6DCFC94ADEE72CEEB3744069CBAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				587088FB6A896D7E50728300EFCB25E0 /* Cartography.framework */,
+				908FB65CD7562DABBB3728606868B140 /* FontAwesome_swift.framework */,
+				7484D59C830410C0EB6528E601B48A44 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D95FE894A4B5A834BC28233857EF25DD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				222992A35FB37EAA67BF45335A584123 /* ReplaceMe.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		EA1E2C6E0BE8DCC66A6ED2280DE5744E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C42996682C41680AB3A8753912F1E090 /* CKImagePicker.framework */,
-				05EE8FB496C1F2CE3378B283F75B4043 /* Pods_CKImagePicker_Example.framework */,
-				602027DC12E0C1DAA4804BFB2731D71E /* Pods_CKImagePicker_Tests.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		309D7CFDC9066285C48FC71782677591 /* Headers */ = {
+		514705BF944036B79FA99816C564643C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA54FB43138F524259BA1053700F3D4 /* CKImagePicker-umbrella.h in Headers */,
+				B90891688A088BC37455234028C2E993 /* Cartography-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		721CEE117B3B72D9F5723F11DBAF3209 /* Headers */ = {
+		7CD46B550BABD8D7522D2B82EE9379AF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DEE668A91D92D42E52E1D735A7281D3 /* Pods-CKImagePicker_Example-umbrella.h in Headers */,
+				893C94DDB856C18251D42D60C88AE2E8 /* CKImagePicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9907D9A65D4C96342849039FD45F204 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF48CFB4EC10AC253D136CCD431E086 /* Pods-CKImagePicker_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D734DB49BFD5C1C91C5E3899530715AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D975AC225FD9B2CD04B7874BC3FE10AA /* FontAwesome.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,39 +485,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3F15E1FAF2CFD5351692FFD7FE93FC65 /* CKImagePicker */ = {
+		9BCCE0E29F8F6496C50F158AD85DF61F /* CKImagePicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF412435D7B0DDDD9055D08BDC8C601A /* Build configuration list for PBXNativeTarget "CKImagePicker" */;
+			buildConfigurationList = C0290D07DFB22A6020BA1FDF3BEDA907 /* Build configuration list for PBXNativeTarget "CKImagePicker" */;
 			buildPhases = (
-				BB1301058FEEFB8CC6D9E1C752D13792 /* Sources */,
-				30AAA70580E7D834C93751BC8C900555 /* Frameworks */,
-				309D7CFDC9066285C48FC71782677591 /* Headers */,
+				2A4524AB0E476A1C9A853B81D95CB969 /* Sources */,
+				0A2E797CF7CC77E14C32DA55E9FA5AE8 /* Frameworks */,
+				7CD46B550BABD8D7522D2B82EE9379AF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E26F982FF4F3AA96B95A496604E7A8D1 /* PBXTargetDependency */,
+				119EE559C3F63876DDA34A6F266D8B42 /* PBXTargetDependency */,
 			);
 			name = CKImagePicker;
 			productName = CKImagePicker;
-			productReference = C42996682C41680AB3A8753912F1E090 /* CKImagePicker.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		890F6362757F36A826C5570383073EEA /* Pods-CKImagePicker_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9AA9F99EFE1517625996DAFD78AFD80 /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Example" */;
-			buildPhases = (
-				35CD6249B3823C83E7D182A98C01AF66 /* Sources */,
-				1F94BDBA8855F7375F9D96D8A6592CE4 /* Frameworks */,
-				721CEE117B3B72D9F5723F11DBAF3209 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F82FE0FF89A2EC09836DECB72B57E49A /* PBXTargetDependency */,
-			);
-			name = "Pods-CKImagePicker_Example";
-			productName = "Pods-CKImagePicker_Example";
-			productReference = 05EE8FB496C1F2CE3378B283F75B4043 /* Pods_CKImagePicker_Example.framework */;
+			productReference = 8ACBCBA4AEE7E7DDCDD87F05583CAF5F /* CKImagePicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9BDB3E67FD473D9B80EA15A9148A7F45 /* Pods-CKImagePicker_Tests */ = {
@@ -301,7 +518,62 @@
 			);
 			name = "Pods-CKImagePicker_Tests";
 			productName = "Pods-CKImagePicker_Tests";
-			productReference = 602027DC12E0C1DAA4804BFB2731D71E /* Pods_CKImagePicker_Tests.framework */;
+			productReference = 29949495165F9A00CA36C1D6062114A1 /* Pods_CKImagePicker_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3A04698AAE4D6124C20602D622956E5 /* Cartography */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B22DC939D187391042315573DBEE7623 /* Build configuration list for PBXNativeTarget "Cartography" */;
+			buildPhases = (
+				B962ED42E882856B9D168260BB18AE95 /* Sources */,
+				429A34DF3BBD7321C9C7D6FBF5F1E3FB /* Frameworks */,
+				514705BF944036B79FA99816C564643C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cartography;
+			productName = Cartography;
+			productReference = AD86BDF312F877543F2F302853A96F0E /* Cartography.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DAB223D9A33832F8971BAE0497926C76 /* FontAwesome.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9A5AA46307465CD63097F26AE4FB40 /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */;
+			buildPhases = (
+				B0273C801DD7A7845F95D9F56076FEC8 /* Sources */,
+				ABDA05BD117E5203A06ECA16CA024D61 /* Frameworks */,
+				B43FFCF1199A71503F93333325E1C2E5 /* Resources */,
+				D734DB49BFD5C1C91C5E3899530715AC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FontAwesome.swift;
+			productName = FontAwesome.swift;
+			productReference = FB1E654ED15A6F539BEAAAD6C4FFAA2B /* FontAwesome_swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DCF24C184FC81EA5DA99A32FBC13D37D /* Pods-CKImagePicker_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F35F351D13429B2C9389B25D171146F /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Example" */;
+			buildPhases = (
+				F62BEC9A4B6E713DEF511B30CB5128B7 /* Sources */,
+				6F97FD1FDF8026733FF67D6053520723 /* Frameworks */,
+				A9907D9A65D4C96342849039FD45F204 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D3DA5E9656D7870121B0F3B61FAC151 /* PBXTargetDependency */,
+				F682FBDF6854E44D0DB3AC8EB67EAE4F /* PBXTargetDependency */,
+				953DE47904C3985AAEF15BD97E9FF474 /* PBXTargetDependency */,
+			);
+			name = "Pods-CKImagePicker_Example";
+			productName = "Pods-CKImagePicker_Example";
+			productReference = 512068B24C07B9F7696EE8AAB1227413 /* Pods_CKImagePicker_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -321,23 +593,37 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = EA1E2C6E0BE8DCC66A6ED2280DE5744E /* Products */;
+			productRefGroup = A82E604DEA5AE7779439E64D6BC0FD21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F15E1FAF2CFD5351692FFD7FE93FC65 /* CKImagePicker */,
-				890F6362757F36A826C5570383073EEA /* Pods-CKImagePicker_Example */,
+				C3A04698AAE4D6124C20602D622956E5 /* Cartography */,
+				9BCCE0E29F8F6496C50F158AD85DF61F /* CKImagePicker */,
+				DAB223D9A33832F8971BAE0497926C76 /* FontAwesome.swift */,
+				DCF24C184FC81EA5DA99A32FBC13D37D /* Pods-CKImagePicker_Example */,
 				9BDB3E67FD473D9B80EA15A9148A7F45 /* Pods-CKImagePicker_Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		B43FFCF1199A71503F93333325E1C2E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		35CD6249B3823C83E7D182A98C01AF66 /* Sources */ = {
+		2A4524AB0E476A1C9A853B81D95CB969 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DF4DA4954BAA0DA56CC124A000AE4B9 /* Pods-CKImagePicker_Example-dummy.m in Sources */,
+				ED4AEC119704E8A39B71A233D6201B29 /* CKImagePickerView.swift in Sources */,
+				102C78F71D024224006B5163 /* CKImagePickerViewController.swift in Sources */,
+				C3CD9494F03FA3BD829EC2574FEBA574 /* CKImagePicker-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,23 +635,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB1301058FEEFB8CC6D9E1C752D13792 /* Sources */ = {
+		B0273C801DD7A7845F95D9F56076FEC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D4032F4DC6A603DF9A444A272C43441 /* CKImagePicker-dummy.m in Sources */,
-				F6DACA113E939744048D120B0DBE7003 /* ReplaceMe.swift in Sources */,
+				337A8DFD50F43263096173E061EEA9A5 /* Enum.swift in Sources */,
+				7C3FBF5E1E0F80256604CB657F319CA1 /* FontAwesome.swift in Sources */,
+				0517A3D1AE2235822B12880D2317472A /* FontAwesome.swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B962ED42E882856B9D168260BB18AE95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */,
+				D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */,
+				EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */,
+				28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */,
+				D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */,
+				F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */,
+				E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */,
+				452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */,
+				0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */,
+				369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */,
+				2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */,
+				5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */,
+				7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */,
+				BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */,
+				8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */,
+				D3C01862D88692FA2E85A2D84345982B /* Point.swift in Sources */,
+				C3649839064E53A4BF767D2EF29651EF /* Priority.swift in Sources */,
+				EB9E85B0CE6A53DCBDE040A716B5DBF8 /* Property.swift in Sources */,
+				B23E3B878363F72D1E874E46EB62FA7F /* Size.swift in Sources */,
+				F95ADCA0B85C6C0640372D3EFBBF1AD6 /* View.swift in Sources */,
+				48ADE3FB3F30FCA5893083351449DA98 /* ViewUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F62BEC9A4B6E713DEF511B30CB5128B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D984EFBC6C8A5C3D72EBD58D0FE6452 /* Pods-CKImagePicker_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F82FE0FF89A2EC09836DECB72B57E49A /* PBXTargetDependency */ = {
+		119EE559C3F63876DDA34A6F266D8B42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesome.swift;
+			target = DAB223D9A33832F8971BAE0497926C76 /* FontAwesome.swift */;
+			targetProxy = B239FB09C3B79F9C2891751A1FDD2D37 /* PBXContainerItemProxy */;
+		};
+		3D3DA5E9656D7870121B0F3B61FAC151 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CKImagePicker;
-			target = 3F15E1FAF2CFD5351692FFD7FE93FC65 /* CKImagePicker */;
-			targetProxy = 8A879F804270F0A51EF6B5712B4700BD /* PBXContainerItemProxy */;
+			target = 9BCCE0E29F8F6496C50F158AD85DF61F /* CKImagePicker */;
+			targetProxy = E8A9E476897274F5509554BF833CD5A7 /* PBXContainerItemProxy */;
+		};
+		953DE47904C3985AAEF15BD97E9FF474 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesome.swift;
+			target = DAB223D9A33832F8971BAE0497926C76 /* FontAwesome.swift */;
+			targetProxy = 0A38B8A830E5357504ED0F028B40F439 /* PBXContainerItemProxy */;
+		};
+		E26F982FF4F3AA96B95A496604E7A8D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cartography;
+			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
+			targetProxy = 512AABAFAB70D6D7E0FF5A9A3C7B3D1C /* PBXContainerItemProxy */;
+		};
+		F682FBDF6854E44D0DB3AC8EB67EAE4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cartography;
+			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
+			targetProxy = BD9C4EB073B45887CE37C98D6C5DF4A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -408,9 +755,39 @@
 			};
 			name = Release;
 		};
-		1B585BF43D9063B4972325A6475B3CEC /* Release */ = {
+		136AA8DDAE7F2FAF0B59993A7682F8AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60C3C7504B51BE8628D523B57D89B05C /* CKImagePicker.xcconfig */;
+			baseConfigurationReference = 9665797115B26A8CEACB19819B53D421 /* FontAwesome.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesome.swift/FontAwesome.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FontAwesome_swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1A79383A54B487E28E4C302C30B4220A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 092417E0E15A8592D7A5FDC1F01C51AE /* Cartography.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -421,14 +798,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CKImagePicker/CKImagePicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CKImagePicker/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CKImagePicker/CKImagePicker.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CKImagePicker;
+				PRODUCT_NAME = Cartography;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,6 +847,102 @@
 			};
 			name = Release;
 		};
+		481450BD310791CEF1EBC02B898316C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F31F43A0701AA6DF19E04F3C04B90A83 /* Pods-CKImagePicker_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CKImagePicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CKImagePicker_Example/Pods-CKImagePicker_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CKImagePicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		543F433465F6663D94A915DE91D94A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D8099CB9A495D6890D3BBD32DC129B /* Pods-CKImagePicker_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CKImagePicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CKImagePicker_Example/Pods-CKImagePicker_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CKImagePicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		577E61562529183FA35F99A8A0F46FB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9665797115B26A8CEACB19819B53D421 /* FontAwesome.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesome.swift/FontAwesome.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FontAwesome_swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5CE59BC7BDB1A0F3E5EC47E7CA0208E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBC2C249BB93E16C53B9E6859EF2DEBE /* Pods-CKImagePicker_Tests.debug.xcconfig */;
@@ -503,13 +976,43 @@
 			};
 			name = Debug;
 		};
-		730E746670D08A729FCCB67ED07FB6FC /* Debug */ = {
+		A4474F4BF89516A6E746D29B9E73DC03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 092417E0E15A8592D7A5FDC1F01C51AE /* Cartography.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cartography;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C828AA434A90BBA0F218F0B2E2FC6EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60C3C7504B51BE8628D523B57D89B05C /* CKImagePicker.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -522,42 +1025,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CKImagePicker/CKImagePicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = CKImagePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		834D0B1C2178FA0BC02793F58DCCFD6C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28D8099CB9A495D6890D3BBD32DC129B /* Pods-CKImagePicker_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CKImagePicker_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CKImagePicker_Example/Pods-CKImagePicker_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CKImagePicker_Example;
+				PRODUCT_NAME = CKImagePicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,40 +1034,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		932A4C7BE8DC607A277F8C9874296998 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F31F43A0701AA6DF19E04F3C04B90A83 /* Pods-CKImagePicker_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CKImagePicker_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CKImagePicker_Example/Pods-CKImagePicker_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CKImagePicker_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -642,9 +1077,57 @@
 			};
 			name = Debug;
 		};
+		F245E85699456B163E73223C9E09235E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60C3C7504B51BE8628D523B57D89B05C /* CKImagePicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CKImagePicker/CKImagePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CKImagePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CKImagePicker/CKImagePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CKImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F35F351D13429B2C9389B25D171146F /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				481450BD310791CEF1EBC02B898316C6 /* Debug */,
+				543F433465F6663D94A915DE91D94A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A9A5AA46307465CD63097F26AE4FB40 /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				136AA8DDAE7F2FAF0B59993A7682F8AD /* Debug */,
+				577E61562529183FA35F99A8A0F46FB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29EB951FD35CA2ACA0D4B4C1058E368A /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -663,20 +1146,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9AA9F99EFE1517625996DAFD78AFD80 /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Example" */ = {
+		B22DC939D187391042315573DBEE7623 /* Build configuration list for PBXNativeTarget "Cartography" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				932A4C7BE8DC607A277F8C9874296998 /* Debug */,
-				834D0B1C2178FA0BC02793F58DCCFD6C /* Release */,
+				A4474F4BF89516A6E746D29B9E73DC03 /* Debug */,
+				1A79383A54B487E28E4C302C30B4220A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF412435D7B0DDDD9055D08BDC8C601A /* Build configuration list for PBXNativeTarget "CKImagePicker" */ = {
+		C0290D07DFB22A6020BA1FDF3BEDA907 /* Build configuration list for PBXNativeTarget "CKImagePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				730E746670D08A729FCCB67ED07FB6FC /* Debug */,
-				1B585BF43D9063B4972325A6475B3CEC /* Release */,
+				F245E85699456B163E73223C9E09235E /* Debug */,
+				C828AA434A90BBA0F218F0B2E2FC6EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

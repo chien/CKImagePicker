@@ -18,5 +18,13 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "CKImagePicker/Classes/**/*"
+  "source_files": "CKImagePicker/Classes/**/*",
+  "dependencies": {
+    "Cartography": [
+      "~> 0.5"
+    ],
+    "FontAwesome.swift": [
+
+    ]
+  }
 }
