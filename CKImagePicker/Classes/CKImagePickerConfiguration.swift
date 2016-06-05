@@ -10,9 +10,7 @@ public class CKImagePickerConfiguration {
     public var font = UIFont.systemFontOfSize(16)
     public var textColor = UIColor.lightGrayColor()
     public var backgroundColor = UIColor.whiteColor()
-    public var selectedFont = UIFont.systemFontOfSize(16)
-    public var selectedTextColor = UIColor.blackColor()
-    public var selectedBackgroundColor = UIColor.whiteColor()
+    public var tintColor = UIColor.blackColor()
 
     public var defaultPage = 0
     public var scrollEnabled = true // in case of using swipable cells, set false

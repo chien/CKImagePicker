@@ -9,7 +9,8 @@
 import Cartography
 
 class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
-    
+    var configuration: CKImagePickerConfiguration!
+
     var collectionView: UICollectionView?
     var imageCropView =  CKImageCropView()
     var imageCropViewContainer = UIView()
@@ -34,7 +35,8 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
     let dragDiff: CGFloat     = 20.0
     let images: [UIImage] = []
     
-    init() {
+    init(configuration: CKImagePickerConfiguration) {
+        self.configuration = configuration
         super.init(frame: CGRectZero)
         
         // initialize collection view
@@ -212,6 +214,7 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         
         let currentTag = cell.tag + 1
         cell.tag = currentTag
+        cell.configuration = self.configuration
         cell.image = self.images[indexPath.item]
         return cell
     }

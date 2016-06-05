@@ -9,7 +9,7 @@
 import UIKit
 
 final class CKAlbumViewCell: UICollectionViewCell {
-    
+    var configuration: CKImagePickerConfiguration!
     var imageView: UIImageView!
     var image: UIImage? {
         didSet {
@@ -19,7 +19,7 @@ final class CKAlbumViewCell: UICollectionViewCell {
     
     override var selected : Bool {
         didSet {
-            self.layer.borderColor = UIColor.yellowColor().CGColor
+            self.layer.borderColor = (selected ? configuration.tintColor : UIColor.clearColor()).CGColor
             self.layer.borderWidth = selected ? 2 : 0
         }
     }

@@ -9,15 +9,11 @@
 import UIKit
 import Cartography
 
-protocol CKImagePickerViewDelegate {
-    func takePhoto(sender: UIButton)
-}
-
 public class CKImagePickerView: UIView {
     var configuration: CKImagePickerConfiguration!
     let buttonSize = CGFloat(30.0)
     let buttonSpace = CGFloat(2.0)
-    let albumView = CKAlbumView()
+    let albumView: CKAlbumView!
 
     // button section
     var buttonSectionView = UIView()
@@ -25,8 +21,9 @@ public class CKImagePickerView: UIView {
     var albumButton = UIButton(type: UIButtonType.System)
     
     public init(frame: CGRect, configuration: CKImagePickerConfiguration) {
-        super.init(frame: frame)
         self.configuration = configuration
+        self.albumView = CKAlbumView(configuration: self.configuration)
+        super.init(frame: frame)
 
         let buttonSectionHeight = buttonSize+2*buttonSpace
         self.addSubview(albumView)
@@ -50,7 +47,6 @@ public class CKImagePickerView: UIView {
             view1.height   == buttonSectionHeight
             view1.top  == view2.bottom
             view1.left == view1.superview!.left
-            
             view2.top == view2.superview!.top
             view2.left == view2.superview!.left
             view2.width == view2.superview!.width
