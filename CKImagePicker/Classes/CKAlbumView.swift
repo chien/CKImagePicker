@@ -6,9 +6,10 @@
 //
 //
 
+import UIKit
 import Cartography
 
-class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
+class CKAlbumView: UIView, UIGestureRecognizerDelegate {
     var configuration: CKImagePickerConfiguration!
 
     var collectionView: UICollectionView?
@@ -33,19 +34,24 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
     var cropBottomY: CGFloat  = 0.0
     var dragStartPos: CGPoint = CGPointZero
     let dragDiff: CGFloat     = 20.0
-    let images: [UIImage] = []
+    var images: [UIImage] = []
     
     init(configuration: CKImagePickerConfiguration) {
         self.configuration = configuration
         super.init(frame: CGRectZero)
-        self.backgroundColor = UIColor.orangeColor()
+        self.translatesAutoresizingMaskIntoConstraints = false
+        imageCropViewContainer.backgroundColor = UIColor.orangeColor()
         
         // initialize collection view
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = cellSize
-        flowLayout.scrollDirection = .Horizontal
-        collectionView = UICollectionView(frame: frame, collectionViewLayout: flowLayout)
-        collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "CKAlbumViewCell")
+        flowLayout.scrollDirection = .Vertical
+        collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: flowLayout)
+        collectionView!.registerClass(CKAlbumViewCell.self, forCellWithReuseIdentifier: "CKAlbumViewCell")
+        collectionView!.translatesAutoresizingMaskIntoConstraints = false
+
+        collectionView!.delegate = self
+        collectionView!.dataSource = self
         collectionView!.backgroundColor = UIColor.greenColor()
 
         let panGesture      = UIPanGestureRecognizer(target: self, action: #selector(CKAlbumView.panned(_:)))
@@ -56,12 +62,22 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         self.addSubview(imageCropViewContainer)
         imageCropViewContainer.addSubview(imageCropView)
 
-        constrain(collectionView!, imageCropViewContainer) { v1, v2 in
-            v1.height == v1.superview!.height - self.imageCropView.frame.height
+        constrain(imageCropViewContainer, collectionView!) { v1, v2 in
+            v1.top == v1.superview!.top
+            v1.left == v1.superview!.left
             v1.width == v1.superview!.width
+            v1.height == v1.superview!.width
+
+            v2.height == CGFloat(200)
             v2.width == v2.superview!.width
-            v2.top == v2.top
-            v1.top == v2.bottom
+            v2.top == v1.bottom
+            v2.left == v1.left
+        }
+        
+        constrain(imageCropView) { view in
+            view.size == view.superview!.size
+            view.top == view.superview!.top
+            view.left == view.superview!.left
         }
         
         dragDirection = Direction.Up
@@ -72,9 +88,7 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         imageCropViewContainer.layer.shadowOffset  = CGSizeZero
 
         if images.count > 0 {
-            changeImage(images[0])
-            collectionView!.reloadData()
-            collectionView!.selectItemAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.None)
+            reloadImages()
         }
     }
     
@@ -83,6 +97,11 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
     }
     
     deinit {
+    }
+    
+    func reloadImages() {
+        collectionView!.reloadData()
+        collectionView!.selectItemAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.None)
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -206,55 +225,6 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         
     }
     
-    
-    // MARK: - UICollectionViewDelegate Protocol
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CKAlbumViewCell", forIndexPath: indexPath) as! CKAlbumViewCell
-        
-        let currentTag = cell.tag + 1
-        cell.tag = currentTag
-        cell.configuration = self.configuration
-        cell.image = self.images[indexPath.item]
-        return cell
-    }
-    
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        
-        return 1
-    }
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return images.count
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
-        let width = (collectionView.frame.width - 3) / 4
-        return CGSize(width: width, height: width)
-    }
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        changeImage(images[indexPath.row])
-        
-        imageCropView.changeScrollable(true)
-        
-//        imageCropViewConstraintTop.constant = imageCropViewOriginalConstraintTop
-//        collectionViewConstraintHeight.constant = self.frame.height - imageCropViewOriginalConstraintTop - imageCropViewContainer.frame.height
-        
-        UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            
-            self.layoutIfNeeded()
-            
-            }, completion: nil)
-        
-        dragDirection = Direction.Up
-        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
-    }
-    
-    
     // MARK: - ScrollViewDelegate
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
@@ -263,6 +233,54 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         }
     }
 }
+
+extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    // MARK: - UICollectionViewDelegate Protocol
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CKAlbumViewCell", forIndexPath: indexPath) as! CKAlbumViewCell
+        
+        let currentTag = cell.tag + 1
+        cell.tag = currentTag
+        cell.configuration = self.configuration
+        cell.image = self.images[indexPath.row]
+        return cell
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        let width = (collectionView.frame.width - 3) / 4
+        return CGSize(width: width, height: width)
+    }
+    
+    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        self.changeImage(self.images[indexPath.row])
+        
+        self.imageCropView.changeScrollable(true)
+        
+        //        imageCropViewConstraintTop.constant = imageCropViewOriginalConstraintTop
+        //        collectionViewConstraintHeight.constant = self.frame.height - imageCropViewOriginalConstraintTop - imageCropViewContainer.frame.height
+        
+        UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            
+            self.layoutIfNeeded()
+            
+            }, completion: nil)
+        
+        self.dragDirection = Direction.Up
+        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
+    }
+}
+
 
 internal extension UICollectionView {
     

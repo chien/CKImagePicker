@@ -22,6 +22,14 @@ public class CKImagePickerViewController: UIViewController {
         self.configuration = configuration
         super.init(nibName: nil, bundle: nil)
     }
+
+    public override func viewDidLoad() {
+        imagePickerView.delegate = self
+        imagePickerView.cameraView.delegate = self
+        imagePickerView.cameraButton.addTarget(self, action: #selector(CKImagePickerViewController.switchView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        imagePickerView.albumButton.addTarget(self, action: #selector(CKImagePickerViewController.switchView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        switchView(imagePickerView.cameraButton)
+    }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -29,5 +37,28 @@ public class CKImagePickerViewController: UIViewController {
     
     public override func viewDidAppear(animated: Bool) {
         imagePickerView.cameraView.initializeSession()
+    }
+}
+
+extension CKImagePickerViewController: CKImagePickerViewDelegate {
+    @objc func cameraShotFinished(image: UIImage) {
+        let imageData = NSData(data:UIImagePNGRepresentation(image)!)
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+        let fullPath = documentsPath.stringByAppendingString("/yourNameImg.jpg")
+        let result = imageData.writeToFile(fullPath, atomically: true)
+
+        let imageFromPath = UIImage(contentsOfFile: fullPath)
+        imagePickerView.albumView.images = [imageFromPath!]
+        imagePickerView.albumView.reloadImages()
+    }
+
+    @objc func switchView(button: UIButton) {
+        if button.tag == CKImagePickerConfiguration.MenuMode.Camera.rawValue {
+            imagePickerView.albumView.hidden = true
+            imagePickerView.cameraView.hidden = false
+        } else {
+            imagePickerView.albumView.hidden = false
+            imagePickerView.cameraView.hidden = true
+        }
     }
 }

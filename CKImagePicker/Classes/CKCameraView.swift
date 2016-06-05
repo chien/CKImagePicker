@@ -44,9 +44,11 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
         
         flashButton.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
         flashButton.setTitle(String.fontAwesomeIconWithName(.Flash), forState: .Normal)
+        flashButton.addTarget(self, action: #selector(CKCameraView.flashButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
         shotButton.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
         shotButton.setTitle(String.fontAwesomeIconWithName(.CameraRetro), forState: .Normal)
+        shotButton.addTarget(self, action: #selector(CKCameraView.shotButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
         flashConfiguration()
 
@@ -67,14 +69,12 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
         
         constrain(flashButton, shotButton) { b1, b2 in
             align(top: b1, b2)
-            
+            b1.left == b1.superview!.left
             b1.width == CGFloat(50)
             b1.height == CGFloat(50)
             b2.size == b1.size
             distribute(by: 10, horizontally: b1, b2)
         }
-
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CKCameraView.willEnterForegroundNotification(_:)), name: UIApplicationWillEnterForegroundNotification, object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {

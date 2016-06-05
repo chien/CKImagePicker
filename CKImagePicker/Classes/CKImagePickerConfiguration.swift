@@ -11,6 +11,9 @@ public class CKImagePickerConfiguration {
     public var textColor = UIColor.lightGrayColor()
     public var backgroundColor = UIColor.whiteColor()
     public var tintColor = UIColor.blackColor()
+    
+    public var menuButtonSize = CGFloat(30)
+    public var menuButtonSpacing = CGFloat(2)
 
     public var defaultPage = 0
     public var scrollEnabled = true // in case of using swipable cells, set false

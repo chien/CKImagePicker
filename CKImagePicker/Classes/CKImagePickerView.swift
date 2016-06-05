@@ -9,16 +9,13 @@
 import UIKit
 import Cartography
 
-protocol CKImagePickerViewDelegate {
+protocol CKImagePickerViewDelegate: CKCameraViewDelegate {
     func switchView(button: UIButton)
 }
 
 public class CKImagePickerView: UIView {
     var configuration: CKImagePickerConfiguration!
-    let constraintGroup = ConstraintGroup()
 
-    let buttonSize = CGFloat(30.0)
-    let buttonSpace = CGFloat(2.0)
     let albumView: CKAlbumView!
     let cameraView: CKCameraView!
     let contentContainer = UIView()
@@ -28,13 +25,15 @@ public class CKImagePickerView: UIView {
     var cameraButton = UIButton(type: UIButtonType.System)
     var albumButton = UIButton(type: UIButtonType.System)
     
+    var delegate: CKImagePickerViewDelegate!
+    
     public init(frame: CGRect, configuration: CKImagePickerConfiguration) {
         self.configuration = configuration
         self.albumView = CKAlbumView(configuration: self.configuration)
         self.cameraView = CKCameraView(configuration: self.configuration)
         super.init(frame: frame)
 
-        let buttonSectionHeight = buttonSize+2*buttonSpace
+        let buttonSectionHeight = configuration.menuButtonSize + 2*configuration.menuButtonSpacing
         self.addSubview(contentContainer)
         contentContainer.addSubview(albumView)
         contentContainer.addSubview(cameraView)
@@ -51,14 +50,13 @@ public class CKImagePickerView: UIView {
         cameraButton.titleLabel!.textColor = configuration.textColor
         cameraButton.titleLabel!.font = configuration.font
         cameraButton.tag = CKImagePickerConfiguration.MenuMode.Camera.rawValue
-        cameraButton.addTarget(self, action: #selector(CKImagePickerView.switchView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
         albumButton.backgroundColor = configuration.backgroundColor
         albumButton.setTitle("Album", forState: UIControlState.Normal)
         albumButton.tag = CKImagePickerConfiguration.MenuMode.Album.rawValue
         albumButton.titleLabel!.textColor = configuration.textColor
         albumButton.titleLabel!.font = configuration.font
-        albumButton.addTarget(self, action: #selector(CKImagePickerView.switchView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
 
         constrain(buttonSectionView, contentContainer) { view1, view2 in
             view2.top == view2.superview!.top
@@ -73,14 +71,14 @@ public class CKImagePickerView: UIView {
         }
         
         constrain(cameraButton, albumButton) { camera, album in
-            camera.bottom == camera.superview!.bottom - self.buttonSpace
-            camera.left == camera.superview!.left + self.buttonSpace
-            album.left == camera.right + self.buttonSpace
+            camera.bottom == camera.superview!.bottom - self.configuration.menuButtonSpacing
+            camera.left == camera.superview!.left + self.configuration.menuButtonSpacing
+            album.left == camera.right + self.configuration.menuButtonSpacing
             align(bottom: camera, album)
-            camera.width == (self.frame.width - 3*self.buttonSpace)/2
+            camera.width == (self.frame.width - 3*self.configuration.menuButtonSpacing)/2
             album.width == camera.width
-            camera.height == self.buttonSize
-            album.height == self.buttonSize
+            camera.height == self.configuration.menuButtonSize
+            album.height == self.configuration.menuButtonSize
         }
         
         constrain(cameraView) { view in
@@ -96,25 +94,9 @@ public class CKImagePickerView: UIView {
             view.top == view.superview!.top
             view.left == view.superview!.left
         }
-        
-        switchView(cameraButton)
     }
     
     required public init(coder aDecoder: NSCoder) {
         fatalError("This class does not not support NSCoding")
     }
 }
-
-
-extension CKImagePickerView: CKImagePickerViewDelegate {
-    func switchView(button: UIButton) {
-        if button.tag == CKImagePickerConfiguration.MenuMode.Camera.rawValue {
-            albumView.hidden = true
-            cameraView.hidden = false
-        } else {
-            albumView.hidden = false
-            cameraView.hidden = true
-        }
-    }
-}
-
