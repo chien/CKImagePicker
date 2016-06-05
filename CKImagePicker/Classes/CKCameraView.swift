@@ -188,56 +188,13 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
                         self.device      = nil
                         self.imageOutput = nil
                         
+                        self.initializeSession()
                     })
                 }
                 
             })
             
         })
-    }
-    
-    func flipButtonPressed(sender: UIButton) {
-        
-        if !cameraIsAvailable() {
-            
-            return
-        }
-        
-        session?.stopRunning()
-        
-        do {
-            
-            session?.beginConfiguration()
-            
-            if let session = session {
-                
-                for input in session.inputs {
-                    
-                    session.removeInput(input as! AVCaptureInput)
-                }
-                
-                let position = (videoInput?.device.position == AVCaptureDevicePosition.Front) ? AVCaptureDevicePosition.Back : AVCaptureDevicePosition.Front
-                
-                for device in AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo) {
-                    
-                    if let device = device as? AVCaptureDevice where device.position == position {
-                        
-                        videoInput = try AVCaptureDeviceInput(device: device)
-                        session.addInput(videoInput)
-                        
-                    }
-                }
-                
-            }
-            
-            session?.commitConfiguration()
-            
-            
-        } catch {
-            
-        }
-        
-        session?.startRunning()
     }
     
     func flashButtonPressed(sender: UIButton) {
