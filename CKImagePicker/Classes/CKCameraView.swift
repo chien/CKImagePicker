@@ -8,18 +8,19 @@
 
 import UIKit
 import AVFoundation
+import Cartography
+import FontAwesome_swift
 
 @objc protocol CKCameraViewDelegate: class {
     func cameraShotFinished(image: UIImage)
 }
 
-final class CKCameraView: UIView, UIGestureRecognizerDelegate {
+class CKCameraView: UIView, UIGestureRecognizerDelegate {
     var configuration: CKImagePickerConfiguration!
     
     var previewViewContainer = UIView()
-    var shotButton = UIButton()
-    var flashButton = UIButton()
-    var flipButton = UIButton()
+    var shotButton = UIButton(type: UIButtonType.System)
+    var flashButton = UIButton(type: UIButtonType.System)
     
     var delegate: CKCameraViewDelegate? = nil
     
@@ -31,16 +32,66 @@ final class CKCameraView: UIView, UIGestureRecognizerDelegate {
     
     init(configuration: CKImagePickerConfiguration) {
         self.configuration = configuration
+        self.session = nil
         super.init(frame: CGRectZero)
-        self.backgroundColor = UIColor.cyanColor()
+        
+        previewViewContainer.backgroundColor = UIColor.grayColor()
 
-        if session != nil {
+        flashButton.tintColor = UIColor.orangeColor()
+        shotButton.tintColor  = UIColor.orangeColor()
+        flashButton.backgroundColor = UIColor.blueColor()
+        shotButton.backgroundColor = UIColor.blueColor()
+        
+        flashButton.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
+        flashButton.setTitle(String.fontAwesomeIconWithName(.Flash), forState: .Normal)
+        
+        shotButton.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
+        shotButton.setTitle(String.fontAwesomeIconWithName(.CameraRetro), forState: .Normal)
+        
+        flashConfiguration()
+
+        self.addSubview(previewViewContainer)
+        self.addSubview(flashButton)
+        self.addSubview(shotButton)
+        
+        constrain(previewViewContainer) { view in
+            view.top == view.superview!.top
+            view.left == view.superview!.left
+            view.width == view.superview!.width
+            view.height == view.superview!.width
+        }
+        
+        constrain(previewViewContainer, flashButton) { preview, button in
+            button.top == preview.bottom + CGFloat(20)
+        }
+        
+        constrain(flashButton, shotButton) { b1, b2 in
+            align(top: b1, b2)
             
-            return
+            b1.width == CGFloat(50)
+            b1.height == CGFloat(50)
+            b2.size == b1.size
+            distribute(by: 10, horizontally: b1, b2)
         }
 
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CKCameraView.willEnterForegroundNotification(_:)), name: UIApplicationWillEnterForegroundNotification, object: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
+    func initializeSession() {
+        if session != nil {
+            return
+        }
+        
         // AVCapture
-        session = AVCaptureSession()
+        self.session = AVCaptureSession()
         
         for device in AVCaptureDevice.devices() {
             
@@ -57,7 +108,7 @@ final class CKCameraView: UIView, UIGestureRecognizerDelegate {
         
         do {
             
-            if let session = session {
+            if let session = self.session {
                 
                 videoInput = try AVCaptureDeviceInput(device: device)
                 
@@ -84,49 +135,15 @@ final class CKCameraView: UIView, UIGestureRecognizerDelegate {
             self.previewViewContainer.addGestureRecognizer(tapRecognizer)
             
         } catch {
-            
-            
+            print("av session error")
         }
-        
-        flashButton.tintColor = UIColor.orangeColor()
-        flipButton.tintColor  = UIColor.orangeColor()
-        shotButton.tintColor  = UIColor.orangeColor()
-        
-        let bundle = NSBundle(forClass: self.classForCoder)
-        
-        let flashImage = UIImage(named: "ic_flash_off", inBundle: bundle, compatibleWithTraitCollection: nil)
-        let flipImage = UIImage(named: "ic_loop", inBundle: bundle, compatibleWithTraitCollection: nil)
-        let shotImage = UIImage(named: "ic_radio_button_checked", inBundle: bundle, compatibleWithTraitCollection: nil)
-        
-        flashButton.setImage(flashImage?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
-        flipButton.setImage(flipImage?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
-        shotButton.setImage(shotImage?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
-        
-//        self.flashConfiguration()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CKCameraView.willEnterForegroundNotification(_:)), name: UIApplicationWillEnterForegroundNotification, object: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    deinit {
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-    
-    func willEnterForegroundNotification(notification: NSNotification) {
         
         let status = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
         
         if status == AVAuthorizationStatus.Authorized {
-            
-            session?.startRunning()
-            
+            session!.startRunning()
         } else if status == AVAuthorizationStatus.Denied || status == AVAuthorizationStatus.Restricted {
-            
-            session?.stopRunning()
+            session!.stopRunning()
         }
     }
     

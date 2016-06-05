@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 public class CKImagePickerViewController: UIViewController {
     var imagePickerView: CKImagePickerView! { return self.view as! CKImagePickerView }
@@ -17,11 +18,16 @@ public class CKImagePickerViewController: UIViewController {
     }
     
     public init(configuration: CKImagePickerConfiguration) {
+        let status = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
         self.configuration = configuration
         super.init(nibName: nil, bundle: nil)
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public override func viewDidAppear(animated: Bool) {
+        imagePickerView.cameraView.initializeSession()
     }
 }

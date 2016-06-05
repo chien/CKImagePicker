@@ -49,6 +49,7 @@ public class CKImagePickerView: UIView {
         cameraButton.backgroundColor = configuration.backgroundColor
         cameraButton.setTitle("Camera", forState: UIControlState.Normal)
         cameraButton.titleLabel!.textColor = configuration.textColor
+        cameraButton.titleLabel!.font = configuration.font
         cameraButton.tag = CKImagePickerConfiguration.MenuMode.Camera.rawValue
         cameraButton.addTarget(self, action: #selector(CKImagePickerView.switchView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -56,6 +57,7 @@ public class CKImagePickerView: UIView {
         albumButton.setTitle("Album", forState: UIControlState.Normal)
         albumButton.tag = CKImagePickerConfiguration.MenuMode.Album.rawValue
         albumButton.titleLabel!.textColor = configuration.textColor
+        albumButton.titleLabel!.font = configuration.font
         albumButton.addTarget(self, action: #selector(CKImagePickerView.switchView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 
         constrain(buttonSectionView, contentContainer) { view1, view2 in
@@ -63,6 +65,7 @@ public class CKImagePickerView: UIView {
             view2.left == view2.superview!.left
             view2.width == view2.superview!.width
             view2.height == view2.superview!.height - buttonSectionHeight
+
             view1.top  == view2.bottom
             view1.left == view1.superview!.left
             view1.height == buttonSectionHeight
@@ -94,7 +97,7 @@ public class CKImagePickerView: UIView {
             view.left == view.superview!.left
         }
         
-        switchView(albumButton)
+        switchView(cameraButton)
     }
     
     required public init(coder aDecoder: NSCoder) {

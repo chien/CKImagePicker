@@ -12,16 +12,13 @@
 		0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62541BC7C4A93AA6C92D4B14AFBE67E6 /* Dimension.swift */; };
 		0FD7387EDA5009285A3BE3D08D444D70 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587088FB6A896D7E50728300EFCB25E0 /* Cartography.framework */; };
 		102C78F71D024224006B5163 /* CKImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */; };
-		106A1BE11D04A7D1007AAF1E /* CKAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE01D04A7D1007AAF1E /* CKAlbumView.swift */; };
-		106A1BE31D04A935007AAF1E /* CKAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE21D04A935007AAF1E /* CKAlbumViewCell.swift */; };
 		106A1BE41D04AD8C007AAF1E /* CKAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE01D04A7D1007AAF1E /* CKAlbumView.swift */; };
 		106A1BE51D04AD8F007AAF1E /* CKImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10775B4F1D02563D006DAC75 /* CKImageCropView.swift */; };
 		106A1BE61D04AD91007AAF1E /* CKAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE21D04A935007AAF1E /* CKAlbumViewCell.swift */; };
-		106A1BE81D04B187007AAF1E /* CKImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE71D04B187007AAF1E /* CKImagePickerConfiguration.swift */; };
 		106A1BE91D04B261007AAF1E /* CKImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE71D04B187007AAF1E /* CKImagePickerConfiguration.swift */; };
-		106A1BEB1D04B746007AAF1E /* CKCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BEA1D04B746007AAF1E /* CKCameraView.swift */; };
 		106A1BEC1D04B7EB007AAF1E /* CKCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BEA1D04B746007AAF1E /* CKCameraView.swift */; };
-		10775B501D02563D006DAC75 /* CKImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10775B4F1D02563D006DAC75 /* CKImageCropView.swift */; };
+		106A1BED1D04C9FD007AAF1E /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBFE4FB47CB95CFA119ECF19C190E53 /* FontAwesome.otf */; };
+		106A1BEF1D04CA32007AAF1E /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBFE4FB47CB95CFA119ECF19C190E53 /* FontAwesome.otf */; };
 		2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F228D8596C5F06F6692032A729A6B1 /* Edge.swift */; };
 		28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D609ADA3CBBE2EB59D4E0EEDA9C38E4 /* Compound.swift */; };
 		337A8DFD50F43263096173E061EEA9A5 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EFC96D3A79D103387BBE83B2977783 /* Enum.swift */; };
@@ -188,8 +185,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FD7387EDA5009285A3BE3D08D444D70 /* Cartography.framework in Frameworks */,
 				04BC278ED8790BA7610C8D826D3507E7 /* FontAwesome_swift.framework in Frameworks */,
+				0FD7387EDA5009285A3BE3D08D444D70 /* Cartography.framework in Frameworks */,
 				959E94859EB9C6E5053730A5CA807BDD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +509,7 @@
 				2A4524AB0E476A1C9A853B81D95CB969 /* Sources */,
 				0A2E797CF7CC77E14C32DA55E9FA5AE8 /* Frameworks */,
 				7CD46B550BABD8D7522D2B82EE9379AF /* Headers */,
+				106A1BEE1D04CA25007AAF1E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -627,10 +625,19 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		106A1BEE1D04CA25007AAF1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106A1BEF1D04CA32007AAF1E /* FontAwesome.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B43FFCF1199A71503F93333325E1C2E5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106A1BED1D04C9FD007AAF1E /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,23 +681,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				106A1BE81D04B187007AAF1E /* CKImagePickerConfiguration.swift in Sources */,
 				584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */,
 				D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */,
-				106A1BEB1D04B746007AAF1E /* CKCameraView.swift in Sources */,
 				EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */,
 				28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */,
-				106A1BE11D04A7D1007AAF1E /* CKAlbumView.swift in Sources */,
 				D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */,
 				F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */,
 				E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */,
 				452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */,
 				0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */,
-				106A1BE31D04A935007AAF1E /* CKAlbumViewCell.swift in Sources */,
 				369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */,
 				2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */,
 				5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */,
-				10775B501D02563D006DAC75 /* CKImageCropView.swift in Sources */,
 				7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */,
 				BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */,
 				8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */,
@@ -805,6 +807,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "FontAwesome-swift";
 				PRODUCT_NAME = FontAwesome_swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -964,6 +967,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "FontAwesome-swift";
 				PRODUCT_NAME = FontAwesome_swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
