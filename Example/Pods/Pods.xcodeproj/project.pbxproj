@@ -19,6 +19,8 @@
 		106A1BE61D04AD91007AAF1E /* CKAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE21D04A935007AAF1E /* CKAlbumViewCell.swift */; };
 		106A1BE81D04B187007AAF1E /* CKImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE71D04B187007AAF1E /* CKImagePickerConfiguration.swift */; };
 		106A1BE91D04B261007AAF1E /* CKImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE71D04B187007AAF1E /* CKImagePickerConfiguration.swift */; };
+		106A1BEB1D04B746007AAF1E /* CKCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BEA1D04B746007AAF1E /* CKCameraView.swift */; };
+		106A1BEC1D04B7EB007AAF1E /* CKCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BEA1D04B746007AAF1E /* CKCameraView.swift */; };
 		10775B501D02563D006DAC75 /* CKImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10775B4F1D02563D006DAC75 /* CKImageCropView.swift */; };
 		2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F228D8596C5F06F6692032A729A6B1 /* Edge.swift */; };
 		28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D609ADA3CBBE2EB59D4E0EEDA9C38E4 /* Compound.swift */; };
@@ -106,6 +108,7 @@
 		106A1BE01D04A7D1007AAF1E /* CKAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKAlbumView.swift; sourceTree = "<group>"; };
 		106A1BE21D04A935007AAF1E /* CKAlbumViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKAlbumViewCell.swift; sourceTree = "<group>"; };
 		106A1BE71D04B187007AAF1E /* CKImagePickerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKImagePickerConfiguration.swift; sourceTree = "<group>"; };
+		106A1BEA1D04B746007AAF1E /* CKCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKCameraView.swift; sourceTree = "<group>"; };
 		10775B4F1D02563D006DAC75 /* CKImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKImageCropView.swift; sourceTree = "<group>"; };
 		10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKImagePickerViewController.swift; sourceTree = "<group>"; };
 		10D92AE5D82047E9A9E308B6073DC690 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -359,6 +362,7 @@
 				10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */,
 				106A1BE21D04A935007AAF1E /* CKAlbumViewCell.swift */,
 				106A1BE01D04A7D1007AAF1E /* CKAlbumView.swift */,
+				106A1BEA1D04B746007AAF1E /* CKCameraView.swift */,
 				10775B4F1D02563D006DAC75 /* CKImageCropView.swift */,
 			);
 			path = Classes;
@@ -637,6 +641,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106A1BEC1D04B7EB007AAF1E /* CKCameraView.swift in Sources */,
 				106A1BE91D04B261007AAF1E /* CKImagePickerConfiguration.swift in Sources */,
 				106A1BE51D04AD8F007AAF1E /* CKImageCropView.swift in Sources */,
 				106A1BE61D04AD91007AAF1E /* CKAlbumViewCell.swift in Sources */,
@@ -672,6 +677,7 @@
 				106A1BE81D04B187007AAF1E /* CKImagePickerConfiguration.swift in Sources */,
 				584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */,
 				D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */,
+				106A1BEB1D04B746007AAF1E /* CKCameraView.swift in Sources */,
 				EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */,
 				28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */,
 				106A1BE11D04A7D1007AAF1E /* CKAlbumView.swift in Sources */,

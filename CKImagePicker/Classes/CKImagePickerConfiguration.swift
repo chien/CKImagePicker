@@ -33,6 +33,11 @@ public class CKImagePickerConfiguration {
     internal let minumumSupportedViewCount = 1
     internal let dummyMenuItemViewsSet = 3
     
+    public enum MenuMode: Int {
+        case Camera
+        case Album
+    }
+    
     public enum MenuPosition {
         case Top
         case Bottom

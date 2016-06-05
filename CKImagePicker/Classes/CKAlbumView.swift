@@ -38,6 +38,7 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
     init(configuration: CKImagePickerConfiguration) {
         self.configuration = configuration
         super.init(frame: CGRectZero)
+        self.backgroundColor = UIColor.orangeColor()
         
         // initialize collection view
         let flowLayout = UICollectionViewFlowLayout()
@@ -47,7 +48,6 @@ class CKAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "CKAlbumViewCell")
         collectionView!.backgroundColor = UIColor.greenColor()
 
-        self.hidden = false
         let panGesture      = UIPanGestureRecognizer(target: self, action: #selector(CKAlbumView.panned(_:)))
         panGesture.delegate = self
         self.addGestureRecognizer(panGesture)
