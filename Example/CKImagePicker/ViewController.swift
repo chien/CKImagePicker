@@ -10,7 +10,6 @@ import UIKit
 import CKImagePicker
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         let button = UIButton(type: UIButtonType.System)
@@ -28,7 +27,8 @@ class ViewController: UIViewController {
     }
     
     func openImagePicker(sender: UIButton) {
-        let vc = CKImagePickerViewController()
+        let configuration = CKImagePickerConfiguration()
+        let vc = CKImagePickerViewController(configuration: configuration)
         self.presentViewController(vc, animated: true, completion: nil)
     }
 }
