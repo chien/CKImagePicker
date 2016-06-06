@@ -59,8 +59,8 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
         constrain(previewViewContainer) { view in
             view.top == view.superview!.top
             view.left == view.superview!.left
-            view.width == view.superview!.width
-            view.height == view.superview!.width
+            view.width == configuration.imageContainerSize
+            view.height == configuration.imageContainerSize
         }
         
         constrain(previewViewContainer, flashButton) { preview, button in

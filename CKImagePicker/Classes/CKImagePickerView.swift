@@ -32,8 +32,7 @@ public class CKImagePickerView: UIView {
         self.albumView = CKAlbumView(configuration: self.configuration)
         self.cameraView = CKCameraView(configuration: self.configuration)
         super.init(frame: frame)
-
-        let buttonSectionHeight = configuration.menuButtonSize + 2*configuration.menuButtonSpacing
+        
         self.addSubview(contentContainer)
         contentContainer.addSubview(albumView)
         contentContainer.addSubview(cameraView)
@@ -56,11 +55,11 @@ public class CKImagePickerView: UIView {
             view2.top == view2.superview!.top
             view2.left == view2.superview!.left
             view2.width == view2.superview!.width
-            view2.height == view2.superview!.height - buttonSectionHeight
+            view2.height == view2.superview!.height - configuration.menuSectionHeight
 
             view1.top  == view2.bottom
             view1.left == view1.superview!.left
-            view1.height == buttonSectionHeight
+            view1.height == configuration.menuSectionHeight
             view1.width == view1.superview!.width
         }
         

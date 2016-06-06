@@ -17,7 +17,6 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
     var imageCropViewContainer = UIView()
     
     var previousPreheatRect: CGRect = CGRectZero
-    let cellSize = CGSize(width: 100, height: 100)
     
     // Variables for calculating the position
     enum Direction {
@@ -42,11 +41,14 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
         super.init(frame: CGRectZero)
         self.translatesAutoresizingMaskIntoConstraints = false
         imageCropViewContainer.backgroundColor = self.configuration.backgroundColor
-        
+
         // initialize collection view
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = cellSize
+        flowLayout.itemSize = configuration.collectionViewCellSize
         flowLayout.scrollDirection = .Vertical
+        flowLayout.minimumLineSpacing = configuration.collectionViewLineSpacing
+        flowLayout.minimumInteritemSpacing = configuration.collectionViewLineSpacing
+
         collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: flowLayout)
         collectionView!.registerClass(CKAlbumViewCell.self, forCellWithReuseIdentifier: "CKAlbumViewCell")
         collectionView!.translatesAutoresizingMaskIntoConstraints = false
@@ -66,10 +68,10 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
         constrain(imageCropViewContainer, collectionView!) { v1, v2 in
             v1.top == v1.superview!.top
             v1.left == v1.superview!.left
-            v1.width == v1.superview!.width
-            v1.height == v1.superview!.width
+            v1.width == configuration.imageContainerSize
+            v1.height == configuration.imageContainerSize
 
-            v2.height == CGFloat(200)
+            v2.height == configuration.controllerContainerHeight
             v2.width == v2.superview!.width
             v2.top == v1.bottom
             v2.left == v1.left
@@ -117,7 +119,6 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        
         return true
     }
     
@@ -266,13 +267,6 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
     
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
-        let width = (collectionView.frame.width - 3) / 4
-        return CGSize(width: width, height: width)
-    }
-    
     public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CKAlbumViewCell
         if currentSelectedCell != nil {
@@ -330,7 +324,7 @@ private extension CKAlbumView {
     
     func changeImage(image: UIImage) {
         self.imageCropView.image = nil
-        self.imageCropView.imageSize = CGSize(width: 100, height: 100)
+        self.imageCropView.imageSize = configuration.collectionViewCellSize
         self.imageCropView.image = image
     }
     

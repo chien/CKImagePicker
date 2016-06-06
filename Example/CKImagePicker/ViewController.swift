@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func openImagePicker(sender: UIButton) {
-        let configuration = CKImagePickerConfiguration()
+        let configuration = CKImagePickerConfiguration(frame: UIScreen.mainScreen().bounds)
         let vc = CKImagePickerViewController(configuration: configuration)
         self.presentViewController(vc, animated: true, completion: nil)
     }
