@@ -13,6 +13,7 @@ import Foundation
 public class CKImagePickerViewController: UIViewController {
     var imagePickerView: CKImagePickerView! { return self.view as! CKImagePickerView }
     private var configuration: CKImagePickerConfiguration!
+    public var imageCount = 0
     
     override public func loadView() {
         view = CKImagePickerView(frame: self.configuration.frame, configuration: self.configuration)
@@ -37,6 +38,7 @@ public class CKImagePickerViewController: UIViewController {
     public override func viewDidLoad() {
         imagePickerView.delegate = self
         imagePickerView.cameraView.delegate = self
+        imagePickerView.albumView.delegate = self
         imagePickerView.cameraButton.addTarget(self, action: #selector(CKImagePickerViewController.switchView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         imagePickerView.albumButton.addTarget(self, action: #selector(CKImagePickerViewController.switchView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         switchView(imagePickerView.cameraButton)
@@ -48,10 +50,17 @@ public class CKImagePickerViewController: UIViewController {
     
     public override func viewDidAppear(animated: Bool) {
         imagePickerView.cameraView.initializeSession()
+        imagePickerView.albumView.reloadImages()
+        imageCount = imagePickerView.albumView.images.count
     }
 }
 
 extension CKImagePickerViewController: CKImagePickerViewDelegate {
+    @objc func imageDeleted() {
+        imagePickerView.albumView.reloadImages()
+        imageCount = imagePickerView.albumView.images.count
+    }
+    
     @objc func cameraShotFinished(image: UIImage) {
         imagePickerView.albumView.resetSelectedImage()
         let imageData = NSData(data:UIImagePNGRepresentation(image)!)
@@ -64,6 +73,7 @@ extension CKImagePickerViewController: CKImagePickerViewDelegate {
             print("Error saving file at path: \(fullPath) with error: \(error)")
         }
         imagePickerView.albumView.reloadImages()
+        imageCount = imagePickerView.albumView.images.count
     }
 
     @objc func switchView(button: UIButton) {

@@ -10,6 +10,10 @@ import UIKit
 import Cartography
 import FontAwesome_swift
 
+@objc protocol CKAlbumViewDelegate: class {
+    func imageDeleted()
+}
+
 class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     var collectionView: UICollectionView?
     var imageCropView =  CKImageCropView()
@@ -17,6 +21,8 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     var deleteButton = UIButton(type: UIButtonType.System)
     
     var previousPreheatRect: CGRect = CGRectZero
+    
+    var delegate: CKAlbumViewDelegate? = nil
     
     // Variables for calculating the position
     enum Direction {
@@ -154,7 +160,7 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
             try fileManager.removeItemAtURL(imageUrl)
             currentSelectedIndex = nil
             self.imageCropView.image = nil
-            reloadImages()
+            delegate!.imageDeleted()
         }
         catch let error as NSError {
             print("Ooops! Something went wrong: \(error)")

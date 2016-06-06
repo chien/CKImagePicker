@@ -9,7 +9,7 @@
 import UIKit
 import Cartography
 
-protocol CKImagePickerViewDelegate: CKCameraViewDelegate {
+protocol CKImagePickerViewDelegate: CKCameraViewDelegate, CKAlbumViewDelegate {
     func switchView(button: UIButton)
 }
 
