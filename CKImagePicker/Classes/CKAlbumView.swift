@@ -109,13 +109,11 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
                 .filter{ $0.pathExtension! == "jpg" }
                 .flatMap { NSData(contentsOfURL: $0) }
                 .flatMap { UIImage(data: $0) }
-            
         } catch {
             print("error loading images")
         }
 
         collectionView!.reloadData()
-        collectionView!.selectItemAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.None)
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -259,7 +257,7 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
     // MARK: - UICollectionViewDelegate Protocol
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CKAlbumViewCell", forIndexPath: indexPath) as! CKAlbumViewCell
-        
+
         let currentTag = cell.tag + 1
         cell.tag = currentTag
         cell.configuration = self.configuration

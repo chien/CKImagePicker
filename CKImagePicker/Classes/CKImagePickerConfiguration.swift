@@ -28,15 +28,15 @@ public class CKImagePickerConfiguration {
         return menuButtonSize + 2*menuButtonSpacing
     }
     
-    internal var imageContainerSize: CGFloat {
-        return frame.width
-    }
+    lazy internal var imageContainerSize: CGFloat = {
+        return self.frame.width
+    }()
     
-    internal var controllerContainerHeight: CGFloat {
-        return frame.height - imageContainerSize - menuSectionHeight
-    }
+    lazy internal var controllerContainerHeight: CGFloat = {
+        return self.frame.height - self.imageContainerSize - self.menuSectionHeight
+    }()
     
-    private let frame: CGRect!
+    internal let frame: CGRect!
     
     public enum MenuMode: Int {
         case Camera

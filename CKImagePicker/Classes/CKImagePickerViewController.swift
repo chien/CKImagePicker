@@ -15,7 +15,7 @@ public class CKImagePickerViewController: UIViewController {
     private var configuration: CKImagePickerConfiguration!
     
     override public func loadView() {
-        view = CKImagePickerView(frame: UIScreen.mainScreen().bounds, configuration: self.configuration)
+        view = CKImagePickerView(frame: self.configuration.frame, configuration: self.configuration)
     }
     
     public init(configuration: CKImagePickerConfiguration) {
@@ -62,7 +62,6 @@ extension CKImagePickerViewController: CKImagePickerViewDelegate {
         } catch {
             print("Error saving file at path: \(fullPath) with error: \(error)")
         }
-        
         imagePickerView.albumView.reloadImages()
     }
 
