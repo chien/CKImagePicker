@@ -10,11 +10,23 @@ import UIKit
 import AVFoundation
 import Foundation
 
+public protocol CKImagePickerProtocal {
+    func imageCountChanges(count: Int)
+}
+
 public class CKImagePickerViewController: UIViewController {
     var imagePickerView: CKImagePickerView! { return self.view as! CKImagePickerView }
     private var configuration: CKImagePickerConfiguration!
-    public var imageCount = 0
-    
+    public var delegate: CKImagePickerProtocal!
+
+    public var imageCount : Int {
+        didSet {
+            if (delegate != nil) {
+                delegate.imageCountChanges(imageCount)
+            }
+        }
+    }
+
     override public func loadView() {
         view = CKImagePickerView(frame: self.configuration.frame, configuration: self.configuration)
     }
@@ -22,6 +34,7 @@ public class CKImagePickerViewController: UIViewController {
     public init(configuration: CKImagePickerConfiguration) {
         let status = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
         self.configuration = configuration
+        self.imageCount = 0
         super.init(nibName: nil, bundle: nil)
         
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)

@@ -21,14 +21,17 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(ViewController.openImagePicker(_:)), forControlEvents: UIControlEvents.TouchUpInside)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     func openImagePicker(sender: UIButton) {
         let configuration = CKImagePickerConfiguration(frame: UIScreen.mainScreen().bounds)
         let vc = CKImagePickerViewController(configuration: configuration)
+        vc.delegate = self
         self.presentViewController(vc, animated: true, completion: nil)
+    }
+}
+
+extension ViewController: CKImagePickerProtocal {
+    func imageCountChanges(count: Int) {
+        let alert = UIAlertView(title: "New Image", message: "image count: \(count)", delegate: nil, cancelButtonTitle: "OK")
+        alert.show()
     }
 }
