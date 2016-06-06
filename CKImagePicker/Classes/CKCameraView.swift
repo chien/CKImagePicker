@@ -33,18 +33,12 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
         self.session = nil
         super.init(frame: CGRectZero)
         self.configuration = configuration
-        
-        previewViewContainer.backgroundColor = UIColor.grayColor()
-        
-        self.configureCameraButton(flashButton, title: String.fontAwesomeIconWithName(.Flash), selector: #selector(CKCameraView.flashButtonPressed(_:)))
-        configureCameraButton(shotButton, title: String.fontAwesomeIconWithName(.CameraRetro), selector: #selector(CKCameraView.shotButtonPressed(_:)))
-        
         flashConfiguration()
 
         self.addSubview(previewViewContainer)
         self.addSubview(buttonViewContainer)
-        buttonViewContainer.addSubview(flashButton)
         buttonViewContainer.addSubview(shotButton)
+        configureCameraButton(shotButton, title: String.fontAwesomeIconWithName(.CameraRetro), selector: #selector(CKCameraView.shotButtonPressed(_:)))
         
         constrain(previewViewContainer, buttonViewContainer) { view, buttonSection in
             view.top == view.superview!.top
@@ -57,17 +51,11 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
             buttonSection.width == configuration.imageContainerSize
             buttonSection.height == configuration.controllerContainerHeight
         }
-        
-        constrain(flashButton, shotButton) { b1, b2 in
-            b1.centerY == b1.superview!.centerY
-            b2.centerY == b2.superview!.centerY
 
-            b1.width == configuration.cameraControlButtonSize
-            b1.height == configuration.cameraControlButtonSize
-            b2.size == b1.size
-
-            b1.right == b1.superview!.centerX - configuration.cameraControlButtonSize/2
-            b2.left == b2.superview!.centerX + configuration.cameraControlButtonSize/2
+        constrain(shotButton) { button in
+            button.center == button.superview!.center
+            button.width == configuration.cameraControlButtonSize
+            button.height == configuration.cameraControlButtonSize
         }
     }
     
@@ -123,7 +111,9 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
             let tapRecognizer      = UITapGestureRecognizer(target: self, action:#selector(CKCameraView.focus(_:)))
             tapRecognizer.delegate = self
             self.previewViewContainer.addGestureRecognizer(tapRecognizer)
-            
+            self.previewViewContainer.addSubview(flashButton)
+            configureUtilButton(flashButton, title: String.fontAwesomeIconWithName(.Flash), selector: #selector(CKCameraView.flashButtonPressed(_:)))
+            setFlashButton()
         } catch {
             print("av session error")
         }
@@ -206,20 +196,17 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
                 
                 if mode == AVCaptureFlashMode.Off {
                     device.flashMode = AVCaptureFlashMode.On
-                    flashButton.backgroundColor = self.configuration.tintColor
-                    flashButton.tintColor = self.configuration.backgroundColor
+                    flashButtonOn()
                 } else if mode == AVCaptureFlashMode.On {
                     device.flashMode = AVCaptureFlashMode.Off
-                    flashButton.backgroundColor = self.configuration.backgroundColor
-                    flashButton.tintColor = self.configuration.tintColor
+                    flashButtonOff()
                 }
                 
                 device.unlockForConfiguration()
             }
             
         } catch _ {
-            flashButton.backgroundColor = self.configuration.backgroundColor
-            flashButton.titleLabel?.textColor = self.configuration.tintColor
+            flashButtonOff()
             return
         }
         
@@ -276,6 +263,38 @@ private extension CKCameraView {
                 self.focusView!.transform = CGAffineTransformMakeScale(1.0, 1.0)
                 self.focusView!.removeFromSuperview()
         })
+    }
+    
+    func setFlashButton() {
+        if !cameraIsAvailable() {
+            flashButton.hidden = true
+            return
+        }
+
+        do {
+            if let device = device {
+                guard device.hasFlash else { return }
+                let mode = device.flashMode
+                if mode == AVCaptureFlashMode.On {
+                    flashButtonOn()
+                } else if mode == AVCaptureFlashMode.Off {
+                    flashButtonOff()
+                }
+            }
+            
+        } catch _ {
+            return
+        }
+    }
+    
+    func flashButtonOn() {
+        flashButton.backgroundColor = self.configuration.tintColor
+        flashButton.tintColor = self.configuration.backgroundColor
+    }
+    
+    func flashButtonOff() {
+        flashButton.backgroundColor = self.configuration.utilButtonBackgroundColor
+        flashButton.tintColor = self.configuration.tintColor
     }
     
     func flashConfiguration() {

@@ -10,6 +10,7 @@ public class CKImagePickerConfiguration {
     public var font = UIFont.systemFontOfSize(16)
     public var textColor = UIColor.lightGrayColor()
     public var backgroundColor = UIColor.whiteColor()
+    public var utilButtonBackgroundColor = UIColor.clearColor()
     public var tintColor = UIColor.orangeColor()
     
     public var menuButtonSize = CGFloat(30)
@@ -18,6 +19,8 @@ public class CKImagePickerConfiguration {
     public var imageFolderName = "default"
     
     public var cameraControlButtonSize = CGFloat(80)
+    public var utilControlButtonSize = CGFloat(50)
+    public var paddingSize = CGFloat(10)
     
     public var collectionViewImagePerRow = CGFloat(4)
     public var collectionViewLineSpacing = CGFloat(2)

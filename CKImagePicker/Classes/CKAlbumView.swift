@@ -65,9 +65,9 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
         self.addSubview(collectionView!)
         self.addSubview(imageCropViewContainer)
         imageCropViewContainer.addSubview(imageCropView)
-
-        configureCameraButton(deleteButton, title: String.fontAwesomeIconWithName(.TrashO), selector: #selector(CKAlbumView.deleteButtonPressed(_:)))
         imageCropViewContainer.addSubview(deleteButton)
+
+        configureUtilButton(deleteButton, title: String.fontAwesomeIconWithName(.TrashO), selector: #selector(CKAlbumView.deleteButtonPressed(_:)))
         deleteButton.hidden = true
 
         constrain(imageCropViewContainer, collectionView!) { v1, v2 in
@@ -82,15 +82,10 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
             v2.left == v1.left
         }
         
-        constrain(imageCropView, deleteButton) { view, button in
+        constrain(imageCropView) { view in
             view.size == view.superview!.size
             view.top == view.superview!.top
             view.left == view.superview!.left
-            
-            button.width == configuration.cameraControlButtonSize
-            button.height == configuration.cameraControlButtonSize
-            button.bottom == button.superview!.bottom + configuration.menuButtonSpacing
-            button.centerX == button.superview!.centerX
         }
         
         dragDirection = Direction.Up
@@ -133,6 +128,7 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     func deleteButtonPressed(button: UIButton) {
         let cell = collectionView!.cellForItemAtIndexPath(currentSelectedIndex) as! CKAlbumViewCell
         cell.currentSelected = false
+        deleteButton.hidden = true
 
         let imageUrl = self.imageUrls[currentSelectedIndex.row]        
         let fileManager = NSFileManager.defaultManager()
