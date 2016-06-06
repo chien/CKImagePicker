@@ -14,6 +14,8 @@ public class CKImagePickerConfiguration {
     
     public var menuButtonSize = CGFloat(30)
     public var menuButtonSpacing = CGFloat(2)
+    
+    public var imageFolderName = "default"
 
     public var defaultPage = 0
     public var scrollEnabled = true // in case of using swipable cells, set false

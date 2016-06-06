@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Foundation
 
 public class CKImagePickerViewController: UIViewController {
     var imagePickerView: CKImagePickerView! { return self.view as! CKImagePickerView }
@@ -21,6 +22,16 @@ public class CKImagePickerViewController: UIViewController {
         let status = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
         self.configuration = configuration
         super.init(nibName: nil, bundle: nil)
+        
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let documentsDirectory: AnyObject = paths[0]
+        let dataPath = documentsDirectory.stringByAppendingPathComponent(configuration.imageFolderName)
+        
+        do {
+            try NSFileManager.defaultManager().createDirectoryAtPath(dataPath, withIntermediateDirectories: false, attributes: nil)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 
     public override func viewDidLoad() {
@@ -44,12 +55,27 @@ extension CKImagePickerViewController: CKImagePickerViewDelegate {
     @objc func cameraShotFinished(image: UIImage) {
         let imageData = NSData(data:UIImagePNGRepresentation(image)!)
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-        let fullPath = documentsPath.stringByAppendingString("/yourNameImg.jpg")
-        let result = imageData.writeToFile(fullPath, atomically: true)
+        let fullPath = documentsPath.stringByAppendingString("/\(configuration.imageFolderName)/\(NSDate().timeIntervalSince1970).jpg")
 
-        let imageFromPath = UIImage(contentsOfFile: fullPath)
-        imagePickerView.albumView.images = [imageFromPath!]
-        imagePickerView.albumView.reloadImages()
+        do {
+            try imageData.writeToFile(fullPath, options: .DataWritingAtomic)
+        } catch {
+            print("Error saving file at path: \(fullPath) with error: \(error)")
+        }
+
+        do {
+            let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+            let imageFolderUrl = documentsUrl.URLByAppendingPathComponent(configuration.imageFolderName, isDirectory: true)
+            let imageUrls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(imageFolderUrl, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions())
+
+            imagePickerView.albumView.images = imageUrls
+                .filter{ $0.pathExtension! == "jpg" }
+                .flatMap { NSData(contentsOfURL: $0) }
+                .flatMap { UIImage(data: $0) }
+            imagePickerView.albumView.reloadImages()
+        } catch {
+            print("error loading images")
+        }
     }
 
     @objc func switchView(button: UIButton) {
