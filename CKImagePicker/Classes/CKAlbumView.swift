@@ -14,7 +14,7 @@ import FontAwesome_swift
     func imageDeleted()
 }
 
-class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
+public class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     var collectionView: UICollectionView?
     var imageCropView =  CKImageCropView()
     var imageCropViewContainer = UIView()
@@ -43,7 +43,7 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     var imageUrls: [NSURL] = []
     var currentSelectedIndex: NSIndexPath!
     
-    init(configuration: CKImagePickerConfiguration) {
+    public init(configuration: CKImagePickerConfiguration) {
         super.init(frame: CGRectZero)
         self.configuration = configuration
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -103,7 +103,7 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
         reloadImages()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -123,7 +123,7 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
         }
     }
 
-    class func loadImageUrls(configuration: CKImagePickerConfiguration) -> [NSURL] {
+    class public func loadImageUrls(configuration: CKImagePickerConfiguration) -> [NSURL] {
         do {
             let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
             let imageFolderUrl = documentsUrl.URLByAppendingPathComponent(configuration.imageFolderName, isDirectory: true)
@@ -153,7 +153,7 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
         collectionView!.reloadData()
     }
     
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     
@@ -293,16 +293,16 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
 }
 
 extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    public func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
     
     // MARK: - UICollectionViewDelegate Protocol
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CKAlbumViewCell", forIndexPath: indexPath) as! CKAlbumViewCell
 
         let currentTag = cell.tag + 1
@@ -312,7 +312,7 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CKAlbumViewCell
         cell.currentSelected = true
 

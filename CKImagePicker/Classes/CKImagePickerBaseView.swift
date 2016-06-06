@@ -10,7 +10,7 @@ import UIKit
 import FontAwesome_swift
 import Cartography
 
-class CKImagePickerBaseView: UIView {
+public class CKImagePickerBaseView: UIView {
     var configuration: CKImagePickerConfiguration!
     
     func configureCameraButton(button: UIButton, title: String, selector: Selector) {
