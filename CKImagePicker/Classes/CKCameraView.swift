@@ -19,6 +19,7 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
     var configuration: CKImagePickerConfiguration!
     
     var previewViewContainer = UIView()
+    var buttonViewContainer = UIView()
     var shotButton = UIButton(type: UIButtonType.System)
     var flashButton = UIButton(type: UIButtonType.System)
     
@@ -36,44 +37,39 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
         super.init(frame: CGRectZero)
         
         previewViewContainer.backgroundColor = UIColor.grayColor()
-
-        flashButton.tintColor = UIColor.orangeColor()
-        shotButton.tintColor  = UIColor.orangeColor()
-        flashButton.backgroundColor = UIColor.blueColor()
-        shotButton.backgroundColor = UIColor.blueColor()
         
-        flashButton.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
-        flashButton.setTitle(String.fontAwesomeIconWithName(.Flash), forState: .Normal)
-        flashButton.addTarget(self, action: #selector(CKCameraView.flashButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        
-        shotButton.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
-        shotButton.setTitle(String.fontAwesomeIconWithName(.CameraRetro), forState: .Normal)
-        shotButton.addTarget(self, action: #selector(CKCameraView.shotButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        configureCameraButton(flashButton, title: String.fontAwesomeIconWithName(.Flash), selector: #selector(CKCameraView.flashButtonPressed(_:)))
+        configureCameraButton(shotButton, title: String.fontAwesomeIconWithName(.CameraRetro), selector: #selector(CKCameraView.shotButtonPressed(_:)))
         
         flashConfiguration()
 
         self.addSubview(previewViewContainer)
-        self.addSubview(flashButton)
-        self.addSubview(shotButton)
+        self.addSubview(buttonViewContainer)
+        buttonViewContainer.addSubview(flashButton)
+        buttonViewContainer.addSubview(shotButton)
         
-        constrain(previewViewContainer) { view in
+        constrain(previewViewContainer, buttonViewContainer) { view, buttonSection in
             view.top == view.superview!.top
             view.left == view.superview!.left
             view.width == configuration.imageContainerSize
             view.height == configuration.imageContainerSize
-        }
-        
-        constrain(previewViewContainer, flashButton) { preview, button in
-            button.top == preview.bottom + CGFloat(20)
+            
+            buttonSection.top == view.bottom
+            buttonSection.left == view.superview!.left
+            buttonSection.width == configuration.imageContainerSize
+            buttonSection.height == configuration.controllerContainerHeight
         }
         
         constrain(flashButton, shotButton) { b1, b2 in
-            align(top: b1, b2)
-            b1.left == b1.superview!.left
-            b1.width == CGFloat(50)
-            b1.height == CGFloat(50)
+            b1.centerY == b1.superview!.centerY
+            b2.centerY == b2.superview!.centerY
+
+            b1.width == configuration.cameraControlButtonSize
+            b1.height == configuration.cameraControlButtonSize
             b2.size == b1.size
-            distribute(by: 10, horizontally: b1, b2)
+
+            b1.right == b1.superview!.centerX - configuration.cameraControlButtonSize/2
+            b2.left == b2.superview!.centerX + configuration.cameraControlButtonSize/2
         }
     }
     
@@ -81,8 +77,16 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+    private func configureCameraButton(button: UIButton, title: String, selector: Selector) {
+        button.tintColor = self.configuration.tintColor
+        button.backgroundColor = self.configuration.backgroundColor
+        button.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
+        button.setTitle(title, forState: .Normal)
+        button.addTarget(self, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 0.5 * configuration.cameraControlButtonSize
+        button.layer.borderWidth = 1
+        button.layer.borderColor = self.configuration.tintColor.CGColor
     }
 
     func initializeSession() {
@@ -215,14 +219,13 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
                 let mode = device.flashMode
                 
                 if mode == AVCaptureFlashMode.Off {
-                    
                     device.flashMode = AVCaptureFlashMode.On
-                    flashButton.setImage(UIImage(named: "ic_flash_on", inBundle: NSBundle(forClass: self.classForCoder), compatibleWithTraitCollection: nil)?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
-                    
+                    flashButton.backgroundColor = self.configuration.tintColor
+                    flashButton.tintColor = self.configuration.backgroundColor
                 } else if mode == AVCaptureFlashMode.On {
-                    
                     device.flashMode = AVCaptureFlashMode.Off
-                    flashButton.setImage(UIImage(named: "ic_flash_off", inBundle: NSBundle(forClass: self.classForCoder), compatibleWithTraitCollection: nil)?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
+                    flashButton.backgroundColor = self.configuration.backgroundColor
+                    flashButton.tintColor = self.configuration.tintColor
                 }
                 
                 device.unlockForConfiguration()
@@ -230,8 +233,8 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
             }
             
         } catch _ {
-            
-            flashButton.setImage(UIImage(named: "ic_flash_off", inBundle: NSBundle(forClass: self.classForCoder), compatibleWithTraitCollection: nil)?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
+            flashButton.backgroundColor = self.configuration.backgroundColor
+            flashButton.titleLabel?.textColor = self.configuration.tintColor
             return
         }
         
@@ -301,7 +304,6 @@ private extension CKCameraView {
                 try device.lockForConfiguration()
                 
                 device.flashMode = AVCaptureFlashMode.Off
-                flashButton.setImage(UIImage(named: "ic_flash_off", inBundle: NSBundle(forClass: self.classForCoder), compatibleWithTraitCollection: nil)?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
                 
                 device.unlockForConfiguration()
                 

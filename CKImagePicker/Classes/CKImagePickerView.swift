@@ -32,6 +32,7 @@ public class CKImagePickerView: UIView {
         self.albumView = CKAlbumView(configuration: self.configuration)
         self.cameraView = CKCameraView(configuration: self.configuration)
         super.init(frame: frame)
+        self.frame = frame
         
         self.addSubview(contentContainer)
         contentContainer.addSubview(albumView)
