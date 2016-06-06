@@ -123,18 +123,26 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
         }
     }
 
-    func reloadImages() {
+    class func loadImageUrls(configuration: CKImagePickerConfiguration) -> [NSURL] {
         do {
             let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
             let imageFolderUrl = documentsUrl.URLByAppendingPathComponent(configuration.imageFolderName, isDirectory: true)
             let imageUrls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(imageFolderUrl, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions())
 
-            self.imageUrls = imageUrls
+            return imageUrls
                 .filter{ $0.pathExtension! == "jpg" }
                 .sort{ (element1, element2) -> Bool in
                     return element1.lastPathComponent > element2.lastPathComponent
             }
+        } catch {
+            return []
+            print("error loading image urls")
+        }
+    }
 
+    func reloadImages() {
+        do {
+            self.imageUrls = CKAlbumView.loadImageUrls(configuration)
             self.images = self.imageUrls
                 .flatMap { NSData(contentsOfURL: $0) }
                 .flatMap { UIImage(data: $0) }

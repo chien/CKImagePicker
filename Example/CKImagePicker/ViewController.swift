@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         let configuration = CKImagePickerConfiguration(frame: UIScreen.mainScreen().bounds)
         let vc = CKImagePickerViewController(configuration: configuration)
         vc.delegate = self
+        let alert = UIAlertView(title: "Current Image Count", message: "image count: \(vc.imageCount)", delegate: nil, cancelButtonTitle: "OK")
+        alert.show()
+
         self.presentViewController(vc, animated: true, completion: nil)
     }
 }

@@ -46,6 +46,7 @@ public class CKImagePickerViewController: UIViewController {
         } catch let error as NSError {
             print(error.localizedDescription)
         }
+        imageCount = CKAlbumView.loadImageUrls(configuration).count
     }
 
     public override func viewDidLoad() {
@@ -64,7 +65,6 @@ public class CKImagePickerViewController: UIViewController {
     public override func viewDidAppear(animated: Bool) {
         imagePickerView.cameraView.initializeSession()
         imagePickerView.albumView.reloadImages()
-        imageCount = imagePickerView.albumView.images.count
     }
 }
 
