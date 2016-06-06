@@ -15,9 +15,7 @@ import FontAwesome_swift
     func cameraShotFinished(image: UIImage)
 }
 
-class CKCameraView: UIView, UIGestureRecognizerDelegate {
-    var configuration: CKImagePickerConfiguration!
-    
+class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     var previewViewContainer = UIView()
     var buttonViewContainer = UIView()
     var shotButton = UIButton(type: UIButtonType.System)
@@ -32,13 +30,13 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
     var focusView: UIView?
     
     init(configuration: CKImagePickerConfiguration) {
-        self.configuration = configuration
         self.session = nil
         super.init(frame: CGRectZero)
+        self.configuration = configuration
         
         previewViewContainer.backgroundColor = UIColor.grayColor()
         
-        configureCameraButton(flashButton, title: String.fontAwesomeIconWithName(.Flash), selector: #selector(CKCameraView.flashButtonPressed(_:)))
+        self.configureCameraButton(flashButton, title: String.fontAwesomeIconWithName(.Flash), selector: #selector(CKCameraView.flashButtonPressed(_:)))
         configureCameraButton(shotButton, title: String.fontAwesomeIconWithName(.CameraRetro), selector: #selector(CKCameraView.shotButtonPressed(_:)))
         
         flashConfiguration()
@@ -75,18 +73,6 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func configureCameraButton(button: UIButton, title: String, selector: Selector) {
-        button.tintColor = self.configuration.tintColor
-        button.backgroundColor = self.configuration.backgroundColor
-        button.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
-        button.setTitle(title, forState: .Normal)
-        button.addTarget(self, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
-        button.layer.masksToBounds = true
-        button.layer.cornerRadius = 0.5 * configuration.cameraControlButtonSize
-        button.layer.borderWidth = 1
-        button.layer.borderColor = self.configuration.tintColor.CGColor
     }
 
     func initializeSession() {
@@ -229,7 +215,6 @@ class CKCameraView: UIView, UIGestureRecognizerDelegate {
                 }
                 
                 device.unlockForConfiguration()
-                
             }
             
         } catch _ {

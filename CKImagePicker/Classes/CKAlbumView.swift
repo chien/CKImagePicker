@@ -8,13 +8,13 @@
 
 import UIKit
 import Cartography
+import FontAwesome_swift
 
-class CKAlbumView: UIView, UIGestureRecognizerDelegate {
-    var configuration: CKImagePickerConfiguration!
-
+class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     var collectionView: UICollectionView?
     var imageCropView =  CKImageCropView()
     var imageCropViewContainer = UIView()
+    var deleteButton = UIButton(type: UIButtonType.System)
     
     var previousPreheatRect: CGRect = CGRectZero
     
@@ -34,11 +34,12 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
     var dragStartPos: CGPoint = CGPointZero
     let dragDiff: CGFloat     = 20.0
     var images: [UIImage] = []
-    var currentSelectedCell: CKAlbumViewCell!
+    var imageUrls: [NSURL] = []
+    var currentSelectedIndex: NSIndexPath!
     
     init(configuration: CKImagePickerConfiguration) {
-        self.configuration = configuration
         super.init(frame: CGRectZero)
+        self.configuration = configuration
         self.translatesAutoresizingMaskIntoConstraints = false
         imageCropViewContainer.backgroundColor = self.configuration.backgroundColor
 
@@ -65,6 +66,10 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
         self.addSubview(imageCropViewContainer)
         imageCropViewContainer.addSubview(imageCropView)
 
+        configureCameraButton(deleteButton, title: String.fontAwesomeIconWithName(.TrashO), selector: #selector(CKAlbumView.deleteButtonPressed(_:)))
+        imageCropViewContainer.addSubview(deleteButton)
+        deleteButton.hidden = true
+
         constrain(imageCropViewContainer, collectionView!) { v1, v2 in
             v1.top == v1.superview!.top
             v1.left == v1.superview!.left
@@ -77,10 +82,15 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
             v2.left == v1.left
         }
         
-        constrain(imageCropView) { view in
+        constrain(imageCropView, deleteButton) { view, button in
             view.size == view.superview!.size
             view.top == view.superview!.top
             view.left == view.superview!.left
+            
+            button.width == configuration.cameraControlButtonSize
+            button.height == configuration.cameraControlButtonSize
+            button.bottom == button.superview!.bottom + configuration.menuButtonSpacing
+            button.centerX == button.superview!.centerX
         }
         
         dragDirection = Direction.Up
@@ -104,9 +114,9 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
             let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
             let imageFolderUrl = documentsUrl.URLByAppendingPathComponent(configuration.imageFolderName, isDirectory: true)
             let imageUrls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(imageFolderUrl, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions())
-            
-            self.images = imageUrls
-                .filter{ $0.pathExtension! == "jpg" }
+
+            self.imageUrls = imageUrls.filter{ $0.pathExtension! == "jpg" }
+            self.images = self.imageUrls
                 .flatMap { NSData(contentsOfURL: $0) }
                 .flatMap { UIImage(data: $0) }
         } catch {
@@ -118,6 +128,23 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
+    }
+    
+    func deleteButtonPressed(button: UIButton) {
+        let cell = collectionView!.cellForItemAtIndexPath(currentSelectedIndex) as! CKAlbumViewCell
+        cell.currentSelected = false
+
+        let imageUrl = self.imageUrls[currentSelectedIndex.row]        
+        let fileManager = NSFileManager.defaultManager()
+        do {
+            try fileManager.removeItemAtURL(imageUrl)
+            currentSelectedIndex = nil
+            self.imageCropView.image = nil
+            reloadImages()
+        }
+        catch let error as NSError {
+            print("Ooops! Something went wrong: \(error)")
+        }
     }
     
     func panned(sender: UITapGestureRecognizer) {
@@ -267,13 +294,15 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
     
     public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CKAlbumViewCell
-        if currentSelectedCell != nil {
+        cell.currentSelected = true
+
+        if currentSelectedIndex != nil {
+            let currentSelectedCell = collectionView.cellForItemAtIndexPath(currentSelectedIndex) as! CKAlbumViewCell
             currentSelectedCell.currentSelected = false
         }
-        cell.currentSelected = true
-        currentSelectedCell = cell
+        currentSelectedIndex = indexPath
 
-        self.changeImage(self.images[indexPath.row])
+        self.changeImage(self.images[currentSelectedIndex.row])
         self.imageCropView.changeScrollable(true)
         
         //        imageCropViewConstraintTop.constant = imageCropViewOriginalConstraintTop
@@ -324,6 +353,7 @@ private extension CKAlbumView {
         self.imageCropView.image = nil
         self.imageCropView.imageSize = configuration.collectionViewCellSize
         self.imageCropView.image = image
+        self.deleteButton.hidden = false
     }
     
     // MARK: - Asset Caching
