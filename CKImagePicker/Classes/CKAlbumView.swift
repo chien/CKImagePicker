@@ -100,6 +100,22 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setDefaultImage() {
+        if self.images.count > 0 {
+            let lastItemIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+            self.collectionView!.selectItemAtIndexPath(lastItemIndexPath, animated: false, scrollPosition: .None)
+            self.collectionView(self.collectionView!, didSelectItemAtIndexPath: lastItemIndexPath)
+        }
+    }
+    
+    func resetSelectedImage() {
+        if currentSelectedIndex != nil {
+            let currentSelectedCell = collectionView!.cellForItemAtIndexPath(currentSelectedIndex) as! CKAlbumViewCell
+            currentSelectedCell.currentSelected = false
+            currentSelectedIndex = nil
+        }
+    }
 
     func reloadImages() {
         do {
@@ -107,7 +123,12 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
             let imageFolderUrl = documentsUrl.URLByAppendingPathComponent(configuration.imageFolderName, isDirectory: true)
             let imageUrls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(imageFolderUrl, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions())
 
-            self.imageUrls = imageUrls.filter{ $0.pathExtension! == "jpg" }
+            self.imageUrls = imageUrls
+                .filter{ $0.pathExtension! == "jpg" }
+                .sort{ (element1, element2) -> Bool in
+                    return element1.lastPathComponent > element2.lastPathComponent
+            }
+
             self.images = self.imageUrls
                 .flatMap { NSData(contentsOfURL: $0) }
                 .flatMap { UIImage(data: $0) }
@@ -277,7 +298,7 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
     
-    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CKAlbumViewCell
         cell.currentSelected = true
 

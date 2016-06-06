@@ -99,22 +99,23 @@ public class CKImagePickerView: UIView {
 internal extension CKImagePickerView {
     func cameraButtonPressed() {
         resetButton()
-        cameraButton.titleLabel!.textColor = self.configuration.tintColor
+        cameraButton.tintColor = self.configuration.tintColor
         albumView.hidden = true
         cameraView.hidden = false
     }
     
     func albumButtonPressed() {
         resetButton()
-        albumButton.titleLabel!.textColor = self.configuration.tintColor
+        albumButton.tintColor = self.configuration.tintColor
         albumView.hidden = false
         cameraView.hidden = true
+        albumView.setDefaultImage()
     }
     
     private func resetButton() {
-        albumButton.titleLabel!.textColor = self.configuration.textColor
+        albumButton.tintColor = self.configuration.textColor
         albumButton.backgroundColor = self.configuration.backgroundColor
-        cameraButton.titleLabel!.textColor = self.configuration.textColor
+        cameraButton.tintColor = self.configuration.textColor
         cameraButton.backgroundColor = self.configuration.backgroundColor
     }
 }

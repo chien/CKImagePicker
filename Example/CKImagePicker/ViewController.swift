@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     func openImagePicker(sender: UIButton) {
         let configuration = CKImagePickerConfiguration(frame: UIScreen.mainScreen().bounds)
         let vc = CKImagePickerViewController(configuration: configuration)

@@ -53,6 +53,7 @@ public class CKImagePickerViewController: UIViewController {
 
 extension CKImagePickerViewController: CKImagePickerViewDelegate {
     @objc func cameraShotFinished(image: UIImage) {
+        imagePickerView.albumView.resetSelectedImage()
         let imageData = NSData(data:UIImagePNGRepresentation(image)!)
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
         let fullPath = documentsPath.stringByAppendingString("/\(configuration.imageFolderName)/\(NSDate().timeIntervalSince1970).jpg")
