@@ -66,6 +66,10 @@ public class CKImagePickerViewController: UIViewController {
         imagePickerView.cameraView.initializeSession()
         imagePickerView.albumView.reloadImages()
     }
+    
+    public override func viewDidDisappear(animated: Bool) {
+        imagePickerView.cameraView.stopSession()
+    }
 }
 
 extension CKImagePickerViewController: CKImagePickerViewDelegate {
@@ -73,7 +77,7 @@ extension CKImagePickerViewController: CKImagePickerViewDelegate {
         imagePickerView.albumView.reloadImages()
         imageCount = imagePickerView.albumView.images.count
     }
-    
+
     @objc func cameraShotFinished(image: UIImage) {
         imagePickerView.albumView.resetSelectedImage()
         let imageData = NSData(data:UIImagePNGRepresentation(image)!)

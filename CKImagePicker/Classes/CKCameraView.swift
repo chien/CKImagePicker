@@ -62,6 +62,16 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func stopSession() {
+        if self.session == nil {
+            return
+        }
+        self.session!.stopRunning()
+        self.session     = nil
+        self.device      = nil
+        self.imageOutput = nil
+    }
 
     func initializeSession() {
         if session != nil {
