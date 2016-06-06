@@ -100,10 +100,7 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    deinit {
-    }
-    
+
     func reloadImages() {
         do {
             let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
@@ -258,14 +255,6 @@ class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
         
         
     }
-    
-    // MARK: - ScrollViewDelegate
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-        if scrollView == collectionView {
-            self.updateCachedAssets()
-        }
-    }
 }
 
 extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -315,112 +304,11 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 }
 
-
-internal extension UICollectionView {
-    
-    func aapl_indexPathsForElementsInRect(rect: CGRect) -> [NSIndexPath] {
-        let allLayoutAttributes = self.collectionViewLayout.layoutAttributesForElementsInRect(rect)
-        if (allLayoutAttributes?.count ?? 0) == 0 {return []}
-        var indexPaths: [NSIndexPath] = []
-        indexPaths.reserveCapacity(allLayoutAttributes!.count)
-        for layoutAttributes in allLayoutAttributes! {
-            let indexPath = layoutAttributes.indexPath
-            indexPaths.append(indexPath)
-        }
-        return indexPaths
-    }
-}
-
-internal extension NSIndexSet {
-    
-    func aapl_indexPathsFromIndexesWithSection(section: Int) -> [NSIndexPath] {
-        var indexPaths: [NSIndexPath] = []
-        indexPaths.reserveCapacity(self.count)
-        self.enumerateIndexesUsingBlock {idx, stop in
-            indexPaths.append(NSIndexPath(forItem: idx, inSection: section))
-        }
-        return indexPaths
-    }
-}
-
 private extension CKAlbumView {
-    
     func changeImage(image: UIImage) {
         self.imageCropView.image = nil
         self.imageCropView.imageSize = configuration.collectionViewCellSize
         self.imageCropView.image = image
         self.deleteButton.hidden = false
-    }
-    
-    // MARK: - Asset Caching
-    
-    func resetCachedAssets() {
-        previousPreheatRect = CGRectZero
-    }
-    
-    func updateCachedAssets() {
-        
-        var preheatRect = self.collectionView!.bounds
-        preheatRect = CGRectInset(preheatRect, 0.0, -0.5 * CGRectGetHeight(preheatRect))
-        
-        let delta = abs(CGRectGetMidY(preheatRect) - CGRectGetMidY(self.previousPreheatRect))
-        if delta > CGRectGetHeight(self.collectionView!.bounds) / 3.0 {
-            
-            var addedIndexPaths: [NSIndexPath] = []
-            var removedIndexPaths: [NSIndexPath] = []
-            
-            self.computeDifferenceBetweenRect(self.previousPreheatRect, andRect: preheatRect, removedHandler: {removedRect in
-                let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(removedRect)
-                removedIndexPaths += indexPaths
-                }, addedHandler: {addedRect in
-                    let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(addedRect)
-                    addedIndexPaths += indexPaths
-            })
-            
-            let assetsToStartCaching = self.assetsAtIndexPaths(addedIndexPaths)
-            let assetsToStopCaching = self.assetsAtIndexPaths(removedIndexPaths)
-            
-            self.previousPreheatRect = preheatRect
-        }
-    }
-    
-    func computeDifferenceBetweenRect(oldRect: CGRect, andRect newRect: CGRect, removedHandler: CGRect->Void, addedHandler: CGRect->Void) {
-        if CGRectIntersectsRect(newRect, oldRect) {
-            let oldMaxY = CGRectGetMaxY(oldRect)
-            let oldMinY = CGRectGetMinY(oldRect)
-            let newMaxY = CGRectGetMaxY(newRect)
-            let newMinY = CGRectGetMinY(newRect)
-            if newMaxY > oldMaxY {
-                let rectToAdd = CGRectMake(newRect.origin.x, oldMaxY, newRect.size.width, (newMaxY - oldMaxY))
-                addedHandler(rectToAdd)
-            }
-            if oldMinY > newMinY {
-                let rectToAdd = CGRectMake(newRect.origin.x, newMinY, newRect.size.width, (oldMinY - newMinY))
-                addedHandler(rectToAdd)
-            }
-            if newMaxY < oldMaxY {
-                let rectToRemove = CGRectMake(newRect.origin.x, newMaxY, newRect.size.width, (oldMaxY - newMaxY))
-                removedHandler(rectToRemove)
-            }
-            if oldMinY < newMinY {
-                let rectToRemove = CGRectMake(newRect.origin.x, oldMinY, newRect.size.width, (newMinY - oldMinY))
-                removedHandler(rectToRemove)
-            }
-        } else {
-            addedHandler(newRect)
-            removedHandler(oldRect)
-        }
-    }
-    
-    func assetsAtIndexPaths(indexPaths: [NSIndexPath]) -> [UIImage] {
-        if indexPaths.count == 0 { return [] }
-        
-        var assets: [UIImage] = []
-        assets.reserveCapacity(indexPaths.count)
-        for indexPath in indexPaths {
-            let asset = self.images[indexPath.item]
-            assets.append(asset)
-        }
-        return assets
     }
 }
