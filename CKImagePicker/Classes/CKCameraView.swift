@@ -169,10 +169,11 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
                     let imageRef = CGImageCreateWithImageInRect(image.CGImage, CGRect(x: rcy-iw*0.5, y: 0 , width: iw, height: iw))
                     
                     let resizedImage = UIImage(CGImage: imageRef!, scale: sw/iw, orientation: image.imageOrientation)
-                    
+
+                    let fixOrientationImage = resizedImage.fixOrientation()
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         
-                        delegate.cameraShotFinished(resizedImage)
+                        delegate.cameraShotFinished(fixOrientationImage)
                         
                         self.session     = nil
                         self.device      = nil
