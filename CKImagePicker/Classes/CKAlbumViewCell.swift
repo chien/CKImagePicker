@@ -10,11 +10,7 @@ import UIKit
 import Cartography
 
 class CKAlbumViewCell: UICollectionViewCell {
-    var configuration: CKImagePickerConfiguration! {
-        didSet {
-            self.layer.borderColor = (selected ? configuration.tintColor : UIColor.clearColor()).CGColor
-        }
-    }
+    var configuration: CKImagePickerConfiguration!
 
     var imageView = UIImageView()
     var image: UIImage? {
@@ -23,15 +19,16 @@ class CKAlbumViewCell: UICollectionViewCell {
         }
     }
     
-    override var selected : Bool {
+    var currentSelected : Bool {
         didSet {
-            self.layer.borderWidth = selected ? 2 : 0
+            self.layer.borderWidth = currentSelected ? 2 : 0
+            self.layer.borderColor = (currentSelected ? configuration.tintColor : UIColor.blackColor()).CGColor
         }
     }
     
     override init(frame: CGRect) {
+        self.currentSelected = false
         super.init(frame: frame)
-        self.selected = false
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.contentView.addSubview(imageView)

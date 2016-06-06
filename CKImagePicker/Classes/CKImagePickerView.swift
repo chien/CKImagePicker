@@ -41,22 +41,16 @@ public class CKImagePickerView: UIView {
 
         // Button Section
         self.addSubview(buttonSectionView)
-        buttonSectionView.backgroundColor = UIColor.blueColor()
         buttonSectionView.addSubview(cameraButton)
         buttonSectionView.addSubview(albumButton)
-        
-        cameraButton.backgroundColor = configuration.backgroundColor
+
         cameraButton.setTitle("Camera", forState: UIControlState.Normal)
-        cameraButton.titleLabel!.textColor = configuration.textColor
-        cameraButton.titleLabel!.font = configuration.font
         cameraButton.tag = CKImagePickerConfiguration.MenuMode.Camera.rawValue
-        
-        albumButton.backgroundColor = configuration.backgroundColor
+        cameraButton.titleLabel!.font = configuration.font
+
         albumButton.setTitle("Album", forState: UIControlState.Normal)
         albumButton.tag = CKImagePickerConfiguration.MenuMode.Album.rawValue
-        albumButton.titleLabel!.textColor = configuration.textColor
         albumButton.titleLabel!.font = configuration.font
-        
 
         constrain(buttonSectionView, contentContainer) { view1, view2 in
             view2.top == view2.superview!.top
@@ -94,9 +88,33 @@ public class CKImagePickerView: UIView {
             view.top == view.superview!.top
             view.left == view.superview!.left
         }
+        resetButton()
     }
     
     required public init(coder aDecoder: NSCoder) {
         fatalError("This class does not not support NSCoding")
+    }
+}
+
+internal extension CKImagePickerView {
+    func cameraButtonPressed() {
+        resetButton()
+        cameraButton.titleLabel!.textColor = self.configuration.tintColor
+        albumView.hidden = true
+        cameraView.hidden = false
+    }
+    
+    func albumButtonPressed() {
+        resetButton()
+        albumButton.titleLabel!.textColor = self.configuration.tintColor
+        albumView.hidden = false
+        cameraView.hidden = true
+    }
+    
+    private func resetButton() {
+        albumButton.titleLabel!.textColor = self.configuration.textColor
+        albumButton.backgroundColor = self.configuration.backgroundColor
+        cameraButton.titleLabel!.textColor = self.configuration.textColor
+        cameraButton.backgroundColor = self.configuration.backgroundColor
     }
 }

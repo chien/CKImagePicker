@@ -10,7 +10,7 @@ public class CKImagePickerConfiguration {
     public var font = UIFont.systemFontOfSize(16)
     public var textColor = UIColor.lightGrayColor()
     public var backgroundColor = UIColor.whiteColor()
-    public var tintColor = UIColor.blackColor()
+    public var tintColor = UIColor.orangeColor()
     
     public var menuButtonSize = CGFloat(30)
     public var menuButtonSpacing = CGFloat(2)

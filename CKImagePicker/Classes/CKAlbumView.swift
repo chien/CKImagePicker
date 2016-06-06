@@ -35,12 +35,13 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
     var dragStartPos: CGPoint = CGPointZero
     let dragDiff: CGFloat     = 20.0
     var images: [UIImage] = []
+    var currentSelectedCell: CKAlbumViewCell!
     
     init(configuration: CKImagePickerConfiguration) {
         self.configuration = configuration
         super.init(frame: CGRectZero)
         self.translatesAutoresizingMaskIntoConstraints = false
-        imageCropViewContainer.backgroundColor = UIColor.orangeColor()
+        imageCropViewContainer.backgroundColor = self.configuration.backgroundColor
         
         // initialize collection view
         let flowLayout = UICollectionViewFlowLayout()
@@ -52,7 +53,7 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
 
         collectionView!.delegate = self
         collectionView!.dataSource = self
-        collectionView!.backgroundColor = UIColor.greenColor()
+        collectionView!.backgroundColor = self.configuration.backgroundColor
 
         let panGesture      = UIPanGestureRecognizer(target: self, action: #selector(CKAlbumView.panned(_:)))
         panGesture.delegate = self
@@ -86,10 +87,7 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
         imageCropViewContainer.layer.shadowRadius  = 30.0
         imageCropViewContainer.layer.shadowOpacity = 0.9
         imageCropViewContainer.layer.shadowOffset  = CGSizeZero
-
-        if images.count > 0 {
-            reloadImages()
-        }
+        reloadImages()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -100,6 +98,20 @@ class CKAlbumView: UIView, UIGestureRecognizerDelegate {
     }
     
     func reloadImages() {
+        do {
+            let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+            let imageFolderUrl = documentsUrl.URLByAppendingPathComponent(configuration.imageFolderName, isDirectory: true)
+            let imageUrls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(imageFolderUrl, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions())
+            
+            self.images = imageUrls
+                .filter{ $0.pathExtension! == "jpg" }
+                .flatMap { NSData(contentsOfURL: $0) }
+                .flatMap { UIImage(data: $0) }
+            
+        } catch {
+            print("error loading images")
+        }
+
         collectionView!.reloadData()
         collectionView!.selectItemAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.None)
     }
@@ -262,9 +274,14 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CKAlbumViewCell
+        if currentSelectedCell != nil {
+            currentSelectedCell.currentSelected = false
+        }
+        cell.currentSelected = true
+        currentSelectedCell = cell
+
         self.changeImage(self.images[indexPath.row])
-        
         self.imageCropView.changeScrollable(true)
         
         //        imageCropViewConstraintTop.constant = imageCropViewOriginalConstraintTop

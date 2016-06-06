@@ -62,29 +62,15 @@ extension CKImagePickerViewController: CKImagePickerViewDelegate {
         } catch {
             print("Error saving file at path: \(fullPath) with error: \(error)")
         }
-
-        do {
-            let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-            let imageFolderUrl = documentsUrl.URLByAppendingPathComponent(configuration.imageFolderName, isDirectory: true)
-            let imageUrls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(imageFolderUrl, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions())
-
-            imagePickerView.albumView.images = imageUrls
-                .filter{ $0.pathExtension! == "jpg" }
-                .flatMap { NSData(contentsOfURL: $0) }
-                .flatMap { UIImage(data: $0) }
-            imagePickerView.albumView.reloadImages()
-        } catch {
-            print("error loading images")
-        }
+        
+        imagePickerView.albumView.reloadImages()
     }
 
     @objc func switchView(button: UIButton) {
         if button.tag == CKImagePickerConfiguration.MenuMode.Camera.rawValue {
-            imagePickerView.albumView.hidden = true
-            imagePickerView.cameraView.hidden = false
+            imagePickerView.cameraButtonPressed()
         } else {
-            imagePickerView.albumView.hidden = false
-            imagePickerView.cameraView.hidden = true
+            imagePickerView.albumButtonPressed()
         }
     }
 }
