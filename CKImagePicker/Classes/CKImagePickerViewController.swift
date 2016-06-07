@@ -101,3 +101,26 @@ extension CKImagePickerViewController: CKImagePickerViewDelegate {
         }
     }
 }
+
+extension CKImagePickerViewController: CKAlbumViewDelegate {
+    func handleDeleteImage(alertAction: UIAlertAction!) -> Void {
+        self.imagePickerView.albumView.deleteImage()
+    }
+
+    func cancelDeleteImage(alertAction: UIAlertAction!) -> Void {}
+    
+    func deleteButtonPressed(button: UIButton) {
+        let alert = UIAlertController(title: "Delete Image", message: "Are you sure you want to delete this image?", preferredStyle: .ActionSheet)
+        
+        let DeleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: handleDeleteImage)
+        let CancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: cancelDeleteImage)
+        
+        alert.addAction(DeleteAction)
+        alert.addAction(CancelAction)
+        
+        // Support display in iPad
+        alert.popoverPresentationController?.sourceView = self.imagePickerView
+        alert.popoverPresentationController?.sourceRect = CGRectMake(self.imagePickerView.bounds.size.width / 2.0, self.imagePickerView.bounds.size.height / 2.0, 1.0, 1.0)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+}
