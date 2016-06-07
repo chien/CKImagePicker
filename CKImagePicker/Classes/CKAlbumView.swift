@@ -299,10 +299,11 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CKAlbumViewCell
         cell.currentSelected = true
 
-        if currentSelectedIndex != nil {
+        if (currentSelectedIndex != nil) && (currentSelectedIndex.row != indexPath.row) {
             let currentSelectedCell = collectionView.cellForItemAtIndexPath(currentSelectedIndex) as! CKAlbumViewCell
             currentSelectedCell.currentSelected = false
         }
+
         currentSelectedIndex = indexPath
 
         self.changeImage(self.imageUrls[currentSelectedIndex.row])
@@ -331,6 +332,7 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
         do {
             try fileManager.removeItemAtURL(imageUrl)
             currentSelectedIndex = nil
+            imageCropView.imageView.image = nil
             delegate!.imageDeleted()
         }
         catch let error as NSError {
