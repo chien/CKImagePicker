@@ -299,13 +299,11 @@ private extension CKCameraView {
     }
     
     func flashButtonOn() {
-        flashButton.backgroundColor = self.configuration.tintColor
-        flashButton.tintColor = self.configuration.backgroundColor
+        enabledUtilButton(flashButton)
     }
     
     func flashButtonOff() {
-        flashButton.backgroundColor = self.configuration.utilButtonBackgroundColor
-        flashButton.tintColor = self.configuration.tintColor
+        disabledUtilButton(flashButton)
     }
     
     func flashConfiguration() {

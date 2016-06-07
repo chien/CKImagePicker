@@ -19,7 +19,7 @@ public class CKImagePickerConfiguration {
     public var imageFolderName = "default"
     
     public var cameraControlButtonSize = CGFloat(64)
-    public var utilControlButtonSize = CGFloat(50)
+    public var utilControlButtonSize = CGFloat(40)
     public var paddingSize = CGFloat(10)
     
     public var collectionViewImagePerRow = CGFloat(5)
