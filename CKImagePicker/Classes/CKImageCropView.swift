@@ -85,29 +85,6 @@ final class CKImageCropView: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    var image: UIImage! = nil {
-        
-        didSet {
-            
-            if image != nil {
-                
-                if !imageView.isDescendantOfView(self) {
-                    self.imageView.alpha = 1.0
-                    self.addSubview(imageView)
-                }
-                
-            } else {
-                
-                imageView.image = nil
-                return
-            }
-
-            imageView.image = image
-            
-        }
-        
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -118,9 +95,6 @@ final class CKImageCropView: UIScrollView, UIScrollViewDelegate {
         self.clipsToBounds   = true
         self.imageView.alpha = 1.0
         self.addSubview(imageView)
-        
-        imageView.frame = CGRect(origin: CGPointZero, size: CGSizeZero)
-        
         self.maximumZoomScale = 2.0
         self.minimumZoomScale = 0.8
         self.showsHorizontalScrollIndicator = false
