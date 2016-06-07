@@ -28,7 +28,7 @@ public class CKImagePickerBaseView: UIView {
     func configureUtilButton(button: UIButton, title: String, selector: Selector) {
         button.tintColor = UIColor.whiteColor()
         button.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
-        button.titleLabel!.font = UIFont.fontAwesomeOfSize(18)
+        button.titleLabel!.font = UIFont.fontAwesomeOfSize(configuration.utilControlButtonSize*0.5)
         button.setTitle(title, forState: .Normal)
         button.addTarget(self, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
         button.layer.masksToBounds = true
