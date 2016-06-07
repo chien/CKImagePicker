@@ -16,12 +16,12 @@ public class CKImagePickerBaseView: UIView {
     func configureCameraButton(button: UIButton, title: String, selector: Selector) {
         button.tintColor = configuration.tintColor
         button.backgroundColor = configuration.backgroundColor
-        button.titleLabel!.font = UIFont.fontAwesomeOfSize(30)
+        button.titleLabel!.font = UIFont.fontAwesomeOfSize(57)
         button.setTitle(title, forState: .Normal)
         button.addTarget(self, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 0.5 * configuration.cameraControlButtonSize
-        button.layer.borderWidth = 1
+        button.layer.borderWidth = 5
         button.layer.borderColor = configuration.tintColor.CGColor
     }
     

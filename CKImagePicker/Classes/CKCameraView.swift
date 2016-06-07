@@ -38,7 +38,7 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
         self.addSubview(previewViewContainer)
         self.addSubview(buttonViewContainer)
         buttonViewContainer.addSubview(shotButton)
-        configureCameraButton(shotButton, title: String.fontAwesomeIconWithName(.CameraRetro), selector: #selector(CKCameraView.shotButtonPressed(_:)))
+        configureCameraButton(shotButton, title: String.fontAwesomeIconWithName(.Circle), selector: #selector(CKCameraView.shotButtonPressed(_:)))
         
         constrain(previewViewContainer, buttonViewContainer) { view, buttonSection in
             view.top == view.superview!.top

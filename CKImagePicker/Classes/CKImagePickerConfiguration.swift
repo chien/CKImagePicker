@@ -18,11 +18,11 @@ public class CKImagePickerConfiguration {
 
     public var imageFolderName = "default"
     
-    public var cameraControlButtonSize = CGFloat(80)
+    public var cameraControlButtonSize = CGFloat(64)
     public var utilControlButtonSize = CGFloat(50)
     public var paddingSize = CGFloat(10)
     
-    public var collectionViewImagePerRow = CGFloat(4)
+    public var collectionViewImagePerRow = CGFloat(5)
     public var collectionViewLineSpacing = CGFloat(2)
     public var collectionViewCellSize: CGSize {
         let cellSize = (imageContainerSize-((collectionViewImagePerRow-1)*collectionViewLineSpacing))/CGFloat(collectionViewImagePerRow)
