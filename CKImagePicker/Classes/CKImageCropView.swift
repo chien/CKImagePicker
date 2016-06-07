@@ -12,26 +12,8 @@ final class CKImageCropView: UIScrollView, UIScrollViewDelegate {
     
     var imageView = UIImageView()
     
-    var imageSize: CGSize?
-    
-    var image: UIImage! = nil {
-        
+    var imageSize: CGSize! {
         didSet {
-            
-            if image != nil {
-                
-                if !imageView.isDescendantOfView(self) {
-                    self.imageView.alpha = 1.0
-                    self.addSubview(imageView)
-                }
-                
-            } else {
-                
-                imageView.image = nil
-                return
-            }
-            
-            let imageSize = self.imageSize ?? image.size
             
             if imageSize.width < self.frame.width || imageSize.height < self.frame.height {
                 
@@ -99,9 +81,28 @@ final class CKImageCropView: UIScrollView, UIScrollViewDelegate {
             
             self.contentSize = CGSize(width: imageView.frame.width + 1, height: imageView.frame.height + 1)
             
-            imageView.image = image
-            
             self.zoomScale = 1.0
+        }
+    }
+    
+    var image: UIImage! = nil {
+        
+        didSet {
+            
+            if image != nil {
+                
+                if !imageView.isDescendantOfView(self) {
+                    self.imageView.alpha = 1.0
+                    self.addSubview(imageView)
+                }
+                
+            } else {
+                
+                imageView.image = nil
+                return
+            }
+
+            imageView.image = image
             
         }
         
@@ -115,7 +116,8 @@ final class CKImageCropView: UIScrollView, UIScrollViewDelegate {
         super.init(frame: CGRectZero)
         self.frame.size      = CGSizeZero
         self.clipsToBounds   = true
-        self.imageView.alpha = 0.0
+        self.imageView.alpha = 1.0
+        self.addSubview(imageView)
         
         imageView.frame = CGRect(origin: CGPointZero, size: CGSizeZero)
         

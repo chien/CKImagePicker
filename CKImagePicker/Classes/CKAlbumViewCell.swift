@@ -7,36 +7,40 @@
 //
 
 import UIKit
-import Cartography
+//import Cartography
 
 class CKAlbumViewCell: UICollectionViewCell {
-    var configuration: CKImagePickerConfiguration!
+    var configuration: CKImagePickerConfiguration?
 
-    var imageView = UIImageView()
-    var image: UIImage? {
-        didSet {
-            self.imageView.image = image
-        }
-    }
-    
+    var imageView: UIImageView!
+
     var currentSelected : Bool {
         didSet {
             self.layer.borderWidth = currentSelected ? 2 : 0
-            self.layer.borderColor = (currentSelected ? configuration.tintColor : UIColor.blackColor()).CGColor
+            self.layer.borderColor = (currentSelected ? configuration!.tintColor : UIColor.blackColor()).CGColor
         }
     }
-    
+
     override init(frame: CGRect) {
         self.currentSelected = false
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
+
+        imageView = UIImageView(frame: self.contentView.bounds)
+        imageView.clipsToBounds = true
+        imageView.contentMode = .ScaleAspectFill
+        imageView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
         self.contentView.addSubview(imageView)
-        constrain(self.imageView) { view in
-            view.size == view.superview!.size
-            view.top == view.superview!.top
-            view.left == view.superview!.left
-        }
+//
+//        constrain(self.imageView) { view in
+//            view.size == view.superview!.size
+//            view.top == view.superview!.top
+//            view.left == view.superview!.left
+//        }
+//        
+        self.setNeedsDisplay()
+//        self.layoutIfNeeded()
     }
 
     required init(coder aDecoder: NSCoder) {

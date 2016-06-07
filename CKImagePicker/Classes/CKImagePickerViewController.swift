@@ -75,7 +75,7 @@ public class CKImagePickerViewController: UIViewController {
 extension CKImagePickerViewController: CKImagePickerViewDelegate {
     @objc func imageDeleted() {
         imagePickerView.albumView.reloadImages()
-        imageCount = imagePickerView.albumView.images.count
+        imageCount = imagePickerView.albumView.imageUrls.count
     }
 
     @objc func cameraShotFinished(image: UIImage) {
@@ -90,7 +90,7 @@ extension CKImagePickerViewController: CKImagePickerViewDelegate {
             print("Error saving file at path: \(fullPath) with error: \(error)")
         }
         imagePickerView.albumView.reloadImages()
-        imageCount = imagePickerView.albumView.images.count
+        imageCount = imagePickerView.albumView.imageUrls.count
     }
 
     @objc func switchView(button: UIButton) {

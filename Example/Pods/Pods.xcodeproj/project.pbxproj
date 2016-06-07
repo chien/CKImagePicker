@@ -7,191 +7,281 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04BC278ED8790BA7610C8D826D3507E7 /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908FB65CD7562DABBB3728606868B140 /* FontAwesome_swift.framework */; };
-		0517A3D1AE2235822B12880D2317472A /* FontAwesome.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F15F88D93D5C57D747201A997ECFB73 /* FontAwesome.swift-dummy.m */; };
-		0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62541BC7C4A93AA6C92D4B14AFBE67E6 /* Dimension.swift */; };
-		0FD7387EDA5009285A3BE3D08D444D70 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587088FB6A896D7E50728300EFCB25E0 /* Cartography.framework */; };
-		102C78F71D024224006B5163 /* CKImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */; };
-		106A1BE41D04AD8C007AAF1E /* CKAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE01D04A7D1007AAF1E /* CKAlbumView.swift */; };
-		106A1BE51D04AD8F007AAF1E /* CKImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10775B4F1D02563D006DAC75 /* CKImageCropView.swift */; };
-		106A1BE61D04AD91007AAF1E /* CKAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE21D04A935007AAF1E /* CKAlbumViewCell.swift */; };
-		106A1BE91D04B261007AAF1E /* CKImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BE71D04B187007AAF1E /* CKImagePickerConfiguration.swift */; };
-		106A1BEC1D04B7EB007AAF1E /* CKCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A1BEA1D04B746007AAF1E /* CKCameraView.swift */; };
-		106A1BED1D04C9FD007AAF1E /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBFE4FB47CB95CFA119ECF19C190E53 /* FontAwesome.otf */; };
-		106A1BEF1D04CA32007AAF1E /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBFE4FB47CB95CFA119ECF19C190E53 /* FontAwesome.otf */; };
-		106B922A1D053F2A00E2A934 /* CKImagePickerBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106B92281D053E5F00E2A934 /* CKImagePickerBaseView.swift */; };
-		106B92311D061E3D00E2A934 /* UIImage+OrientationFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106B922F1D061E2100E2A934 /* UIImage+OrientationFix.swift */; };
-		2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F228D8596C5F06F6692032A729A6B1 /* Edge.swift */; };
-		28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D609ADA3CBBE2EB59D4E0EEDA9C38E4 /* Compound.swift */; };
-		337A8DFD50F43263096173E061EEA9A5 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EFC96D3A79D103387BBE83B2977783 /* Enum.swift */; };
-		369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDFC488F6C44FB2308C4DDB5BF54D5 /* Distribute.swift */; };
-		452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B519A6C8A3C0ABF52151D3C3E80484 /* Context.swift */; };
-		48ADE3FB3F30FCA5893083351449DA98 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F964DB26B0F492D4D158574C4046F /* ViewUtils.swift */; };
-		5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63834B86CE7819F19880B1116E314D21 /* Edges.swift */; };
-		584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BF92C747917382CD69B081E05ED61 /* Align.swift */; };
-		69FA424183BC078853BCF9A653C4E503 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7040C4521CFEC3E43116B1C1C5094687 /* CoreText.framework */; };
-		6D984EFBC6C8A5C3D72EBD58D0FE6452 /* Pods-CKImagePicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C02DDF8E205F0FD9E89D65F4379F5 /* Pods-CKImagePicker_Example-dummy.m */; };
-		7C3FBF5E1E0F80256604CB657F319CA1 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895F3FBB4DCC9F9A94819B1EE8F9086 /* FontAwesome.swift */; };
-		7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3FEFEEA125EDD2FC79971A72F07EC /* Expression.swift */; };
-		8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F91BD93887B5697C881EC522B3F5 /* LayoutProxy.swift */; };
+		00CCD010C6404C3405DEC687D6AB6D29 /* CKCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B190B33E7B11542BEB21B0706198B /* CKCameraView.swift */; };
+		020D00089702AE077F61647D8877F39F /* UIImage+OrientationFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E886514BE0555AB3B354A8A528BB8 /* UIImage+OrientationFix.swift */; };
+		025E633A750CF68436D37B97F55F38A0 /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6309F03B156F1AE1872F85133C32F0 /* NSHTTPURLResponse+Haneke.swift */; };
+		0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD053890F8AA78ED44D04BEEDAE9E51 /* Dimension.swift */; };
+		0A3C4EB82E43BCFEF618C2677FC278E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
+		1702DF8C460226429DBC15331FB5EE92 /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C70DEB340B113BCC17B859743AFE18 /* NSURLResponse+Haneke.swift */; };
+		182211E82F8355765774E681AD7ED9C6 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3D3AB783E16C0E7BB4ED2E2EB042B /* Fetcher.swift */; };
+		1BBD1242BEE759F7B684F9B5B284C08C /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0698B89BF299765BF6361F1230362E4 /* Haneke.swift */; };
+		2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ED91C06C871767F1C28120F575AB27 /* Edge.swift */; };
+		2275EC2B74DFC11C6F44CF315F0D34B8 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891A16DF302302D815B8D5FE123AFFD /* Enum.swift */; };
+		2435BCD3D108D46C654240CD9938604D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B541EA3E3BDC6D29E3868C931316A0 /* Data.swift */; };
+		28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982EA728DFE370CEC3FAC4E84AE5AE0B /* Compound.swift */; };
+		32542F12E359A4A0DFB4A6A32376BA68 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBBE81372115BFBF276DACC35EF3E3 /* UIImageView+Haneke.swift */; };
+		356DC50BF1033B650566B9E6C322BA04 /* FontAwesome.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA57B8EFC160105DD419F52A9B84DBCF /* FontAwesome.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519D6E93BF4CE58F7F7942179C98622 /* Distribute.swift */; };
+		3726A5E28B80FE09C1BE5476271FFF94 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423161C7DCD747CF79A9E1D26B3DB63 /* Log.swift */; };
+		38ACEE395B9A753DE0308F0962F48A01 /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9768F0406A2B5F1A444F5FE5410BA9 /* FontAwesome_swift.framework */; };
+		41659D369CC9877BD047C44C3D7E4DE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
+		452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62A32799A29EDF12C683748B946E5D3 /* Context.swift */; };
+		48ADE3FB3F30FCA5893083351449DA98 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5564E45C4E5573071A73891F6EA73D /* ViewUtils.swift */; };
+		5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48747BE862725E76B73D05114D4D599 /* Edges.swift */; };
+		5500CA138263F62010285F80975C49E0 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8941B461D9371BDA9CD8A56744B81E8 /* Cartography.framework */; };
+		552C074BCDD7AAB15FEBC65BD9A2FDC9 /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370293DF5B8318875BD0C610ED5A67A9 /* NSFileManager+Haneke.swift */; };
+		584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDDD1B31168FEAC716F07A4A27AFC3F /* Align.swift */; };
+		5853A7CEFA927667EE0654FD9D372652 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60A35D669C896BDC275745CD9362F4 /* Cache.swift */; };
+		5873B6D529055503239FA8AAE2B06548 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66202030427BF81CA94C1478ED4CF775 /* CoreText.framework */; };
+		587EF6A850072276C7BD7668475B931C /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFFA77313AD7281995300801A495E594 /* FontAwesome.swift.bundle */; };
+		5BE816B2F915DA92DB89972D577F8445 /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5AC654AAD358AE855EC804088A8A76 /* CryptoSwiftMD5.swift */; };
+		622668A47C833EC9AA7DBE7C8488EC1B /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25997A5F3997AD44C0260EF1C5F676 /* DiskFetcher.swift */; };
+		64773875208FD553E635C8F604A4FA85 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91355663933B6D026116AA38994B5 /* CGSize+Swift.swift */; };
+		7081BD30FA3E98FEEB6008994CE5E080 /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A686DB785FFBAE35E32BC1C17EEBF1 /* HanekeSwift-dummy.m */; };
+		763A4E2A6C8D2BF29AD862FC362B8691 /* CKImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF7CE2AE0C54861621A4F3A6AB0BCD /* CKImagePickerConfiguration.swift */; };
+		7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4F2B93355796918670A7E3EF2CD14F /* Expression.swift */; };
+		8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB12BE87F44FD39686E87BF123DA885 /* LayoutProxy.swift */; };
 		8547482751BA97D2641836491D494EB4 /* Pods-CKImagePicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B316A27472CDADAE1ADF46CA65CAA8E /* Pods-CKImagePicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		893C94DDB856C18251D42D60C88AE2E8 /* CKImagePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C14A418C427B40D2E2FA201F7E50A97A /* CKImagePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		959E94859EB9C6E5053730A5CA807BDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
-		A33E78335A9459EC83327D52001569C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
-		AEA028409EAB5D66D04F375D62E90CA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
+		86317CA7420A283E19ADBA6E7E96752C /* CKImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCAA37D63B8D1A2299B6ADC2548C4C9 /* CKImageCropView.swift */; };
+		86C62E4A08ECF41366FAB1D703260821 /* CKAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC9C6BE2DBD429516303A0493038AE /* CKAlbumView.swift */; };
+		8DAC39C7B226410C964B83B111BD7CE1 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF183027F0CB1AF57DEF302CE98506 /* Format.swift */; };
+		9058D45D2119F9D9C0E904D3C7CCF553 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDBAAEC67C911D8AD735664AA17B78C /* Haneke.framework */; };
+		94A7A88FCA41D7FA86F8814E9C6CA53C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
+		990A594A890000C20EE9C17C236C0858 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
+		A05DA3143B823DFC2B601088F89DFDA7 /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1C48EED2E10CEDA82AFEA830084A5 /* UIView+Haneke.swift */; };
+		A33E78335A9459EC83327D52001569C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
+		A6090BB065BC8DB23B7E616EF39E11B2 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBDA3F0B39177CC23CECB823C9BCBA1 /* FontAwesome.otf */; };
+		AA2D893948349ABA962E5D1ED1D9F014 /* CKAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C9B33DA0B92A41DF747816989C3D2 /* CKAlbumViewCell.swift */; };
+		AD13DAEDE7F144FD6FA7CC93B8479D19 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940AA8ECBE3B0EA8A642A5C7AFC61D8F /* Fetch.swift */; };
 		B11F5A38FEFEA1E9C42C8BBD24B9CCAE /* Pods-CKImagePicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB3F14F2770A749A5BCA676FE74D7B /* Pods-CKImagePicker_Tests-dummy.m */; };
-		B23E3B878363F72D1E874E46EB62FA7F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA943956740DFF5FD1327D6F9714D7 /* Size.swift */; };
-		B90891688A088BC37455234028C2E993 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D6E28AC3C6F8C10D54A191C52C747EC /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1990AA51B9B2CF26994D479E3F4EBED /* Extensions.swift */; };
-		C2BF1C991136F55CCED13B8F3BDA5FB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB252D8D28FC805929A8F0175B0CF902 /* UIKit.framework */; };
-		C3649839064E53A4BF767D2EF29651EF /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE1EB9D0B50D7EF9173744C93BA658 /* Priority.swift */; };
-		C3CD9494F03FA3BD829EC2574FEBA574 /* CKImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 339CC665ABC707C7A9121F1CAD9044CB /* CKImagePicker-dummy.m */; };
-		D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD33908679C2D583A279BBD56D7729 /* Constrain.swift */; };
-		D3C01862D88692FA2E85A2D84345982B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529215ABCE0F34C011ABB7381DAA38B2 /* Point.swift */; };
-		D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CA82255853E2B4165667D953B09F53 /* Cartography-dummy.m */; };
-		D975AC225FD9B2CD04B7874BC3FE10AA /* FontAwesome.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1CAAFCE21FB744447212C2A70B691CE /* FontAwesome.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD26D6B360B69331A9163CD61ABE81 /* ConstraintGroup.swift */; };
-		E6B4D17838D9F72928A00FA0EB7F857B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
-		EB9E85B0CE6A53DCBDE040A716B5DBF8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4DD5FA9D392852FF21F33986D9F4D3 /* Property.swift */; };
-		ED4AEC119704E8A39B71A233D6201B29 /* CKImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804F2610EEF857462AE13AD417CC312 /* CKImagePickerView.swift */; };
-		EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23E3F9ACF9CEC09645F436CC5D3035 /* Coefficients.swift */; };
-		EE964A7C6CE7CE8D74056501B2D8FD0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */; };
-		F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989E9286978C6881458F33AAC288F041 /* Constraint.swift */; };
-		F95ADCA0B85C6C0640372D3EFBBF1AD6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01155ECB608F59BE64C4E589B34EA2F /* View.swift */; };
-		FDF48CFB4EC10AC253D136CCD431E086 /* Pods-CKImagePicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030855295DAD83227BA348C8BA0DE92F /* Pods-CKImagePicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B23E3B878363F72D1E874E46EB62FA7F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C12747E0EE52286C0FCCFF1BA04D8 /* Size.swift */; };
+		B90891688A088BC37455234028C2E993 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D36FAEB6A64FB41F616EF3CAE9FFDFA2 /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B922E4DED66778F72B296F710FAE170F /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DDF1A9A897EC34DBD171E397E1C663 /* DiskCache.swift */; };
+		BABF46CA9CA7DD9EF60AA0650F444493 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB05959A571E35D3E29ED644C3E4D9 /* String+Haneke.swift */; };
+		BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEB5B694735B5CF42A5200BD2038BBE /* Extensions.swift */; };
+		C03A16894680E09B23D1F18DBB9A3893 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A9D2432FF766FFED280A2BBF5B0A1E /* UIKit.framework */; };
+		C3649839064E53A4BF767D2EF29651EF /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869D0C52674803A12954F078D74EAF5 /* Priority.swift */; };
+		C7BF605CB348F1BC62CEA0CFEE0DF624 /* Pods-CKImagePicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C02DDF8E205F0FD9E89D65F4379F5 /* Pods-CKImagePicker_Example-dummy.m */; };
+		CA56A6E541E39EAA0CF52DD0BAD1E02E /* Pods-CKImagePicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030855295DAD83227BA348C8BA0DE92F /* Pods-CKImagePicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC3712633CF64B47CA7889381758375F /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F1E8BBBEDE82C21C17D4D7410DF251 /* UIImage+Haneke.swift */; };
+		CD2E9E11B46F3BB7F44DA285FC8807A6 /* FontAwesome.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 262D16253537C4640BDC70FFA043FE85 /* FontAwesome.swift-dummy.m */; };
+		D03AE8EA55AB9992C3BE61A1CF79B136 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B897DD6B3982E5A6D196BF158453297F /* NetworkFetcher.swift */; };
+		D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5084CF9AFB866F137768974ACED05B3 /* Constrain.swift */; };
+		D3C01862D88692FA2E85A2D84345982B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78132989E7160F75CD620C2DA7551 /* Point.swift */; };
+		D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC1D4ECDD51DFE07C8467CED1BB584 /* Cartography-dummy.m */; };
+		DC1C403BA12A446CCCFE52DBA4723728 /* CKImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 339CC665ABC707C7A9121F1CAD9044CB /* CKImagePicker-dummy.m */; };
+		E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30C9AF4FB360259B7BE05E519F0907 /* ConstraintGroup.swift */; };
+		E35B07D1F58256E8C24F3CFF9C72E41D /* CKImagePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C14A418C427B40D2E2FA201F7E50A97A /* CKImagePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5BF73F9FF6AB9279F05FF5297F4899E /* CKImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EA878AF06065546B213DAEA5BF285 /* CKImagePickerViewController.swift */; };
+		EB9E85B0CE6A53DCBDE040A716B5DBF8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05303F448950FED73E36F3939E6C6CF1 /* Property.swift */; };
+		ECC565132DF093E9B04C49146740B806 /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869180AACE3537904F95D3F01658832 /* UIButton+Haneke.swift */; };
+		EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8E86C54C5D9670B2C42E9A85E699F2 /* Coefficients.swift */; };
+		EE964A7C6CE7CE8D74056501B2D8FD0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
+		F2D7BFC919063E44A946108D45759968 /* CKImagePickerBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FAAA5A1BC6B3D641C31DD2E0F4372 /* CKImagePickerBaseView.swift */; };
+		F435FF22C109A0E2F937C3F5C1A5E179 /* CKImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D4AE5CB1DCDE9F7BFACF115CED3F5 /* CKImagePickerView.swift */; };
+		F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897904EE823DEB2C6E440BF6503B444 /* Constraint.swift */; };
+		F95ADCA0B85C6C0640372D3EFBBF1AD6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74B9596666E63F7A01CC9F5C41269E9 /* View.swift */; };
+		FE471AD38954863A84D0A2EBE08B5FF4 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6075CE726A5D89F49CC55677D877CC /* FontAwesome.swift */; };
+		FFB3C46D2244D060B1311D295D78B8A8 /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86191826204BAD432ABA6981F9AD5C83 /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A38B8A830E5357504ED0F028B40F439 /* PBXContainerItemProxy */ = {
+		3139CCA0F24E02B08F3E21EF6F489EFE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DAB223D9A33832F8971BAE0497926C76;
+			remoteGlobalIDString = 18231732CEC57AD9BDB34D59B8F88400;
 			remoteInfo = FontAwesome.swift;
 		};
-		512AABAFAB70D6D7E0FF5A9A3C7B3D1C /* PBXContainerItemProxy */ = {
+		44A47DAEC225F4869D2A4D2393CE7274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E48F3DB84196B430BE2031B146E795A2;
+			remoteInfo = HanekeSwift;
+		};
+		489C240F4C645952A6AD51350A9B9E31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18231732CEC57AD9BDB34D59B8F88400;
+			remoteInfo = FontAwesome.swift;
+		};
+		5FF57CE0164DBC4207E5CBE2573EDB44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C3A04698AAE4D6124C20602D622956E5;
 			remoteInfo = Cartography;
 		};
-		B239FB09C3B79F9C2891751A1FDD2D37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DAB223D9A33832F8971BAE0497926C76;
-			remoteInfo = FontAwesome.swift;
-		};
-		BD9C4EB073B45887CE37C98D6C5DF4A1 /* PBXContainerItemProxy */ = {
+		AE812120B604E0B96673D22E7480ACAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C3A04698AAE4D6124C20602D622956E5;
 			remoteInfo = Cartography;
 		};
-		E8A9E476897274F5509554BF833CD5A7 /* PBXContainerItemProxy */ = {
+		CB89E0AFFFB10ED5072E4D62A66BD055 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9BCCE0E29F8F6496C50F158AD85DF61F;
+			remoteGlobalIDString = E48F3DB84196B430BE2031B146E795A2;
+			remoteInfo = HanekeSwift;
+		};
+		E79F983F4733C9763D8F425E4CBACD65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C16C35416BA0A6AFC5AEA67B9318D22;
 			remoteInfo = CKImagePicker;
+		};
+		F6209FC06DBD46066069C761D5D89D49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D0316172AE4B25F6C8A409D15AEF2FF;
+			remoteInfo = "FontAwesome.swift-FontAwesome.swift";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A686DB785FFBAE35E32BC1C17EEBF1 /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
+		00F6EA6D96CB47580A766B0D511AEE6E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		030855295DAD83227BA348C8BA0DE92F /* Pods-CKImagePicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CKImagePicker_Example-umbrella.h"; sourceTree = "<group>"; };
-		092417E0E15A8592D7A5FDC1F01C51AE /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
-		0D6E28AC3C6F8C10D54A191C52C747EC /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
-		0F15F88D93D5C57D747201A997ECFB73 /* FontAwesome.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesome.swift-dummy.m"; sourceTree = "<group>"; };
-		106A1BE01D04A7D1007AAF1E /* CKAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKAlbumView.swift; sourceTree = "<group>"; };
-		106A1BE21D04A935007AAF1E /* CKAlbumViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKAlbumViewCell.swift; sourceTree = "<group>"; };
-		106A1BE71D04B187007AAF1E /* CKImagePickerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKImagePickerConfiguration.swift; sourceTree = "<group>"; };
-		106A1BEA1D04B746007AAF1E /* CKCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKCameraView.swift; sourceTree = "<group>"; };
-		106B92281D053E5F00E2A934 /* CKImagePickerBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKImagePickerBaseView.swift; sourceTree = "<group>"; };
-		106B922F1D061E2100E2A934 /* UIImage+OrientationFix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+OrientationFix.swift"; sourceTree = "<group>"; };
-		10775B4F1D02563D006DAC75 /* CKImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKImageCropView.swift; sourceTree = "<group>"; };
-		10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKImagePickerViewController.swift; sourceTree = "<group>"; };
+		03F1E8BBBEDE82C21C17D4D7410DF251 /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		04B91355663933B6D026116AA38994B5 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
+		05303F448950FED73E36F3939E6C6CF1 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
+		0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		085E886514BE0555AB3B354A8A528BB8 /* UIImage+OrientationFix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+OrientationFix.swift"; sourceTree = "<group>"; };
+		0B0EA878AF06065546B213DAEA5BF285 /* CKImagePickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKImagePickerViewController.swift; sourceTree = "<group>"; };
+		0F7FAAA5A1BC6B3D641C31DD2E0F4372 /* CKImagePickerBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKImagePickerBaseView.swift; sourceTree = "<group>"; };
 		10D92AE5D82047E9A9E308B6073DC690 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1804F2610EEF857462AE13AD417CC312 /* CKImagePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKImagePickerView.swift; sourceTree = "<group>"; };
-		1A544112391090DBFFEC39D98EB7CDD9 /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
-		1B2B6CA4BECB3ABC2560ADDD4E68041B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BBFE4FB47CB95CFA119ECF19C190E53 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesome/FontAwesome.otf; sourceTree = "<group>"; };
+		14A9D2432FF766FFED280A2BBF5B0A1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1BBDA3F0B39177CC23CECB823C9BCBA1 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesome/FontAwesome.otf; sourceTree = "<group>"; };
+		1BF1C48EED2E10CEDA82AFEA830084A5 /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
+		1CDBAAEC67C911D8AD735664AA17B78C /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E394E7746C9D1B71AD7DB7853B9FE19 /* Pods-CKImagePicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CKImagePicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		20B519A6C8A3C0ABF52151D3C3E80484 /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
-		2635398B762378A33F5020695B5E931A /* FontAwesome.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-prefix.pch"; sourceTree = "<group>"; };
+		1E60A35D669C896BDC275745CD9362F4 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
+		1E79C24AE50FCE3F3D3B83EBC50A92AD /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
+		22CC1D4ECDD51DFE07C8467CED1BB584 /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
+		262D16253537C4640BDC70FFA043FE85 /* FontAwesome.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesome.swift-dummy.m"; sourceTree = "<group>"; };
 		28D8099CB9A495D6890D3BBD32DC129B /* Pods-CKImagePicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		29949495165F9A00CA36C1D6062114A1 /* Pods_CKImagePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKImagePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D609ADA3CBBE2EB59D4E0EEDA9C38E4 /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
+		2B6309F03B156F1AE1872F85133C32F0 /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
 		2DCEDDF89AFC120B672D095471C4F924 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FB99F5D3D9B1BCB9026437E40B22981 /* Pods-CKImagePicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKImagePicker_Example-resources.sh"; sourceTree = "<group>"; };
-		30DA943956740DFF5FD1327D6F9714D7 /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
-		32EFC96D3A79D103387BBE83B2977783 /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = FontAwesome/Enum.swift; sourceTree = "<group>"; };
 		339CC665ABC707C7A9121F1CAD9044CB /* CKImagePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CKImagePicker-dummy.m"; sourceTree = "<group>"; };
 		369C02DDF8E205F0FD9E89D65F4379F5 /* Pods-CKImagePicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CKImagePicker_Example-dummy.m"; sourceTree = "<group>"; };
-		3866F91BD93887B5697C881EC522B3F5 /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
-		3895F3FBB4DCC9F9A94819B1EE8F9086 /* FontAwesome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = FontAwesome/FontAwesome.swift; sourceTree = "<group>"; };
+		370293DF5B8318875BD0C610ED5A67A9 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
+		3D30C9AF4FB360259B7BE05E519F0907 /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
+		42B541EA3E3BDC6D29E3868C931316A0 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		4869D0C52674803A12954F078D74EAF5 /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
+		48D664FCC54A4388DC12C3A83BB8B1A4 /* FontAwesome.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesome.swift.xcconfig; sourceTree = "<group>"; };
 		4A9FBC396EE0E094A30AF3DF9051CAAF /* Pods-CKImagePicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CKImagePicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		4DE3FEFEEA125EDD2FC79971A72F07EC /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
-		4EBE1EB9D0B50D7EF9173744C93BA658 /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
-		512068B24C07B9F7696EE8AAB1227413 /* Pods_CKImagePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKImagePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		529215ABCE0F34C011ABB7381DAA38B2 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
-		587088FB6A896D7E50728300EFCB25E0 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53D3D3AB783E16C0E7BB4ED2E2EB042B /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
+		57AB05959A571E35D3E29ED644C3E4D9 /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
+		57D78DC5A7C9B6036312693B9478C3C1 /* Pods_CKImagePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKImagePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5891A16DF302302D815B8D5FE123AFFD /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = FontAwesome/Enum.swift; sourceTree = "<group>"; };
+		5BA78132989E7160F75CD620C2DA7551 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
+		5FD053890F8AA78ED44D04BEEDAE9E51 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
 		60C3C7504B51BE8628D523B57D89B05C /* CKImagePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CKImagePicker.xcconfig; sourceTree = "<group>"; };
-		62541BC7C4A93AA6C92D4B14AFBE67E6 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
-		63834B86CE7819F19880B1116E314D21 /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
 		64D6C1489BCD47A406BCE0D4678B1C36 /* Pods-CKImagePicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKImagePicker_Tests-resources.sh"; sourceTree = "<group>"; };
-		6F4DD5FA9D392852FF21F33986D9F4D3 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
-		7040C4521CFEC3E43116B1C1C5094687 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		66202030427BF81CA94C1478ED4CF775 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		6897904EE823DEB2C6E440BF6503B444 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
+		6DDDD1B31168FEAC716F07A4A27AFC3F /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
+		6FCAA37D63B8D1A2299B6ADC2548C4C9 /* CKImageCropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKImageCropView.swift; sourceTree = "<group>"; };
+		6FDCD29A24E63E9C821594B45ECAE8AB /* FontAwesome.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-prefix.pch"; sourceTree = "<group>"; };
+		72EFC4D08D723D71A1B39B78A7C5F130 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		731EBA943FDE7B334334EA6BCACA78C0 /* Pods-CKImagePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CKImagePicker_Tests.modulemap"; sourceTree = "<group>"; };
+		73CBBE81372115BFBF276DACC35EF3E3 /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
+		74ED91C06C871767F1C28120F575AB27 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
+		751B190B33E7B11542BEB21B0706198B /* CKCameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKCameraView.swift; sourceTree = "<group>"; };
+		77DF183027F0CB1AF57DEF302CE98506 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
 		7B316A27472CDADAE1ADF46CA65CAA8E /* Pods-CKImagePicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CKImagePicker_Tests-umbrella.h"; sourceTree = "<group>"; };
-		7F23E3F9ACF9CEC09645F436CC5D3035 /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
+		7E682A3A582390AE24E64D60F7D52685 /* Pods_CKImagePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKImagePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8519D6E93BF4CE58F7F7942179C98622 /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
+		86191826204BAD432ABA6981F9AD5C83 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
+		8A4F2B93355796918670A7E3EF2CD14F /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
+		8A8E86C54C5D9670B2C42E9A85E699F2 /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
 		8A9DF7D2CB3743C01DAFD7B53B3E698D /* Pods-CKImagePicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKImagePicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8ACBCBA4AEE7E7DDCDD87F05583CAF5F /* CKImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CKImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		908FB65CD7562DABBB3728606868B140 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D2C9B33DA0B92A41DF747816989C3D2 /* CKAlbumViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKAlbumViewCell.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9665797115B26A8CEACB19819B53D421 /* FontAwesome.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesome.swift.xcconfig; sourceTree = "<group>"; };
-		96813BB33D4E4FE01E47FCB5FF65EE00 /* FontAwesome.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FontAwesome.swift.modulemap; sourceTree = "<group>"; };
-		989E9286978C6881458F33AAC288F041 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
+		940AA8ECBE3B0EA8A642A5C7AFC61D8F /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
+		969B0A353C3034AD73DFC2FC6129F7DA /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
+		96BC7C9C90C745E76DB2A2C48955C81B /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
+		982EA728DFE370CEC3FAC4E84AE5AE0B /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
+		9869180AACE3537904F95D3F01658832 /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
+		9A25997A5F3997AD44C0260EF1C5F676 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
+		9E9DFADC5146CE2ADF9ADA0460380A9F /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cartography.modulemap; sourceTree = "<group>"; };
+		9EB0F82301B8520D11F972BDFA1C5D5F /* FontAwesome.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FontAwesome.swift.modulemap; sourceTree = "<group>"; };
 		A049E714E9DAF710C014BCD3B52FF42A /* Pods-CKImagePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A2F228D8596C5F06F6692032A729A6B1 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
+		A2C92CC44E18E10D81A0BE7BFD83FF58 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A31D4AE5CB1DCDE9F7BFACF115CED3F5 /* CKImagePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKImagePickerView.swift; sourceTree = "<group>"; };
+		A62A32799A29EDF12C683748B946E5D3 /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
 		A7AB3F14F2770A749A5BCA676FE74D7B /* Pods-CKImagePicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CKImagePicker_Tests-dummy.m"; sourceTree = "<group>"; };
-		A9AD33908679C2D583A279BBD56D7729 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
-		AD86BDF312F877543F2F302853A96F0E /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC3A45A9685D4B720FE13736DACE689 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF4761EB692EDE2918E3F89722EC980E /* CKImagePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKImagePicker-prefix.pch"; sourceTree = "<group>"; };
-		AFF7F1F887F603617A4D025AAE7379AB /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cartography.modulemap; sourceTree = "<group>"; };
-		B01155ECB608F59BE64C4E589B34EA2F /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
+		B18DBFF6CB18DD327A3F26D4821DD3F1 /* CKImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CKImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19BD9B784A432B2195BAFFFA0A514C1 /* Pods-CKImagePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKImagePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		B423161C7DCD747CF79A9E1D26B3DB63 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
+		B5084CF9AFB866F137768974ACED05B3 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
+		B897DD6B3982E5A6D196BF158453297F /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
+		B8DDF1A9A897EC34DBD171E397E1C663 /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
 		B9B7AD74037AB5C5AFC7B4D76A6487FB /* Pods-CKImagePicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKImagePicker_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BA57B8EFC160105DD419F52A9B84DBCF /* FontAwesome.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-umbrella.h"; sourceTree = "<group>"; };
 		BBC2C249BB93E16C53B9E6859EF2DEBE /* Pods-CKImagePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5AC654AAD358AE855EC804088A8A76 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
+		BF6075CE726A5D89F49CC55677D877CC /* FontAwesome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = FontAwesome/FontAwesome.swift; sourceTree = "<group>"; };
+		BF9768F0406A2B5F1A444F5FE5410BA9 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00F2E39D69F3A312678D22300C35529 /* ResourceBundle-FontAwesome.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FontAwesome.swift-Info.plist"; sourceTree = "<group>"; };
 		C14A418C427B40D2E2FA201F7E50A97A /* CKImagePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKImagePicker-umbrella.h"; sourceTree = "<group>"; };
-		C78F964DB26B0F492D4D158574C4046F /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
-		CFF154F894F261086983C164743A9235 /* ResourceBundle-FontAwesome.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FontAwesome.swift-Info.plist"; sourceTree = "<group>"; };
+		C2F832D6B59CE30A321CE0B1554379F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB5C12747E0EE52286C0FCCFF1BA04D8 /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
 		D0E974606CABE4778F9D8A240DC3D7EA /* CKImagePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CKImagePicker.modulemap; sourceTree = "<group>"; };
-		D1CAAFCE21FB744447212C2A70B691CE /* FontAwesome.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-umbrella.h"; sourceTree = "<group>"; };
-		D1FDFC488F6C44FB2308C4DDB5BF54D5 /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
+		D36FAEB6A64FB41F616EF3CAE9FFDFA2 /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
 		D5EA43D2726506325D3863CE1A197B6E /* Pods-CKImagePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CKImagePicker_Example.modulemap"; sourceTree = "<group>"; };
-		D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DC71C5A0C7E6BA04F6F1AC7384E3F493 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3CA82255853E2B4165667D953B09F53 /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
-		E5FD26D6B360B69331A9163CD61ABE81 /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
-		E99BF92C747917382CD69B081E05ED61 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
-		F1990AA51B9B2CF26994D479E3F4EBED /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
+		DDB12BE87F44FD39686E87BF123DA885 /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
+		DEF4617F0A018BE7A22CBF417D6AB60B /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
+		E0698B89BF299765BF6361F1230362E4 /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
+		E1FC9C6BE2DBD429516303A0493038AE /* CKAlbumView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKAlbumView.swift; sourceTree = "<group>"; };
+		E6AF7CE2AE0C54861621A4F3A6AB0BCD /* CKImagePickerConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CKImagePickerConfiguration.swift; sourceTree = "<group>"; };
+		E94A02D38241E456194BF323D70F389C /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEB5B694735B5CF42A5200BD2038BBE /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
+		ED5564E45C4E5573071A73891F6EA73D /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
+		EFFA77313AD7281995300801A495E594 /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FontAwesome.swift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21B44D37C15DADF8F3BF40AFDCCB6B0 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
 		F31F43A0701AA6DF19E04F3C04B90A83 /* Pods-CKImagePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F3FB5E699E738A833F7D0F5A3C8007A7 /* Pods-CKImagePicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKImagePicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FB1E654ED15A6F539BEAAAD6C4FFAA2B /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB252D8D28FC805929A8F0175B0CF902 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F48747BE862725E76B73D05114D4D599 /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
+		F4C70DEB340B113BCC17B859743AFE18 /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		F74B9596666E63F7A01CC9F5C41269E9 /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
+		F8941B461D9371BDA9CD8A56744B81E8 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC67CBD050FD5204C7A3A2A197E8CC49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0A2E797CF7CC77E14C32DA55E9FA5AE8 /* Frameworks */ = {
+		1496EF154483F37BDCBC2DF29902FE83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BC278ED8790BA7610C8D826D3507E7 /* FontAwesome_swift.framework in Frameworks */,
-				0FD7387EDA5009285A3BE3D08D444D70 /* Cartography.framework in Frameworks */,
-				959E94859EB9C6E5053730A5CA807BDD /* Foundation.framework in Frameworks */,
+				990A594A890000C20EE9C17C236C0858 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25655E28FCF13140672507D0283D091C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5873B6D529055503239FA8AAE2B06548 /* CoreText.framework in Frameworks */,
+				0A3C4EB82E43BCFEF618C2677FC278E0 /* Foundation.framework in Frameworks */,
+				C03A16894680E09B23D1F18DBB9A3893 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C4DCF8C4E12788FEB9D6F6B63185948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41659D369CC9877BD047C44C3D7E4DE2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,27 +301,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F97FD1FDF8026733FF67D6053520723 /* Frameworks */ = {
+		C327DD51519F9093E51BB8168B05DCE6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B4D17838D9F72928A00FA0EB7F857B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABDA05BD117E5203A06ECA16CA024D61 /* Frameworks */ = {
+		FE78E08077E93C178EF180EE4EA63690 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69FA424183BC078853BCF9A653C4E503 /* CoreText.framework in Frameworks */,
-				AEA028409EAB5D66D04F375D62E90CA7 /* Foundation.framework in Frameworks */,
-				C2BF1C991136F55CCED13B8F3BDA5FB2 /* UIKit.framework in Frameworks */,
+				5500CA138263F62010285F80975C49E0 /* Cartography.framework in Frameworks */,
+				38ACEE395B9A753DE0308F0962F48A01 /* FontAwesome_swift.framework in Frameworks */,
+				94A7A88FCA41D7FA86F8814E9C6CA53C /* Foundation.framework in Frameworks */,
+				9058D45D2119F9D9C0E904D3C7CCF553 /* Haneke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B62B71A74781B53214C372350604D2D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E9DFADC5146CE2ADF9ADA0460380A9F /* Cartography.modulemap */,
+				DEF4617F0A018BE7A22CBF417D6AB60B /* Cartography.xcconfig */,
+				22CC1D4ECDD51DFE07C8467CED1BB584 /* Cartography-dummy.m */,
+				969B0A353C3034AD73DFC2FC6129F7DA /* Cartography-prefix.pch */,
+				D36FAEB6A64FB41F616EF3CAE9FFDFA2 /* Cartography-umbrella.h */,
+				C2F832D6B59CE30A321CE0B1554379F7 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cartography";
+			sourceTree = "<group>";
+		};
 		0CD7DFE7A3BA573D7FC2096B1F09ACDB /* Pods-CKImagePicker_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,19 +363,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2961161AE9F445E0A3CD985064896FBA /* Support Files */ = {
+		2F46AF31F5A83148BA88695241B6C9AD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				96813BB33D4E4FE01E47FCB5FF65EE00 /* FontAwesome.swift.modulemap */,
-				9665797115B26A8CEACB19819B53D421 /* FontAwesome.swift.xcconfig */,
-				0F15F88D93D5C57D747201A997ECFB73 /* FontAwesome.swift-dummy.m */,
-				2635398B762378A33F5020695B5E931A /* FontAwesome.swift-prefix.pch */,
-				D1CAAFCE21FB744447212C2A70B691CE /* FontAwesome.swift-umbrella.h */,
-				DC71C5A0C7E6BA04F6F1AC7384E3F493 /* Info.plist */,
-				CFF154F894F261086983C164743A9235 /* ResourceBundle-FontAwesome.swift-Info.plist */,
+				1BBDA3F0B39177CC23CECB823C9BCBA1 /* FontAwesome.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		35946A47EB6D1BA5936C5E4B3D17E7FB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F21B44D37C15DADF8F3BF40AFDCCB6B0 /* HanekeSwift.modulemap */,
+				96BC7C9C90C745E76DB2A2C48955C81B /* HanekeSwift.xcconfig */,
+				00A686DB785FFBAE35E32BC1C17EEBF1 /* HanekeSwift-dummy.m */,
+				1E79C24AE50FCE3F3D3B83EBC50A92AD /* HanekeSwift-prefix.pch */,
+				86191826204BAD432ABA6981F9AD5C83 /* HanekeSwift-umbrella.h */,
+				00F6EA6D96CB47580A766B0D511AEE6E /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/FontAwesome.swift";
+			path = "../Target Support Files/HanekeSwift";
 			sourceTree = "<group>";
 		};
 		3FCE16374516E9C2D0E891B5692738C9 /* Development Pods */ = {
@@ -282,12 +393,12 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		456C7A4103EC32B1C570C71995D3D342 /* Resources */ = {
+		40CC1FACB467501EA9FCD7DC33A16F06 /* CKImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				1BBFE4FB47CB95CFA119ECF19C190E53 /* FontAwesome.otf */,
+				B1763EC3CCE111DAC99C7998F35FDBD5 /* Classes */,
 			);
-			name = Resources;
+			path = CKImagePicker;
 			sourceTree = "<group>";
 		};
 		53DD72C8851E2F4B22A4645E0A5D3179 /* Pods-CKImagePicker_Example */ = {
@@ -308,18 +419,14 @@
 			path = "Target Support Files/Pods-CKImagePicker_Example";
 			sourceTree = "<group>";
 		};
-		54FAA4C9CA7A857AEBBD701C1C35E574 /* Support Files */ = {
+		594A5474107742EA69873815DB5CABBB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AFF7F1F887F603617A4D025AAE7379AB /* Cartography.modulemap */,
-				092417E0E15A8592D7A5FDC1F01C51AE /* Cartography.xcconfig */,
-				E3CA82255853E2B4165667D953B09F53 /* Cartography-dummy.m */,
-				1A544112391090DBFFEC39D98EB7CDD9 /* Cartography-prefix.pch */,
-				0D6E28AC3C6F8C10D54A191C52C747EC /* Cartography-umbrella.h */,
-				1B2B6CA4BECB3ABC2560ADDD4E68041B /* Info.plist */,
+				DDF10CB76F8AAC31EB9BAA9D3A139D43 /* Cartography */,
+				5FEDD430A6EF9730EAFEEF294656B90D /* FontAwesome.swift */,
+				91A2D7479EAEC125AA08224D8AF3EF8C /* HanekeSwift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Cartography";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		5A091148867774A23EA0D02FF04FCD08 /* Support Files */ = {
@@ -336,39 +443,40 @@
 			path = "Example/Pods/Target Support Files/CKImagePicker";
 			sourceTree = "<group>";
 		};
-		7484D59C830410C0EB6528E601B48A44 /* iOS */ = {
+		5DF7D1186537FC5862BC38247D9BEFCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7040C4521CFEC3E43116B1C1C5094687 /* CoreText.framework */,
-				D8631165E5D092C9B7E1540F75DEBC90 /* Foundation.framework */,
-				FB252D8D28FC805929A8F0175B0CF902 /* UIKit.framework */,
+				F8941B461D9371BDA9CD8A56744B81E8 /* Cartography.framework */,
+				BF9768F0406A2B5F1A444F5FE5410BA9 /* FontAwesome_swift.framework */,
+				1CDBAAEC67C911D8AD735664AA17B78C /* Haneke.framework */,
+				F2855650600E580801920D763A4670A3 /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7B009CD1819DCE0D53E3B50CBF5F5AF6 /* Pods */ = {
+		5FEDD430A6EF9730EAFEEF294656B90D /* FontAwesome.swift */ = {
 			isa = PBXGroup;
 			children = (
-				D0CAC1145D5EA87AA51EF9917F8A0DEB /* Cartography */,
-				8257B743184BDA27CD55DEA0CE764B5E /* FontAwesome.swift */,
+				5891A16DF302302D815B8D5FE123AFFD /* Enum.swift */,
+				BF6075CE726A5D89F49CC55677D877CC /* FontAwesome.swift */,
+				2F46AF31F5A83148BA88695241B6C9AD /* Resources */,
+				E69B826FFD9B3CF18E70158F043C5103 /* Support Files */,
 			);
-			name = Pods;
+			path = FontAwesome.swift;
 			sourceTree = "<group>";
 		};
-		7BADDB9910B55CD25A37955945DF2151 /* Classes */ = {
+		747B76971CDD759581F3557130320A04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1804F2610EEF857462AE13AD417CC312 /* CKImagePickerView.swift */,
-				106A1BE71D04B187007AAF1E /* CKImagePickerConfiguration.swift */,
-				10AFF41D1D023DDC00ADE328 /* CKImagePickerViewController.swift */,
-				106A1BE21D04A935007AAF1E /* CKAlbumViewCell.swift */,
-				106A1BE01D04A7D1007AAF1E /* CKAlbumView.swift */,
-				106A1BEA1D04B746007AAF1E /* CKCameraView.swift */,
-				106B922F1D061E2100E2A934 /* UIImage+OrientationFix.swift */,
-				10775B4F1D02563D006DAC75 /* CKImageCropView.swift */,
-				106B92281D053E5F00E2A934 /* CKImagePickerBaseView.swift */,
+				72EFC4D08D723D71A1B39B78A7C5F130 /* Cartography.framework */,
+				B18DBFF6CB18DD327A3F26D4821DD3F1 /* CKImagePicker.framework */,
+				EFFA77313AD7281995300801A495E594 /* FontAwesome.swift.bundle */,
+				E94A02D38241E456194BF323D70F389C /* FontAwesome_swift.framework */,
+				A2C92CC44E18E10D81A0BE7BFD83FF58 /* Haneke.framework */,
+				57D78DC5A7C9B6036312693B9478C3C1 /* Pods_CKImagePicker_Example.framework */,
+				7E682A3A582390AE24E64D60F7D52685 /* Pods_CKImagePicker_Tests.framework */,
 			);
-			path = Classes;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -376,95 +484,139 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				3FCE16374516E9C2D0E891B5692738C9 /* Development Pods */,
-				F33B6DCFC94ADEE72CEEB3744069CBAE /* Frameworks */,
-				7B009CD1819DCE0D53E3B50CBF5F5AF6 /* Pods */,
-				A82E604DEA5AE7779439E64D6BC0FD21 /* Products */,
+				5DF7D1186537FC5862BC38247D9BEFCE /* Frameworks */,
+				594A5474107742EA69873815DB5CABBB /* Pods */,
+				747B76971CDD759581F3557130320A04 /* Products */,
 				293768885D20C8F4E18028A73DD3B0CA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8257B743184BDA27CD55DEA0CE764B5E /* FontAwesome.swift */ = {
+		91A2D7479EAEC125AA08224D8AF3EF8C /* HanekeSwift */ = {
 			isa = PBXGroup;
 			children = (
-				32EFC96D3A79D103387BBE83B2977783 /* Enum.swift */,
-				3895F3FBB4DCC9F9A94819B1EE8F9086 /* FontAwesome.swift */,
-				456C7A4103EC32B1C570C71995D3D342 /* Resources */,
-				2961161AE9F445E0A3CD985064896FBA /* Support Files */,
+				1E60A35D669C896BDC275745CD9362F4 /* Cache.swift */,
+				04B91355663933B6D026116AA38994B5 /* CGSize+Swift.swift */,
+				BE5AC654AAD358AE855EC804088A8A76 /* CryptoSwiftMD5.swift */,
+				42B541EA3E3BDC6D29E3868C931316A0 /* Data.swift */,
+				B8DDF1A9A897EC34DBD171E397E1C663 /* DiskCache.swift */,
+				9A25997A5F3997AD44C0260EF1C5F676 /* DiskFetcher.swift */,
+				940AA8ECBE3B0EA8A642A5C7AFC61D8F /* Fetch.swift */,
+				53D3D3AB783E16C0E7BB4ED2E2EB042B /* Fetcher.swift */,
+				77DF183027F0CB1AF57DEF302CE98506 /* Format.swift */,
+				E0698B89BF299765BF6361F1230362E4 /* Haneke.swift */,
+				B423161C7DCD747CF79A9E1D26B3DB63 /* Log.swift */,
+				B897DD6B3982E5A6D196BF158453297F /* NetworkFetcher.swift */,
+				370293DF5B8318875BD0C610ED5A67A9 /* NSFileManager+Haneke.swift */,
+				2B6309F03B156F1AE1872F85133C32F0 /* NSHTTPURLResponse+Haneke.swift */,
+				F4C70DEB340B113BCC17B859743AFE18 /* NSURLResponse+Haneke.swift */,
+				57AB05959A571E35D3E29ED644C3E4D9 /* String+Haneke.swift */,
+				9869180AACE3537904F95D3F01658832 /* UIButton+Haneke.swift */,
+				03F1E8BBBEDE82C21C17D4D7410DF251 /* UIImage+Haneke.swift */,
+				73CBBE81372115BFBF276DACC35EF3E3 /* UIImageView+Haneke.swift */,
+				1BF1C48EED2E10CEDA82AFEA830084A5 /* UIView+Haneke.swift */,
+				35946A47EB6D1BA5936C5E4B3D17E7FB /* Support Files */,
 			);
-			path = FontAwesome.swift;
+			path = HanekeSwift;
 			sourceTree = "<group>";
 		};
 		99A6323C5AC39C030818E2E90164380F /* CKImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				ACB9152CE165AFC37C947F4D25CC6893 /* CKImagePicker */,
+				40CC1FACB467501EA9FCD7DC33A16F06 /* CKImagePicker */,
 				5A091148867774A23EA0D02FF04FCD08 /* Support Files */,
 			);
 			name = CKImagePicker;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		A82E604DEA5AE7779439E64D6BC0FD21 /* Products */ = {
+		B1763EC3CCE111DAC99C7998F35FDBD5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AD86BDF312F877543F2F302853A96F0E /* Cartography.framework */,
-				8ACBCBA4AEE7E7DDCDD87F05583CAF5F /* CKImagePicker.framework */,
-				FB1E654ED15A6F539BEAAAD6C4FFAA2B /* FontAwesome_swift.framework */,
-				512068B24C07B9F7696EE8AAB1227413 /* Pods_CKImagePicker_Example.framework */,
-				29949495165F9A00CA36C1D6062114A1 /* Pods_CKImagePicker_Tests.framework */,
+				E1FC9C6BE2DBD429516303A0493038AE /* CKAlbumView.swift */,
+				8D2C9B33DA0B92A41DF747816989C3D2 /* CKAlbumViewCell.swift */,
+				751B190B33E7B11542BEB21B0706198B /* CKCameraView.swift */,
+				6FCAA37D63B8D1A2299B6ADC2548C4C9 /* CKImageCropView.swift */,
+				0F7FAAA5A1BC6B3D641C31DD2E0F4372 /* CKImagePickerBaseView.swift */,
+				E6AF7CE2AE0C54861621A4F3A6AB0BCD /* CKImagePickerConfiguration.swift */,
+				A31D4AE5CB1DCDE9F7BFACF115CED3F5 /* CKImagePickerView.swift */,
+				0B0EA878AF06065546B213DAEA5BF285 /* CKImagePickerViewController.swift */,
+				085E886514BE0555AB3B354A8A528BB8 /* UIImage+OrientationFix.swift */,
 			);
-			name = Products;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		ACB9152CE165AFC37C947F4D25CC6893 /* CKImagePicker */ = {
+		DDF10CB76F8AAC31EB9BAA9D3A139D43 /* Cartography */ = {
 			isa = PBXGroup;
 			children = (
-				7BADDB9910B55CD25A37955945DF2151 /* Classes */,
-			);
-			path = CKImagePicker;
-			sourceTree = "<group>";
-		};
-		D0CAC1145D5EA87AA51EF9917F8A0DEB /* Cartography */ = {
-			isa = PBXGroup;
-			children = (
-				E99BF92C747917382CD69B081E05ED61 /* Align.swift */,
-				7F23E3F9ACF9CEC09645F436CC5D3035 /* Coefficients.swift */,
-				2D609ADA3CBBE2EB59D4E0EEDA9C38E4 /* Compound.swift */,
-				A9AD33908679C2D583A279BBD56D7729 /* Constrain.swift */,
-				989E9286978C6881458F33AAC288F041 /* Constraint.swift */,
-				E5FD26D6B360B69331A9163CD61ABE81 /* ConstraintGroup.swift */,
-				20B519A6C8A3C0ABF52151D3C3E80484 /* Context.swift */,
-				62541BC7C4A93AA6C92D4B14AFBE67E6 /* Dimension.swift */,
-				D1FDFC488F6C44FB2308C4DDB5BF54D5 /* Distribute.swift */,
-				A2F228D8596C5F06F6692032A729A6B1 /* Edge.swift */,
-				63834B86CE7819F19880B1116E314D21 /* Edges.swift */,
-				4DE3FEFEEA125EDD2FC79971A72F07EC /* Expression.swift */,
-				F1990AA51B9B2CF26994D479E3F4EBED /* Extensions.swift */,
-				3866F91BD93887B5697C881EC522B3F5 /* LayoutProxy.swift */,
-				529215ABCE0F34C011ABB7381DAA38B2 /* Point.swift */,
-				4EBE1EB9D0B50D7EF9173744C93BA658 /* Priority.swift */,
-				6F4DD5FA9D392852FF21F33986D9F4D3 /* Property.swift */,
-				30DA943956740DFF5FD1327D6F9714D7 /* Size.swift */,
-				B01155ECB608F59BE64C4E589B34EA2F /* View.swift */,
-				C78F964DB26B0F492D4D158574C4046F /* ViewUtils.swift */,
-				54FAA4C9CA7A857AEBBD701C1C35E574 /* Support Files */,
+				6DDDD1B31168FEAC716F07A4A27AFC3F /* Align.swift */,
+				8A8E86C54C5D9670B2C42E9A85E699F2 /* Coefficients.swift */,
+				982EA728DFE370CEC3FAC4E84AE5AE0B /* Compound.swift */,
+				B5084CF9AFB866F137768974ACED05B3 /* Constrain.swift */,
+				6897904EE823DEB2C6E440BF6503B444 /* Constraint.swift */,
+				3D30C9AF4FB360259B7BE05E519F0907 /* ConstraintGroup.swift */,
+				A62A32799A29EDF12C683748B946E5D3 /* Context.swift */,
+				5FD053890F8AA78ED44D04BEEDAE9E51 /* Dimension.swift */,
+				8519D6E93BF4CE58F7F7942179C98622 /* Distribute.swift */,
+				74ED91C06C871767F1C28120F575AB27 /* Edge.swift */,
+				F48747BE862725E76B73D05114D4D599 /* Edges.swift */,
+				8A4F2B93355796918670A7E3EF2CD14F /* Expression.swift */,
+				EBEB5B694735B5CF42A5200BD2038BBE /* Extensions.swift */,
+				DDB12BE87F44FD39686E87BF123DA885 /* LayoutProxy.swift */,
+				5BA78132989E7160F75CD620C2DA7551 /* Point.swift */,
+				4869D0C52674803A12954F078D74EAF5 /* Priority.swift */,
+				05303F448950FED73E36F3939E6C6CF1 /* Property.swift */,
+				CB5C12747E0EE52286C0FCCFF1BA04D8 /* Size.swift */,
+				F74B9596666E63F7A01CC9F5C41269E9 /* View.swift */,
+				ED5564E45C4E5573071A73891F6EA73D /* ViewUtils.swift */,
+				0B62B71A74781B53214C372350604D2D /* Support Files */,
 			);
 			path = Cartography;
 			sourceTree = "<group>";
 		};
-		F33B6DCFC94ADEE72CEEB3744069CBAE /* Frameworks */ = {
+		E69B826FFD9B3CF18E70158F043C5103 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				587088FB6A896D7E50728300EFCB25E0 /* Cartography.framework */,
-				908FB65CD7562DABBB3728606868B140 /* FontAwesome_swift.framework */,
-				7484D59C830410C0EB6528E601B48A44 /* iOS */,
+				9EB0F82301B8520D11F972BDFA1C5D5F /* FontAwesome.swift.modulemap */,
+				48D664FCC54A4388DC12C3A83BB8B1A4 /* FontAwesome.swift.xcconfig */,
+				262D16253537C4640BDC70FFA043FE85 /* FontAwesome.swift-dummy.m */,
+				6FDCD29A24E63E9C821594B45ECAE8AB /* FontAwesome.swift-prefix.pch */,
+				BA57B8EFC160105DD419F52A9B84DBCF /* FontAwesome.swift-umbrella.h */,
+				AAC3A45A9685D4B720FE13736DACE689 /* Info.plist */,
+				C00F2E39D69F3A312678D22300C35529 /* ResourceBundle-FontAwesome.swift-Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/FontAwesome.swift";
+			sourceTree = "<group>";
+		};
+		F2855650600E580801920D763A4670A3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				66202030427BF81CA94C1478ED4CF775 /* CoreText.framework */,
+				0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */,
+				14A9D2432FF766FFED280A2BBF5B0A1E /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		243434F66759D41C6BA94A02812713F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E35B07D1F58256E8C24F3CFF9C72E41D /* CKImagePicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E898B463B5364BEDF445C1C0EBF4943 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB3C46D2244D060B1311D295D78B8A8 /* HanekeSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		514705BF944036B79FA99816C564643C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,27 +625,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7CD46B550BABD8D7522D2B82EE9379AF /* Headers */ = {
+		BB9C33BC4A61E65B5E43123C5E854072 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				893C94DDB856C18251D42D60C88AE2E8 /* CKImagePicker-umbrella.h in Headers */,
+				CA56A6E541E39EAA0CF52DD0BAD1E02E /* Pods-CKImagePicker_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9907D9A65D4C96342849039FD45F204 /* Headers */ = {
+		FA54FF2817EE06C7790A1344EB1401DA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDF48CFB4EC10AC253D136CCD431E086 /* Pods-CKImagePicker_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D734DB49BFD5C1C91C5E3899530715AC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D975AC225FD9B2CD04B7874BC3FE10AA /* FontAwesome.swift-umbrella.h in Headers */,
+				356DC50BF1033B650566B9E6C322BA04 /* FontAwesome.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,24 +652,81 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9BCCE0E29F8F6496C50F158AD85DF61F /* CKImagePicker */ = {
+		18231732CEC57AD9BDB34D59B8F88400 /* FontAwesome.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0290D07DFB22A6020BA1FDF3BEDA907 /* Build configuration list for PBXNativeTarget "CKImagePicker" */;
+			buildConfigurationList = 87E99FAF016AEC02BF944B103810813B /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */;
 			buildPhases = (
-				2A4524AB0E476A1C9A853B81D95CB969 /* Sources */,
-				0A2E797CF7CC77E14C32DA55E9FA5AE8 /* Frameworks */,
-				7CD46B550BABD8D7522D2B82EE9379AF /* Headers */,
-				106A1BEE1D04CA25007AAF1E /* Resources */,
+				5B04ECE9B6C0116A3AFBF5AB5B6BF1B1 /* Sources */,
+				25655E28FCF13140672507D0283D091C /* Frameworks */,
+				EAD280FBD7FFE66FE0C6558CB0BC7400 /* Resources */,
+				FA54FF2817EE06C7790A1344EB1401DA /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E26F982FF4F3AA96B95A496604E7A8D1 /* PBXTargetDependency */,
-				119EE559C3F63876DDA34A6F266D8B42 /* PBXTargetDependency */,
+				74E545B8E8DC7CDCF3A7F1DC000BD140 /* PBXTargetDependency */,
+			);
+			name = FontAwesome.swift;
+			productName = FontAwesome.swift;
+			productReference = E94A02D38241E456194BF323D70F389C /* FontAwesome_swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1D50A1FB7A7B796156D341D4FF5DCF4D /* Pods-CKImagePicker_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0C80E5B5218B0AEAEB032F3F7D57C58 /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Example" */;
+			buildPhases = (
+				E4417B99A7F5EBE2307CEB925F818DEE /* Sources */,
+				1496EF154483F37BDCBC2DF29902FE83 /* Frameworks */,
+				BB9C33BC4A61E65B5E43123C5E854072 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AEA480810B6F6086A70BC5F0E7D673A /* PBXTargetDependency */,
+				67E18A78374FC88B4BBB096ABA04D571 /* PBXTargetDependency */,
+				DE36CC71C59CF060DF0CB0F1071CEC92 /* PBXTargetDependency */,
+				1B6B6C85D11843E939C645AF6743F772 /* PBXTargetDependency */,
+			);
+			name = "Pods-CKImagePicker_Example";
+			productName = "Pods-CKImagePicker_Example";
+			productReference = 57D78DC5A7C9B6036312693B9478C3C1 /* Pods_CKImagePicker_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2D0316172AE4B25F6C8A409D15AEF2FF /* FontAwesome.swift-FontAwesome.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2D7100407321A73358EFD8278ABB932 /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */;
+			buildPhases = (
+				06809AA734D02C032BFC41A88F251637 /* Sources */,
+				C327DD51519F9093E51BB8168B05DCE6 /* Frameworks */,
+				8C49AEA294ABFC1696CBBEC56ABD39BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FontAwesome.swift-FontAwesome.swift";
+			productName = "FontAwesome.swift-FontAwesome.swift";
+			productReference = EFFA77313AD7281995300801A495E594 /* FontAwesome.swift.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		6C16C35416BA0A6AFC5AEA67B9318D22 /* CKImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3500FB8EF05F1418BDA5704ECDF365C1 /* Build configuration list for PBXNativeTarget "CKImagePicker" */;
+			buildPhases = (
+				60FB081993D41D79282DBBB22AD667CF /* Sources */,
+				FE78E08077E93C178EF180EE4EA63690 /* Frameworks */,
+				243434F66759D41C6BA94A02812713F7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00DA93246CA0063A02F7498242F34496 /* PBXTargetDependency */,
+				BBAF800FEAF090CE8C36F0E3C1BBC390 /* PBXTargetDependency */,
+				A415740A0E4A1AD15C7011D93E891D4C /* PBXTargetDependency */,
 			);
 			name = CKImagePicker;
 			productName = CKImagePicker;
-			productReference = 8ACBCBA4AEE7E7DDCDD87F05583CAF5F /* CKImagePicker.framework */;
+			productReference = B18DBFF6CB18DD327A3F26D4821DD3F1 /* CKImagePicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9BDB3E67FD473D9B80EA15A9148A7F45 /* Pods-CKImagePicker_Tests */ = {
@@ -542,7 +743,7 @@
 			);
 			name = "Pods-CKImagePicker_Tests";
 			productName = "Pods-CKImagePicker_Tests";
-			productReference = 29949495165F9A00CA36C1D6062114A1 /* Pods_CKImagePicker_Tests.framework */;
+			productReference = 7E682A3A582390AE24E64D60F7D52685 /* Pods_CKImagePicker_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C3A04698AAE4D6124C20602D622956E5 /* Cartography */ = {
@@ -559,45 +760,24 @@
 			);
 			name = Cartography;
 			productName = Cartography;
-			productReference = AD86BDF312F877543F2F302853A96F0E /* Cartography.framework */;
+			productReference = 72EFC4D08D723D71A1B39B78A7C5F130 /* Cartography.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DAB223D9A33832F8971BAE0497926C76 /* FontAwesome.swift */ = {
+		E48F3DB84196B430BE2031B146E795A2 /* HanekeSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A9A5AA46307465CD63097F26AE4FB40 /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */;
+			buildConfigurationList = 0566F32825396F6BD8453ACBDF07C5C9 /* Build configuration list for PBXNativeTarget "HanekeSwift" */;
 			buildPhases = (
-				B0273C801DD7A7845F95D9F56076FEC8 /* Sources */,
-				ABDA05BD117E5203A06ECA16CA024D61 /* Frameworks */,
-				B43FFCF1199A71503F93333325E1C2E5 /* Resources */,
-				D734DB49BFD5C1C91C5E3899530715AC /* Headers */,
+				15057D12AFB81F0C0FC7C2F29B628D21 /* Sources */,
+				2C4DCF8C4E12788FEB9D6F6B63185948 /* Frameworks */,
+				3E898B463B5364BEDF445C1C0EBF4943 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FontAwesome.swift;
-			productName = FontAwesome.swift;
-			productReference = FB1E654ED15A6F539BEAAAD6C4FFAA2B /* FontAwesome_swift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		DCF24C184FC81EA5DA99A32FBC13D37D /* Pods-CKImagePicker_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0F35F351D13429B2C9389B25D171146F /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Example" */;
-			buildPhases = (
-				F62BEC9A4B6E713DEF511B30CB5128B7 /* Sources */,
-				6F97FD1FDF8026733FF67D6053520723 /* Frameworks */,
-				A9907D9A65D4C96342849039FD45F204 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3D3DA5E9656D7870121B0F3B61FAC151 /* PBXTargetDependency */,
-				F682FBDF6854E44D0DB3AC8EB67EAE4F /* PBXTargetDependency */,
-				953DE47904C3985AAEF15BD97E9FF474 /* PBXTargetDependency */,
-			);
-			name = "Pods-CKImagePicker_Example";
-			productName = "Pods-CKImagePicker_Example";
-			productReference = 512068B24C07B9F7696EE8AAB1227413 /* Pods_CKImagePicker_Example.framework */;
+			name = HanekeSwift;
+			productName = HanekeSwift;
+			productReference = A2C92CC44E18E10D81A0BE7BFD83FF58 /* Haneke.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -617,53 +797,100 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A82E604DEA5AE7779439E64D6BC0FD21 /* Products */;
+			productRefGroup = 747B76971CDD759581F3557130320A04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C3A04698AAE4D6124C20602D622956E5 /* Cartography */,
-				9BCCE0E29F8F6496C50F158AD85DF61F /* CKImagePicker */,
-				DAB223D9A33832F8971BAE0497926C76 /* FontAwesome.swift */,
-				DCF24C184FC81EA5DA99A32FBC13D37D /* Pods-CKImagePicker_Example */,
+				6C16C35416BA0A6AFC5AEA67B9318D22 /* CKImagePicker */,
+				18231732CEC57AD9BDB34D59B8F88400 /* FontAwesome.swift */,
+				2D0316172AE4B25F6C8A409D15AEF2FF /* FontAwesome.swift-FontAwesome.swift */,
+				E48F3DB84196B430BE2031B146E795A2 /* HanekeSwift */,
+				1D50A1FB7A7B796156D341D4FF5DCF4D /* Pods-CKImagePicker_Example */,
 				9BDB3E67FD473D9B80EA15A9148A7F45 /* Pods-CKImagePicker_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		106A1BEE1D04CA25007AAF1E /* Resources */ = {
+		8C49AEA294ABFC1696CBBEC56ABD39BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				106A1BEF1D04CA32007AAF1E /* FontAwesome.otf in Resources */,
+				A6090BB065BC8DB23B7E616EF39E11B2 /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B43FFCF1199A71503F93333325E1C2E5 /* Resources */ = {
+		EAD280FBD7FFE66FE0C6558CB0BC7400 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				106A1BED1D04C9FD007AAF1E /* FontAwesome.otf in Resources */,
+				587EF6A850072276C7BD7668475B931C /* FontAwesome.swift.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2A4524AB0E476A1C9A853B81D95CB969 /* Sources */ = {
+		06809AA734D02C032BFC41A88F251637 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				106B92311D061E3D00E2A934 /* UIImage+OrientationFix.swift in Sources */,
-				106B922A1D053F2A00E2A934 /* CKImagePickerBaseView.swift in Sources */,
-				106A1BEC1D04B7EB007AAF1E /* CKCameraView.swift in Sources */,
-				106A1BE91D04B261007AAF1E /* CKImagePickerConfiguration.swift in Sources */,
-				106A1BE51D04AD8F007AAF1E /* CKImageCropView.swift in Sources */,
-				106A1BE61D04AD91007AAF1E /* CKAlbumViewCell.swift in Sources */,
-				106A1BE41D04AD8C007AAF1E /* CKAlbumView.swift in Sources */,
-				ED4AEC119704E8A39B71A233D6201B29 /* CKImagePickerView.swift in Sources */,
-				102C78F71D024224006B5163 /* CKImagePickerViewController.swift in Sources */,
-				C3CD9494F03FA3BD829EC2574FEBA574 /* CKImagePicker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15057D12AFB81F0C0FC7C2F29B628D21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5853A7CEFA927667EE0654FD9D372652 /* Cache.swift in Sources */,
+				64773875208FD553E635C8F604A4FA85 /* CGSize+Swift.swift in Sources */,
+				5BE816B2F915DA92DB89972D577F8445 /* CryptoSwiftMD5.swift in Sources */,
+				2435BCD3D108D46C654240CD9938604D /* Data.swift in Sources */,
+				B922E4DED66778F72B296F710FAE170F /* DiskCache.swift in Sources */,
+				622668A47C833EC9AA7DBE7C8488EC1B /* DiskFetcher.swift in Sources */,
+				AD13DAEDE7F144FD6FA7CC93B8479D19 /* Fetch.swift in Sources */,
+				182211E82F8355765774E681AD7ED9C6 /* Fetcher.swift in Sources */,
+				8DAC39C7B226410C964B83B111BD7CE1 /* Format.swift in Sources */,
+				1BBD1242BEE759F7B684F9B5B284C08C /* Haneke.swift in Sources */,
+				7081BD30FA3E98FEEB6008994CE5E080 /* HanekeSwift-dummy.m in Sources */,
+				3726A5E28B80FE09C1BE5476271FFF94 /* Log.swift in Sources */,
+				D03AE8EA55AB9992C3BE61A1CF79B136 /* NetworkFetcher.swift in Sources */,
+				552C074BCDD7AAB15FEBC65BD9A2FDC9 /* NSFileManager+Haneke.swift in Sources */,
+				025E633A750CF68436D37B97F55F38A0 /* NSHTTPURLResponse+Haneke.swift in Sources */,
+				1702DF8C460226429DBC15331FB5EE92 /* NSURLResponse+Haneke.swift in Sources */,
+				BABF46CA9CA7DD9EF60AA0650F444493 /* String+Haneke.swift in Sources */,
+				ECC565132DF093E9B04C49146740B806 /* UIButton+Haneke.swift in Sources */,
+				CC3712633CF64B47CA7889381758375F /* UIImage+Haneke.swift in Sources */,
+				32542F12E359A4A0DFB4A6A32376BA68 /* UIImageView+Haneke.swift in Sources */,
+				A05DA3143B823DFC2B601088F89DFDA7 /* UIView+Haneke.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B04ECE9B6C0116A3AFBF5AB5B6BF1B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2275EC2B74DFC11C6F44CF315F0D34B8 /* Enum.swift in Sources */,
+				FE471AD38954863A84D0A2EBE08B5FF4 /* FontAwesome.swift in Sources */,
+				CD2E9E11B46F3BB7F44DA285FC8807A6 /* FontAwesome.swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60FB081993D41D79282DBBB22AD667CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C62E4A08ECF41366FAB1D703260821 /* CKAlbumView.swift in Sources */,
+				AA2D893948349ABA962E5D1ED1D9F014 /* CKAlbumViewCell.swift in Sources */,
+				00CCD010C6404C3405DEC687D6AB6D29 /* CKCameraView.swift in Sources */,
+				86317CA7420A283E19ADBA6E7E96752C /* CKImageCropView.swift in Sources */,
+				DC1C403BA12A446CCCFE52DBA4723728 /* CKImagePicker-dummy.m in Sources */,
+				F2D7BFC919063E44A946108D45759968 /* CKImagePickerBaseView.swift in Sources */,
+				763A4E2A6C8D2BF29AD862FC362B8691 /* CKImagePickerConfiguration.swift in Sources */,
+				F435FF22C109A0E2F937C3F5C1A5E179 /* CKImagePickerView.swift in Sources */,
+				E5BF73F9FF6AB9279F05FF5297F4899E /* CKImagePickerViewController.swift in Sources */,
+				020D00089702AE077F61647D8877F39F /* UIImage+OrientationFix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,16 +899,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B11F5A38FEFEA1E9C42C8BBD24B9CCAE /* Pods-CKImagePicker_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B0273C801DD7A7845F95D9F56076FEC8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				337A8DFD50F43263096173E061EEA9A5 /* Enum.swift in Sources */,
-				7C3FBF5E1E0F80256604CB657F319CA1 /* FontAwesome.swift in Sources */,
-				0517A3D1AE2235822B12880D2317472A /* FontAwesome.swift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,46 +930,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F62BEC9A4B6E713DEF511B30CB5128B7 /* Sources */ = {
+		E4417B99A7F5EBE2307CEB925F818DEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D984EFBC6C8A5C3D72EBD58D0FE6452 /* Pods-CKImagePicker_Example-dummy.m in Sources */,
+				C7BF605CB348F1BC62CEA0CFEE0DF624 /* Pods-CKImagePicker_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		119EE559C3F63876DDA34A6F266D8B42 /* PBXTargetDependency */ = {
+		00DA93246CA0063A02F7498242F34496 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = FontAwesome.swift;
-			target = DAB223D9A33832F8971BAE0497926C76 /* FontAwesome.swift */;
-			targetProxy = B239FB09C3B79F9C2891751A1FDD2D37 /* PBXContainerItemProxy */;
+			name = Cartography;
+			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
+			targetProxy = 5FF57CE0164DBC4207E5CBE2573EDB44 /* PBXContainerItemProxy */;
 		};
-		3D3DA5E9656D7870121B0F3B61FAC151 /* PBXTargetDependency */ = {
+		0AEA480810B6F6086A70BC5F0E7D673A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CKImagePicker;
-			target = 9BCCE0E29F8F6496C50F158AD85DF61F /* CKImagePicker */;
-			targetProxy = E8A9E476897274F5509554BF833CD5A7 /* PBXContainerItemProxy */;
+			target = 6C16C35416BA0A6AFC5AEA67B9318D22 /* CKImagePicker */;
+			targetProxy = E79F983F4733C9763D8F425E4CBACD65 /* PBXContainerItemProxy */;
 		};
-		953DE47904C3985AAEF15BD97E9FF474 /* PBXTargetDependency */ = {
+		1B6B6C85D11843E939C645AF6743F772 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HanekeSwift;
+			target = E48F3DB84196B430BE2031B146E795A2 /* HanekeSwift */;
+			targetProxy = 44A47DAEC225F4869D2A4D2393CE7274 /* PBXContainerItemProxy */;
+		};
+		67E18A78374FC88B4BBB096ABA04D571 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cartography;
+			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
+			targetProxy = AE812120B604E0B96673D22E7480ACAB /* PBXContainerItemProxy */;
+		};
+		74E545B8E8DC7CDCF3A7F1DC000BD140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "FontAwesome.swift-FontAwesome.swift";
+			target = 2D0316172AE4B25F6C8A409D15AEF2FF /* FontAwesome.swift-FontAwesome.swift */;
+			targetProxy = F6209FC06DBD46066069C761D5D89D49 /* PBXContainerItemProxy */;
+		};
+		A415740A0E4A1AD15C7011D93E891D4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HanekeSwift;
+			target = E48F3DB84196B430BE2031B146E795A2 /* HanekeSwift */;
+			targetProxy = CB89E0AFFFB10ED5072E4D62A66BD055 /* PBXContainerItemProxy */;
+		};
+		BBAF800FEAF090CE8C36F0E3C1BBC390 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FontAwesome.swift;
-			target = DAB223D9A33832F8971BAE0497926C76 /* FontAwesome.swift */;
-			targetProxy = 0A38B8A830E5357504ED0F028B40F439 /* PBXContainerItemProxy */;
+			target = 18231732CEC57AD9BDB34D59B8F88400 /* FontAwesome.swift */;
+			targetProxy = 489C240F4C645952A6AD51350A9B9E31 /* PBXContainerItemProxy */;
 		};
-		E26F982FF4F3AA96B95A496604E7A8D1 /* PBXTargetDependency */ = {
+		DE36CC71C59CF060DF0CB0F1071CEC92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Cartography;
-			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
-			targetProxy = 512AABAFAB70D6D7E0FF5A9A3C7B3D1C /* PBXContainerItemProxy */;
-		};
-		F682FBDF6854E44D0DB3AC8EB67EAE4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Cartography;
-			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
-			targetProxy = BD9C4EB073B45887CE37C98D6C5DF4A1 /* PBXContainerItemProxy */;
+			name = FontAwesome.swift;
+			target = 18231732CEC57AD9BDB34D59B8F88400 /* FontAwesome.swift */;
+			targetProxy = 3139CCA0F24E02B08F3E21EF6F489EFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -795,40 +1030,9 @@
 			};
 			name = Release;
 		};
-		136AA8DDAE7F2FAF0B59993A7682F8AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9665797115B26A8CEACB19819B53D421 /* FontAwesome.swift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FontAwesome.swift/FontAwesome.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "FontAwesome-swift";
-				PRODUCT_NAME = FontAwesome_swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		1A79383A54B487E28E4C302C30B4220A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 092417E0E15A8592D7A5FDC1F01C51AE /* Cartography.xcconfig */;
+			baseConfigurationReference = DEF4617F0A018BE7A22CBF417D6AB60B /* Cartography.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -888,41 +1092,24 @@
 			};
 			name = Release;
 		};
-		481450BD310791CEF1EBC02B898316C6 /* Debug */ = {
+		251513483CD5E0E9CB1956390AA35A97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F31F43A0701AA6DF19E04F3C04B90A83 /* Pods-CKImagePicker_Example.debug.xcconfig */;
+			baseConfigurationReference = 48D664FCC54A4388DC12C3A83BB8B1A4 /* FontAwesome.swift.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CKImagePicker_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CKImagePicker_Example/Pods-CKImagePicker_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CKImagePicker_Example;
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = FontAwesome.swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
-		543F433465F6663D94A915DE91D94A21 /* Release */ = {
+		38D3C980F2B6F412739A56A637BCFD2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28D8099CB9A495D6890D3BBD32DC129B /* Pods-CKImagePicker_Example.release.xcconfig */;
 			buildSettings = {
@@ -947,36 +1134,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_CKImagePicker_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		577E61562529183FA35F99A8A0F46FB2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9665797115B26A8CEACB19819B53D421 /* FontAwesome.swift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FontAwesome.swift/FontAwesome.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "FontAwesome-swift";
-				PRODUCT_NAME = FontAwesome_swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1018,9 +1175,56 @@
 			};
 			name = Debug;
 		};
+		6D20E9C421DB004B35E955D7C2DED87B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D664FCC54A4388DC12C3A83BB8B1A4 /* FontAwesome.swift.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = FontAwesome.swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		70932B71A1A59E62DE5B8652D231D75B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D664FCC54A4388DC12C3A83BB8B1A4 /* FontAwesome.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesome.swift/FontAwesome.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "FontAwesome-swift";
+				PRODUCT_NAME = FontAwesome_swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A4474F4BF89516A6E746D29B9E73DC03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 092417E0E15A8592D7A5FDC1F01C51AE /* Cartography.xcconfig */;
+			baseConfigurationReference = DEF4617F0A018BE7A22CBF417D6AB60B /* Cartography.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1048,34 +1252,66 @@
 			};
 			name = Debug;
 		};
-		C828AA434A90BBA0F218F0B2E2FC6EA6 /* Release */ = {
+		A7B1B17F2E91B407DA6FED6855832066 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60C3C7504B51BE8628D523B57D89B05C /* CKImagePicker.xcconfig */;
+			baseConfigurationReference = 48D664FCC54A4388DC12C3A83BB8B1A4 /* FontAwesome.swift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CKImagePicker/CKImagePicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CKImagePicker/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesome.swift/FontAwesome.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CKImagePicker/CKImagePicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CKImagePicker;
+				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "FontAwesome-swift";
+				PRODUCT_NAME = FontAwesome_swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		C19D08C19CB3F77782848C1E80D54861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BC7C9C90C745E76DB2A2C48955C81B /* HanekeSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1119,7 +1355,7 @@
 			};
 			name = Debug;
 		};
-		F245E85699456B163E73223C9E09235E /* Debug */ = {
+		D6050026BBCFA520E70456A2A217BA54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60C3C7504B51BE8628D523B57D89B05C /* CKImagePicker.xcconfig */;
 			buildSettings = {
@@ -1149,23 +1385,106 @@
 			};
 			name = Debug;
 		};
+		E9367F7607208F443507184633433E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BC7C9C90C745E76DB2A2C48955C81B /* HanekeSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F8CAB54343E760159633F319FD344969 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60C3C7504B51BE8628D523B57D89B05C /* CKImagePicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CKImagePicker/CKImagePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CKImagePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CKImagePicker/CKImagePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CKImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FE0C989904738E9523221EAD7110108E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F31F43A0701AA6DF19E04F3C04B90A83 /* Pods-CKImagePicker_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CKImagePicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CKImagePicker_Example/Pods-CKImagePicker_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CKImagePicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F35F351D13429B2C9389B25D171146F /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Example" */ = {
+		0566F32825396F6BD8453ACBDF07C5C9 /* Build configuration list for PBXNativeTarget "HanekeSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				481450BD310791CEF1EBC02B898316C6 /* Debug */,
-				543F433465F6663D94A915DE91D94A21 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1A9A5AA46307465CD63097F26AE4FB40 /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				136AA8DDAE7F2FAF0B59993A7682F8AD /* Debug */,
-				577E61562529183FA35F99A8A0F46FB2 /* Release */,
+				C19D08C19CB3F77782848C1E80D54861 /* Debug */,
+				E9367F7607208F443507184633433E7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1188,6 +1507,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3500FB8EF05F1418BDA5704ECDF365C1 /* Build configuration list for PBXNativeTarget "CKImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6050026BBCFA520E70456A2A217BA54 /* Debug */,
+				F8CAB54343E760159633F319FD344969 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E99FAF016AEC02BF944B103810813B /* Build configuration list for PBXNativeTarget "FontAwesome.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7B1B17F2E91B407DA6FED6855832066 /* Debug */,
+				70932B71A1A59E62DE5B8652D231D75B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0C80E5B5218B0AEAEB032F3F7D57C58 /* Build configuration list for PBXNativeTarget "Pods-CKImagePicker_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE0C989904738E9523221EAD7110108E /* Debug */,
+				38D3C980F2B6F412739A56A637BCFD2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B22DC939D187391042315573DBEE7623 /* Build configuration list for PBXNativeTarget "Cartography" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1197,11 +1543,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0290D07DFB22A6020BA1FDF3BEDA907 /* Build configuration list for PBXNativeTarget "CKImagePicker" */ = {
+		C2D7100407321A73358EFD8278ABB932 /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F245E85699456B163E73223C9E09235E /* Debug */,
-				C828AA434A90BBA0F218F0B2E2FC6EA6 /* Release */,
+				6D20E9C421DB004B35E955D7C2DED87B /* Debug */,
+				251513483CD5E0E9CB1956390AA35A97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

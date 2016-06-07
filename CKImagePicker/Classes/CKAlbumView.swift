@@ -9,6 +9,7 @@
 import UIKit
 import Cartography
 import FontAwesome_swift
+import Haneke
 
 @objc protocol CKAlbumViewDelegate: class {
     func imageDeleted()
@@ -40,7 +41,6 @@ public class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     var cropBottomY: CGFloat  = 0.0
     var dragStartPos: CGPoint = CGPointZero
     let dragDiff: CGFloat     = 20.0
-    var images: [UIImage] = []
     var imageUrls: [NSURL] = []
     var currentSelectedIndex: NSIndexPath!
     
@@ -109,7 +109,7 @@ public class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     }
     
     func setDefaultImage() {
-        if self.images.count > 0 {
+        if self.imageUrls.count > 0 {
             let lastItemIndexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.collectionView!.selectItemAtIndexPath(lastItemIndexPath, animated: false, scrollPosition: .None)
             self.collectionView(self.collectionView!, didSelectItemAtIndexPath: lastItemIndexPath)
@@ -144,9 +144,9 @@ public class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     func reloadImages() {
         do {
             self.imageUrls = CKAlbumView.loadImageUrls(configuration)
-            self.images = self.imageUrls
-                .flatMap { NSData(contentsOfURL: $0) }
-                .flatMap { UIImage(data: $0) }
+//            self.images = self.imageUrls
+//                .flatMap { NSData(contentsOfURL: $0) }
+//                .flatMap { UIImage(data: $0) }
         } catch {
             print("error loading images")
         }
@@ -281,7 +281,7 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return imageUrls.count
     }
     
     // MARK: - UICollectionViewDelegate Protocol
@@ -291,7 +291,7 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
         let currentTag = cell.tag + 1
         cell.tag = currentTag
         cell.configuration = self.configuration
-        cell.image = self.images[indexPath.row]
+        cell.imageView.hnk_setImageFromURL(self.imageUrls[indexPath.row])
         return cell
     }
     
@@ -305,14 +305,14 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         currentSelectedIndex = indexPath
 
-        self.changeImage(self.images[currentSelectedIndex.row])
+        self.changeImage(self.imageUrls[currentSelectedIndex.row])
         self.imageCropView.changeScrollable(true)
         
         //        imageCropViewConstraintTop.constant = imageCropViewOriginalConstraintTop
         //        collectionViewConstraintHeight.constant = self.frame.height - imageCropViewOriginalConstraintTop - imageCropViewContainer.frame.height
         
         UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            
+
             self.layoutIfNeeded()
             
             }, completion: nil)
@@ -331,7 +331,6 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
         do {
             try fileManager.removeItemAtURL(imageUrl)
             currentSelectedIndex = nil
-            self.imageCropView.image = nil
             delegate!.imageDeleted()
         }
         catch let error as NSError {
@@ -345,10 +344,9 @@ private extension CKAlbumView {
         delegate!.deleteButtonPressed(button)
     }
     
-    func changeImage(image: UIImage) {
-        self.imageCropView.image = nil
+    func changeImage(url: NSURL) {
         self.imageCropView.imageSize = configuration.collectionViewCellSize
-        self.imageCropView.image = image
+        self.imageCropView.imageView.hnk_setImageFromURL(url)
         self.deleteButton.hidden = false
     }
 }

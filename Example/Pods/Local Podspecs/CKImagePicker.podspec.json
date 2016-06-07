@@ -23,6 +23,9 @@
     "Cartography": [
       "~> 0.5"
     ],
+    "HanekeSwift": [
+
+    ],
     "FontAwesome.swift": [
 
     ]
