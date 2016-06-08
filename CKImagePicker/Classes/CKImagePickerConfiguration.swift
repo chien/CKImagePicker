@@ -6,6 +6,15 @@
 //
 //
 
+extension UIImage {
+    var uncompressedPNGData: NSData      { return UIImagePNGRepresentation(self)!        }
+    var highestQualityJPEGNSData: NSData { return UIImageJPEGRepresentation(self, 1.0)!  }
+    var highQualityJPEGNSData: NSData    { return UIImageJPEGRepresentation(self, 0.75)! }
+    var mediumQualityJPEGNSData: NSData  { return UIImageJPEGRepresentation(self, 0.5)!  }
+    var lowQualityJPEGNSData: NSData     { return UIImageJPEGRepresentation(self, 0.25)! }
+    var lowestQualityJPEGNSData:NSData   { return UIImageJPEGRepresentation(self, 0.0)!  }
+}
+
 public class CKImagePickerConfiguration {
     public var font = UIFont.systemFontOfSize(16)
     public var textColor = UIColor.lightGrayColor()
@@ -28,7 +37,8 @@ public class CKImagePickerConfiguration {
         let cellSize = (imageContainerSize-((collectionViewImagePerRow-1)*collectionViewLineSpacing))/CGFloat(collectionViewImagePerRow)
         return CGSize(width: cellSize, height: cellSize)
     }
-    
+    public var compressionRate = CGFloat(0.5)
+
     internal var menuSectionHeight: CGFloat {
         return menuButtonSize + 2*menuButtonSpacing
     }
