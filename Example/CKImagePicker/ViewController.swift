@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 
 extension ViewController: CKImagePickerProtocal {
     func imageCountChanges(count: Int) {
-        let alert = UIAlertView(title: "New Image", message: "image count: \(count)", delegate: nil, cancelButtonTitle: "OK")
-        alert.show()
+//        let alert = UIAlertView(title: "New Image", message: "image count: \(count)", delegate: nil, cancelButtonTitle: "OK")
+//        alert.show()
     }
 }

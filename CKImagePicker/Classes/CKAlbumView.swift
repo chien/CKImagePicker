@@ -6,6 +6,7 @@
 //
 //
 
+import Foundation
 import UIKit
 import Cartography
 import FontAwesome_swift
@@ -42,7 +43,7 @@ public class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     var dragStartPos: CGPoint = CGPointZero
     let dragDiff: CGFloat     = 20.0
     var imageUrls: [NSURL] = []
-    var currentSelectedIndex: NSIndexPath!
+    var currentSelectedRow = 0
     
     public init(configuration: CKImagePickerConfiguration) {
         super.init(frame: CGRectZero)
@@ -109,19 +110,15 @@ public class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     }
     
     func setDefaultImage() {
-        if self.imageUrls.count > 0 {
-            let lastItemIndexPath = NSIndexPath(forRow: 0, inSection: 0)
-            self.collectionView!.selectItemAtIndexPath(lastItemIndexPath, animated: false, scrollPosition: .None)
-            self.collectionView(self.collectionView!, didSelectItemAtIndexPath: lastItemIndexPath)
+        if (self.imageUrls.count > 0) {
+            self.changeImage(self.imageUrls[currentSelectedRow])
+            self.imageCropView.changeScrollable(true)
         }
     }
     
     func resetSelectedImage() {
-        if currentSelectedIndex != nil {
-            let currentSelectedCell = collectionView!.cellForItemAtIndexPath(currentSelectedIndex) as! CKAlbumViewCell
-            currentSelectedCell.currentSelected = false
-            currentSelectedIndex = nil
-        }
+        self.currentSelectedRow = 0
+        setDefaultImage()
     }
 
     class public func loadImageUrls(configuration: CKImagePickerConfiguration) -> [NSURL] {
@@ -144,9 +141,6 @@ public class CKAlbumView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     func reloadImages() {
         do {
             self.imageUrls = CKAlbumView.loadImageUrls(configuration)
-//            self.images = self.imageUrls
-//                .flatMap { NSData(contentsOfURL: $0) }
-//                .flatMap { UIImage(data: $0) }
         } catch {
             print("error loading images")
         }
@@ -287,26 +281,30 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
     // MARK: - UICollectionViewDelegate Protocol
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CKAlbumViewCell", forIndexPath: indexPath) as! CKAlbumViewCell
-
-        let currentTag = cell.tag + 1
-        cell.tag = currentTag
+        cell.tag = indexPath.row
         cell.configuration = self.configuration
         cell.imageView.hnk_setImageFromURL(self.imageUrls[indexPath.row])
+        
+        if currentSelectedRow == indexPath.row {
+            cell.selected = true
+        }
         return cell
     }
     
     public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CKAlbumViewCell
-        cell.currentSelected = true
-
-        if (currentSelectedIndex != nil) && (currentSelectedIndex.row != indexPath.row) {
-            let currentSelectedCell = collectionView.cellForItemAtIndexPath(currentSelectedIndex) as! CKAlbumViewCell
-            currentSelectedCell.currentSelected = false
+        if let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) {
+            let cell = selectedCell as! CKAlbumViewCell
+            cell.selected = true
         }
+        
+        let previousIndexPath = NSIndexPath(forRow: currentSelectedRow, inSection: 0)
+        if let previousCell = collectionView.cellForItemAtIndexPath(previousIndexPath) {
+            let albumViewCell = previousCell as! CKAlbumViewCell
+            albumViewCell.selected = false
+        }
+        currentSelectedRow = indexPath.row
 
-        currentSelectedIndex = indexPath
-
-        self.changeImage(self.imageUrls[currentSelectedIndex.row])
+        self.changeImage(self.imageUrls[currentSelectedRow])
         self.imageCropView.changeScrollable(true)
         
         //        imageCropViewConstraintTop.constant = imageCropViewOriginalConstraintTop
@@ -319,20 +317,21 @@ extension CKAlbumView: UICollectionViewDataSource, UICollectionViewDelegate {
             }, completion: nil)
         
         self.dragDirection = Direction.Up
-        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
     }
     
     func deleteImage() {
-        let cell = collectionView!.cellForItemAtIndexPath(currentSelectedIndex) as! CKAlbumViewCell
-        cell.currentSelected = false
+        let indexPath = NSIndexPath(forRow: currentSelectedRow, inSection: 0)
+        let cell = collectionView!.cellForItemAtIndexPath(indexPath) as! CKAlbumViewCell
+        cell.selected = false
         deleteButton.hidden = true
         
-        let imageUrl = self.imageUrls[currentSelectedIndex.row]
+        let imageUrl = self.imageUrls[indexPath.row]
         let fileManager = NSFileManager.defaultManager()
         do {
             try fileManager.removeItemAtURL(imageUrl)
-            currentSelectedIndex = nil
+            self.reloadImages()
             imageCropView.imageView.image = nil
+            self.resetSelectedImage()
             delegate!.imageDeleted()
         }
         catch let error as NSError {

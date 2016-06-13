@@ -74,7 +74,6 @@ public class CKImagePickerViewController: UIViewController {
 
 extension CKImagePickerViewController: CKImagePickerViewDelegate {
     @objc func imageDeleted() {
-        imagePickerView.albumView.reloadImages()
         imageCount = imagePickerView.albumView.imageUrls.count
     }
 

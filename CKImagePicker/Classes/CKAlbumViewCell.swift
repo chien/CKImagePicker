@@ -14,16 +14,25 @@ class CKAlbumViewCell: UICollectionViewCell {
 
     var imageView: UIImageView!
 
-    var currentSelected : Bool {
-        didSet {
-            self.layer.borderWidth = currentSelected ? 2 : 0
-            self.layer.borderColor = (currentSelected ? configuration!.tintColor : UIColor.blackColor()).CGColor
+    override var selected: Bool {
+        get {
+            return super.selected
+        }
+        set {
+            if newValue {
+                super.selected = true
+                self.layer.borderWidth = 2
+                self.layer.borderColor = configuration!.tintColor.CGColor
+            } else if newValue == false {
+                super.selected = false
+                self.layer.borderWidth = 0
+            }
         }
     }
 
     override init(frame: CGRect) {
-        self.currentSelected = false
         super.init(frame: frame)
+        self.selected = false
         self.translatesAutoresizingMaskIntoConstraints = false
 
         imageView = UIImageView(frame: self.contentView.bounds)
@@ -32,15 +41,7 @@ class CKAlbumViewCell: UICollectionViewCell {
         imageView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
         self.contentView.addSubview(imageView)
-//
-//        constrain(self.imageView) { view in
-//            view.size == view.superview!.size
-//            view.top == view.superview!.top
-//            view.left == view.superview!.left
-//        }
-//        
         self.setNeedsDisplay()
-//        self.layoutIfNeeded()
     }
 
     required init(coder aDecoder: NSCoder) {

@@ -74,6 +74,8 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     }
 
     func initializeSession() {
+        enableCameraButton(self.shotButton)
+
         if session != nil {
             return
         }
@@ -140,10 +142,10 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
     func shotButtonPressed(sender: UIButton) {
         
         guard let imageOutput = imageOutput else {
-            
             return
         }
-        
+
+        disableCameraButton(self.shotButton)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             
             let videoConnection = imageOutput.connectionWithMediaType(AVMediaTypeVideo)

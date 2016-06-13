@@ -12,6 +12,7 @@
 		025E633A750CF68436D37B97F55F38A0 /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6309F03B156F1AE1872F85133C32F0 /* NSHTTPURLResponse+Haneke.swift */; };
 		0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD053890F8AA78ED44D04BEEDAE9E51 /* Dimension.swift */; };
 		0A3C4EB82E43BCFEF618C2677FC278E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
+		10218A021D0F44C5007CC5F3 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBDA3F0B39177CC23CECB823C9BCBA1 /* FontAwesome.otf */; };
 		1702DF8C460226429DBC15331FB5EE92 /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C70DEB340B113BCC17B859743AFE18 /* NSURLResponse+Haneke.swift */; };
 		182211E82F8355765774E681AD7ED9C6 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3D3AB783E16C0E7BB4ED2E2EB042B /* Fetcher.swift */; };
 		1BBD1242BEE759F7B684F9B5B284C08C /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0698B89BF299765BF6361F1230362E4 /* Haneke.swift */; };
@@ -33,7 +34,6 @@
 		584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDDD1B31168FEAC716F07A4A27AFC3F /* Align.swift */; };
 		5853A7CEFA927667EE0654FD9D372652 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60A35D669C896BDC275745CD9362F4 /* Cache.swift */; };
 		5873B6D529055503239FA8AAE2B06548 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66202030427BF81CA94C1478ED4CF775 /* CoreText.framework */; };
-		587EF6A850072276C7BD7668475B931C /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFFA77313AD7281995300801A495E594 /* FontAwesome.swift.bundle */; };
 		5BE816B2F915DA92DB89972D577F8445 /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5AC654AAD358AE855EC804088A8A76 /* CryptoSwiftMD5.swift */; };
 		622668A47C833EC9AA7DBE7C8488EC1B /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25997A5F3997AD44C0260EF1C5F676 /* DiskFetcher.swift */; };
 		64773875208FD553E635C8F604A4FA85 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91355663933B6D026116AA38994B5 /* CGSize+Swift.swift */; };
@@ -50,7 +50,6 @@
 		990A594A890000C20EE9C17C236C0858 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
 		A05DA3143B823DFC2B601088F89DFDA7 /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1C48EED2E10CEDA82AFEA830084A5 /* UIView+Haneke.swift */; };
 		A33E78335A9459EC83327D52001569C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700FB53AD34204373E1257F80DBB45B /* Foundation.framework */; };
-		A6090BB065BC8DB23B7E616EF39E11B2 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBDA3F0B39177CC23CECB823C9BCBA1 /* FontAwesome.otf */; };
 		AA2D893948349ABA962E5D1ED1D9F014 /* CKAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C9B33DA0B92A41DF747816989C3D2 /* CKAlbumViewCell.swift */; };
 		AD13DAEDE7F144FD6FA7CC93B8479D19 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940AA8ECBE3B0EA8A642A5C7AFC61D8F /* Fetch.swift */; };
 		B11F5A38FEFEA1E9C42C8BBD24B9CCAE /* Pods-CKImagePicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB3F14F2770A749A5BCA676FE74D7B /* Pods-CKImagePicker_Tests-dummy.m */; };
@@ -134,13 +133,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6C16C35416BA0A6AFC5AEA67B9318D22;
 			remoteInfo = CKImagePicker;
-		};
-		F6209FC06DBD46066069C761D5D89D49 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2D0316172AE4B25F6C8A409D15AEF2FF;
-			remoteInfo = "FontAwesome.swift-FontAwesome.swift";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -247,7 +239,6 @@
 		E94A02D38241E456194BF323D70F389C /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEB5B694735B5CF42A5200BD2038BBE /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
 		ED5564E45C4E5573071A73891F6EA73D /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
-		EFFA77313AD7281995300801A495E594 /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FontAwesome.swift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21B44D37C15DADF8F3BF40AFDCCB6B0 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
 		F31F43A0701AA6DF19E04F3C04B90A83 /* Pods-CKImagePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKImagePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F3FB5E699E738A833F7D0F5A3C8007A7 /* Pods-CKImagePicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKImagePicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -298,13 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE964A7C6CE7CE8D74056501B2D8FD0E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C327DD51519F9093E51BB8168B05DCE6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +454,6 @@
 			children = (
 				72EFC4D08D723D71A1B39B78A7C5F130 /* Cartography.framework */,
 				B18DBFF6CB18DD327A3F26D4821DD3F1 /* CKImagePicker.framework */,
-				EFFA77313AD7281995300801A495E594 /* FontAwesome.swift.bundle */,
 				E94A02D38241E456194BF323D70F389C /* FontAwesome_swift.framework */,
 				A2C92CC44E18E10D81A0BE7BFD83FF58 /* Haneke.framework */,
 				57D78DC5A7C9B6036312693B9478C3C1 /* Pods_CKImagePicker_Example.framework */,
@@ -664,7 +647,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				74E545B8E8DC7CDCF3A7F1DC000BD140 /* PBXTargetDependency */,
 			);
 			name = FontAwesome.swift;
 			productName = FontAwesome.swift;
@@ -691,23 +673,6 @@
 			productName = "Pods-CKImagePicker_Example";
 			productReference = 57D78DC5A7C9B6036312693B9478C3C1 /* Pods_CKImagePicker_Example.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		2D0316172AE4B25F6C8A409D15AEF2FF /* FontAwesome.swift-FontAwesome.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C2D7100407321A73358EFD8278ABB932 /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */;
-			buildPhases = (
-				06809AA734D02C032BFC41A88F251637 /* Sources */,
-				C327DD51519F9093E51BB8168B05DCE6 /* Frameworks */,
-				8C49AEA294ABFC1696CBBEC56ABD39BE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "FontAwesome.swift-FontAwesome.swift";
-			productName = "FontAwesome.swift-FontAwesome.swift";
-			productReference = EFFA77313AD7281995300801A495E594 /* FontAwesome.swift.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 		6C16C35416BA0A6AFC5AEA67B9318D22 /* CKImagePicker */ = {
 			isa = PBXNativeTarget;
@@ -804,7 +769,6 @@
 				C3A04698AAE4D6124C20602D622956E5 /* Cartography */,
 				6C16C35416BA0A6AFC5AEA67B9318D22 /* CKImagePicker */,
 				18231732CEC57AD9BDB34D59B8F88400 /* FontAwesome.swift */,
-				2D0316172AE4B25F6C8A409D15AEF2FF /* FontAwesome.swift-FontAwesome.swift */,
 				E48F3DB84196B430BE2031B146E795A2 /* HanekeSwift */,
 				1D50A1FB7A7B796156D341D4FF5DCF4D /* Pods-CKImagePicker_Example */,
 				9BDB3E67FD473D9B80EA15A9148A7F45 /* Pods-CKImagePicker_Tests */,
@@ -813,32 +777,17 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8C49AEA294ABFC1696CBBEC56ABD39BE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A6090BB065BC8DB23B7E616EF39E11B2 /* FontAwesome.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EAD280FBD7FFE66FE0C6558CB0BC7400 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				587EF6A850072276C7BD7668475B931C /* FontAwesome.swift.bundle in Resources */,
+				10218A021D0F44C5007CC5F3 /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		06809AA734D02C032BFC41A88F251637 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		15057D12AFB81F0C0FC7C2F29B628D21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -965,12 +914,6 @@
 			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
 			targetProxy = AE812120B604E0B96673D22E7480ACAB /* PBXContainerItemProxy */;
 		};
-		74E545B8E8DC7CDCF3A7F1DC000BD140 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "FontAwesome.swift-FontAwesome.swift";
-			target = 2D0316172AE4B25F6C8A409D15AEF2FF /* FontAwesome.swift-FontAwesome.swift */;
-			targetProxy = F6209FC06DBD46066069C761D5D89D49 /* PBXContainerItemProxy */;
-		};
 		A415740A0E4A1AD15C7011D93E891D4C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HanekeSwift;
@@ -1092,23 +1035,6 @@
 			};
 			name = Release;
 		};
-		251513483CD5E0E9CB1956390AA35A97 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48D664FCC54A4388DC12C3A83BB8B1A4 /* FontAwesome.swift.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = FontAwesome.swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		38D3C980F2B6F412739A56A637BCFD2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28D8099CB9A495D6890D3BBD32DC129B /* Pods-CKImagePicker_Example.release.xcconfig */;
@@ -1172,23 +1098,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6D20E9C421DB004B35E955D7C2DED87B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48D664FCC54A4388DC12C3A83BB8B1A4 /* FontAwesome.swift.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = FontAwesome.swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1539,15 +1448,6 @@
 			buildConfigurations = (
 				A4474F4BF89516A6E746D29B9E73DC03 /* Debug */,
 				1A79383A54B487E28E4C302C30B4220A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C2D7100407321A73358EFD8278ABB932 /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6D20E9C421DB004B35E955D7C2DED87B /* Debug */,
-				251513483CD5E0E9CB1956390AA35A97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

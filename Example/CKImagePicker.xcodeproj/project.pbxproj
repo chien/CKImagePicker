@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		378C6F6681E3793830509A9F /* Pods_CKImagePicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572F26C3AEB24F1CE49E9052 /* Pods_CKImagePicker_Tests.framework */; };
 		3BE204525809DFC2D12271CF /* Pods_CKImagePicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456256568229C8A9A0CF97FB /* Pods_CKImagePicker_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -62,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				378C6F6681E3793830509A9F /* Pods_CKImagePicker_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
