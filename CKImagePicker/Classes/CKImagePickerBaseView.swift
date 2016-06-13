@@ -31,7 +31,7 @@ public class CKImagePickerBaseView: UIView {
     }
     
     func disableCameraButton(button: UIButton) {
-        button.enabled = true
+        button.enabled = false
         button.backgroundColor = configuration.backgroundColor.colorWithAlphaComponent(0.5)
         button.tintColor = configuration.tintColor.colorWithAlphaComponent(0.5)
     }
