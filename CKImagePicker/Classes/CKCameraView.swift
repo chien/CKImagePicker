@@ -153,6 +153,16 @@ class CKCameraView: CKImagePickerBaseView, UIGestureRecognizerDelegate {
                 
                 self.session?.stopRunning()
                 
+                if buffer == nil {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.session     = nil
+                        self.device      = nil
+                        self.imageOutput = nil
+                        self.initializeSession()
+                    })
+                    return
+                }
+
                 let data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
                 
                 if let image = UIImage(data: data), let delegate = self.delegate {
